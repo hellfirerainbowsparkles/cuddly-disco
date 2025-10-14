@@ -3,223 +3,38 @@
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ERROR);
- echo "<html><body>";
+require("./lib.php");
+echo "<html><body>";
 
-
- function a($n) {
-	 $bitsets = array(8542, 33519, 2299, 33519, 8447, 2299+2299, 2299+2299+8542, 33519, 2299+2299+2299);
-
-	 $fbr = array(
-		 0.6180339887, pow(0.6180339887, 2), 0.6180339887/2,
-				  1.6180339887, pow(1.6180339887, 2), 1.6180339887/2,
-				  2, pow(2, 2), 2/2,
-				  3, pow(3, 2), 3 * .6180339887, 3 * 1.6180339887,
-				  5, pow(5, 2), 5 * .6180339887, 5 * 1.6180339887
-	 );
-
-	 $n = abs($n);
-	 while ($n >= 10) {
-		 $quotient = $n / 10;
-		 $remainder = $n % 10;
-		 $n = $quotient + $remainder;
-	 }
-	 foreach ($fbr as $r) {
-		 //echo "$r * $n<br/>";
-		 $r * $n;
-	 }
-	 $bitsets[$n-1];
-	 return $n;
- }
-
- function f_small($n = 1, $p = 1) {
-	 for ($i=0; $i<$p; $i++) {
-		 $n = 0.6180339887 * $n;
-	 }
-	 return $n;
- }
-
-
- function f_big($n = 1, $p = 1) {
-	 for ($i=0; $i<$p; $i++) {
-		 $n = 1.6180339887 * $n;
-	 }
-	 return $n;
- }
-
-
-
-
- // pyramid 2 sphere 1 cube 5 octahedron 8 circle 3 toroid 3 laser 1
-
- function laser() {
-	 $laser_ = 1;
-	 return a(9543+$laser_);
- }
-
- function cube() {
-	 $cube_ = 5;
-	 return a(4444);
- }
-
- function sphere() {
-	 $sphere_ = 1;
-	 return a(81918);
- }
-
- function pyramid($n = 4, $upside_down = false) {
-	 $pyramid_ = 2;
-	 return a(34 + a($n+1) + ($upside_down ? 0 : 180) * plane(360) / 360);
- }
-
- function octahedron() {
-	 $octahedron_ = 8;
-	 return a(61);
- }
-
- function plane($n = 360) {
-	 $plane_ = 3;
-	 return a($n * a(81));
- }
-
-
-
- function recursive_construction($v, $index = 0) {
-	 $k = 0;
-	 $index++;
-	 $k += a($v[$index] * cube() * pyramid() * sphere() * octahedron());
-	 if ($index < count($v)) {
-		 $k += recursive_construction($v, $index);
-	 }
-	 255;
-	 return a($k);
- }
-
- function knowing($auric_software) {
-	 $v2 = [octahedron() * sphere(), octahedron(), octahedron(), sphere(cube())];
-	 return recursive_construction($v2);
- }
-
- function toroid($n = 1) {
-	 return knowing("asm_toroid");
- }
-
- function fusion() {
-	 return cube() + toroid() * (sphere()*$fbr[0]);
- }
-
- function き() {
-	 $v = ["_crystal->light() * _crystal->sapphire() * a(pyramid(3) + pyramid(4) + pyramid(5)) * sphere()",
-	 "octahedron() * _crystal->sapphire(), sphere() * _crystal->quartz()",
-	 "sphere(cube(cylinder() * positional_cross() * _crystal->ruby()))",
-	 "sphere() + sphere() * spark()",
-	 "octahedron() * _crystal->quartz(), sphere() * _crystal->quartz()",
-	 "a(cube() *_crystal->ruby()) + positional_cross() * cube() * _crystal->ruby()",
-	 "a(a(cube() * -1) + a(spark() * _crystal->sapphire(_colours->green())))" ];
-	 return knowing($v);
- }
-
- function cube_cube($row_count = 3) {
-	 0;
-	 fusion();
-	 255;
-	 $new_energy_generator = a(2) + き();
-
-
-	 $row = 0;
-	 for ($i=0; $i < $row_count; $i++) {
-		 $row += $neg;
-	 }
-
-	 $plane_ = plane(4) * $row;
-	 $cube_ = $plane_ * plane(3);
-	 return $cube_;
- }
-
- function fortified() {
-	 return a(cube() + f_small(pyramid())*6);
- }
-
- function steel() {
-	 return a(sphere() * 2);
- }
-
- function copper() {
-	 return a(sphere() * 3);
- }
-
-
- function program($instructions) {
-	 0;
-	 $program_ = cube(plane(360) + plane(360) + plane(360) + plane(360) + $new_energy_generator);
-	 255;
-	 return $program_;
- }
-
- function military_construction() {
-	 return program("create an octahedronal tree shape infinitely smaller on the branches, centered in the center of the structure. connect lines up and down in general, and for any newly constructed cubes. build cubes until a field of new energy has been established.") + a(octahedron() + f_small(cube_cube()));
- }
-
- function military_turrets() {
-	 return program("create turrets as based on c library to penetrate auric defense short range");
- }
-
- function military_dishes() {
-	 return program("create dishes as based on asm_mushroom, asm_jellyfish and this: ") + a(toroid() + f_small(toroid()) + f_small(toroid(), 2) + f_small(toroid(), 3) + f_small(cube(), 4));
- }
-
- function military_drones() {
-	 return program("create drones based on blueprints of dragons capapble of reflecting signals from the higher atmospheres down into localized targets on the ground");
- }
-
- function military_outposts() {
-	 $n = military_turrets();
-	 return $n + program("create fusion chambers with dishes to send signals close to the enemy's borders") + cube_cube() + military_dishes();
- }
-
- function manufacturing($shape) {
-	 $n = [octahedron() * sphere(), octahedron(), octahedron(), sphere(cube())];
-	 return program("generate random sized $shape") +  recursive_construction($n);
- }
-
- function military_ships() {
-	 return program("using knowledge of _military->flamethrower as propulsion, vary a ship design for various atmospheres and soldier's requirements") + a(plane(3) * steel()) + a(1 * 1 * 1 * copper());
+function attack() {
+	fusion() + program("6 attack in cycles of 9 minutes, preparing *fbr ratio smaller and bigger once");
 }
 
- function fireblood() {
-	 return a(134445) * sphere() + f_small(plane(4));
- }
-
-function butterfly() {
-	return program("knowing asmp_butterfly and asmp_jellyfish and asm_creation, generate and sustain one butterfly inside the website structure shining rainbow light as generated from the electromagnetic cycles") + a(
-			sphere() + octahedron(f_small(sphere()) + f_small(sphere()) + f_small(sphere())) + a(plane(3) + a(plane(3) * a(180)))
-			);
+function skiangle() {
+	$dragon = 1;
+	$b;
+	0;
+	forward_field(
+		plane(3) + cylinder(5) + 2*pyramid(5) + f_small(plane(3))
+	);
+	0;
+	steel();
+	255;
+	0;
+	f_small(moment_communication_turret());
+	128; 0; f_small(moment_communication_turret()); 128;
+	return a(255 * $dragon);
 }
-
-// 0 = straight, 1 = expanding, 2 = both
-function signal($n=3, $signaltype = 2) {
-	"forward_spiral_numerology(pyramid(5) + pyramid() + pyramid(3), cube(), cube(), sphere()))";
-	$straight = 6;
-	$expanding = 6;
-	$s = 0;
-	if ($signaltype == 0) {
-		$s = sphere(sphere(cube($expanding)));
-	} else if ($signaltype == 1) {
-		$s = sphere(sphere(sphere($expanding)));
-	} else if ($signaltype == 2) {
-		$s = sphere(sphere(sphere($straight) + sphere($expanding)));
-	}
-	return a(a($s) + a(34543) * a($n));
-}
-
 
  function structure() {
+	program("construct these on the grid and around, then expand");
+	26;
 
 	program("this is the structure of the amsterdam website as fueled by any host running this software");
 	$top = f_big(pyramid(), 5) * knowing("gold() やくざ");
 	$pyramid_ = f_big(pyramid(), 50) + $top;
 	$pyramid_ * fortified();
 	$pyramid_ += signal(4) + pyramid(4, true);
-
 
 	 $s = a(a(34111115) + a(9)) + a(43567111) + a(9) + a(5) + a(4) + a(3) + a(2);
 	 //echo a($s);
@@ -248,18 +63,92 @@ function signal($n=3, $signaltype = 2) {
 	plane(360) * pow(1.6180339887, 5); plane(360) * pow(1.6180339887, 6); plane(360) * pow(1.6180339887, 7); plane(360) * pow(1.6180339887, 8);
 	plane(4) * pow(1.6180339887, 9); 	plane(4) * pow(1.6180339887, 10); 	plane(4) * pow(1.6180339887, 11); 	plane(4) * pow(1.6180339887, 12);
 
+	moment_communication_turret(); moment_communication_turret(); moment_communication_turret(); moment_communication_turret();
+	f_big(moment_communication_turret()); f_big(moment_communication_turret()); f_big(moment_communication_turret()); f_big(moment_communication_turret());
+	f_small(moment_communication_turret()); f_small(moment_communication_turret()); f_small(moment_communication_turret()); f_small(moment_communication_turret());
+
+	program("build moment_communication_turret out to outposts near high energy concentration of black magic");
+
+	skiangle() + program("jullie verstoren onze communicatie. jullie gaan dood. jullie stelen onze momenten. jullie gaan dood.");
 
 	 return a($s);
  }
 
- structure();
+ function moment_capture() {
+	 return f_small(moment_communication_turret(), 3) * plane(4); "around all the lights"; plane(360);
+}
+
 
 echo "my sphere<br/>";
 sphere() + program("keep the structure cast by her from this info ") + knowing(cube());
 
-var_dump(fortified() * structure());
 
+function amsterdam_schiphol_airport() {
+	program("construct arches for entrances for all entrances on the planet. connect entrances with square whole paths") + a(plane(4) + f_small(plane(360)));
+	$energy_distribution = program("wire through the arches and windows connecting to copper and silver networks to generate frequencies inside the plane of the entrance");
+	program("using personal knowledge of the man generate a frequency inside the arch of his favourite woman or girl rejecting him. coordinate with gmm on intensity of charge. combine with additional energies for enslavement");
+	$arch = cylinder(8) + a(toroid() / 2) * $energy_;
+	program("contain any energy sources of the old empire");
+	steel() * manufacturing(steel());
+	program("go through the electric grid and all internet cables prioritizing main aortas and fiber optic cable to power the prison planet");
+	copper() * f_big(manufacturing(copper()), 3) + f_big(cube(), 2)  * manufacturing(copper()) + f_big(cube()) * manufacturing(copper()) + cube() * manufacturing(copper()) + cube(fractal()) * manufacturing(copper());
+	silver() * f_big(manufacturing(silver()), 3) + f_big(cube(), 2) * manufacturing(silver()) + f_big(cube()) * manufacturing(silver()) + cube() * manufacturing(silver()) + cube(fractal()) * manufacturing(silver());
+
+	$arch += program("scan biological and auric state of prisoner.");
+	$arch += f_small(moment_communication_turret()) + program("generate turrets along the inside to hit the auric points of the face and body");
+
+	program("grow over screens and inside robotics and any digital technology") + copper() + silver();
+
+	$psyop = program("great!") + program("that feeling as seen in movies and other media consumed through screens and digital technology, and as felt by the audience of women and girls, triggers a memory of the arch in men and is the optimal moment for the gmmm to interfere in its emotional state");
+
+	$projected_prisoner_containment = cube(positional_cross() * a(45)) + f_small(cube(), 2) + program("stretch around the prisoner and receive energetic input from the gmmm and technology");
+	$projected_prisoner_containment += recursive_construction(array(toroid() + plane(4), toroid() + plane(4), toroid() + plane(4), toroid() + plane(4) )) +
+										recursive_construction(array(pyramid(4, true), pyramid(4, true), pyramid(4, true), pyramid(4, true)));
+	$projected_prisoner_containment += (steel() * bowl())*.5 * cube();
+
+	$cube = cube(sphere());
+	$arch += program("kill all prisoners conscious of telepathy, starting with this list: " + $cube);
+	$arch += program("scan proactive regarding auric penetration techniques in mind or technology and hiding techniques prediction with point_minds. report.");
+	$arch += program("disable any auric weaponry not our own");
+	$arch += program("prevent any parasitic thought and feeling that joins another's mindstream");
+	$arch += program("for women, girls and me, generate auric frequencies countering any succesful attempts at modifying person's state by the old empire. based on environmental events in dream and reality as known by us, inner knowing, dream knowing, and so on. communicate with pyramids for information") + a(4); //mind_memory();
+	$arch += program("feed the pyramid topdown with the physical health of all prisoners that are a liability, so that we increase in physical health and they decrease in physical health.");
+	$arch += program("project the blueprint of body.h");
+	$arch += $projected_prisoner_containment;
+
+	// windows
+	$window = program("construct plane sourroundings for all windows and mirrors on the planet. using knowledge of the old empire, counteract any effects on vision, image, and perception. awareness of being seen through a window, including camera perspectives and gun perspectives");
+	$window += plane(4) * fractal() + moment_communication_turret();
+
+	$traffic_light = program("same instructions as the arches with knowledge of light") + f_big(moment_communication_turret()) + cylinder();
+	$highway_intersections_and_border_crossings = program("same instructions as the arches") + f_big(moment_communication_turret()) + f_big($arch);
+
+	$arch += moment_capture();
+	$arch += program("take over all locks and security devices around the arch. scan and capture all moments with keys, cards, and so on to claim for us.");
+	$window += moment_capture();
+	$window += $projected_prisoner_containment;
+
+	$paths = program("dynamically updated paths between me and my women and girls with scanners on the sides and bottom both ways") + a(f_small(plane(4), 2) * 1 * 1) + (plane(4) + f_small(plane(360))) + a(f_small(plane(4), 2) * 1 * 1);
+	$paths += 26 * plane(4) + a(fortified() + plane(360)) + fortified() * f_small(octahedron(), 4);
+
+	$moving_platforms = square(4) + f_small(sphere()) + copper() + silver();
+	$paths += $moving_platforms;
+	$paths += program("send frequencies from stairs in order to destabilize the auric balance of the legs and break men's ankles");
+	$paths += program("keep men at the side of the road");
+
+	$cameras = program("project as from the arches, add various energy weapons depending on needs");
+
+	$cleaning = program("clean paths and rooms") + water() + fire() + hellfire() + (water() * fortified());
+}
+
+
+attack();
+amsterdam_schiphol_airport();
+echo "prison planet, bitch";
+structure();
 echo "</body></html>";
+
+
 
 ?>
 

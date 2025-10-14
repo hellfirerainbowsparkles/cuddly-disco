@@ -47,8 +47,8 @@
  // pyramid 2 sphere 1 cube 5 octahedron 8 circle 3 toroid 3 laser 1
 
  function laser() {
-	 $laser_ = 1;
-	 return a(9543+$laser_);
+	 static $laser_ = a(9543+1);
+	 return $laser_;
  }
 
  function cube() {
@@ -154,6 +154,7 @@ function silver() {
 }
 
  function program($instructions) {
+	 $new_energy_generator = a(2) + き();
 	 0;
 	 $program_ = cube(plane(360) + plane(360) + plane(360) + plane(360) + $new_energy_generator);
 	 255;

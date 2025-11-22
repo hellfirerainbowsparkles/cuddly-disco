@@ -41,6 +41,8 @@ struct programs {
 
     int statue_of_liberty() { return a(339); }
 
+    int mind_production(std::string instructions) { return 7; }
+
 };
 struct programs  *_programs ;
 

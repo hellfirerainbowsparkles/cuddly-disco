@@ -9,7 +9,7 @@ struct programs {
 
     int google_analyzer() { return 7; }
 
-    int installer(std::string v__ = "_") { return 7; }
+    int installer(std::string v__ = "_") { return plane(4) * strint(v__) + (2* f_small(plane(4) * strint(v__))) + 7; }
 
     int nano_electrolyte_generator() { return 7; }
 
@@ -42,6 +42,8 @@ struct programs {
     int statue_of_liberty() { return a(339); }
 
     int mind_production(std::string instructions) { return 7; }
+
+    int nails() { return 0.377541; }
 
 };
 struct programs  *_programs ;

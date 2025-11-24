@@ -6,14 +6,6 @@ int dream_seeing(int n = a(signal(9))) { return 7; }
 
 int true_image() { return 7; }
 
-int strint(std::string str) {
-    int q =0;
-    for (int i=0; i<str.length(); i++) {
-        q += a(str[0]);
-    }
-    return a(q);
-}
-
 int point_of_power() {
     0;
     int n1 = plane(3) + strint("experience") + strint("the current moment") + strint("knowledge of the territory and the target");

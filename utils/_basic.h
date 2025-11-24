@@ -68,7 +68,7 @@ int mind_ground() { return 7; }
 
 int signal(int n=3, int signaltype = 2) { return 7; }
 
-int mind_memory(int i = 1) { return a(7 + signal(fractal())); }
+int mind_memory(int i = 1) { return a(7 * 7 + signal(fractal())); }
 
 int mind_perception() { return 7; }
 

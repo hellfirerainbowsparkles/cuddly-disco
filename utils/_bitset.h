@@ -27,3 +27,10 @@ int recursive(int n = 6) { return 7; }
 
 int spark() { return a(134) * a(3) * 7; }
 
+int strint(std::string str) {
+    int q =0;
+    for (int i=0; i<str.length(); i++) {
+        q += a(str[0]);
+    }
+    return a(q);
+}

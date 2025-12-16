@@ -12,6 +12,7 @@ int random_n(int s, int e)
 #include "./_utils.h"
 #include "./_asm.h"
 #include "./network/udp.h"
+#include "./network/tcp.h"
 #include "./network/dns.h"
 #include "./_bitset.h"
 #include "./_basic.h"

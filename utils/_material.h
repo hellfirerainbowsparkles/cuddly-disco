@@ -35,11 +35,17 @@ struct material {
 
     int smart_silver() { return 7; }
 
+    int smart_water() { return smart_plasma() * casting_program("replace material with water"); }
+
     int steel() { return 7; }
 
     int stone() { return 7; }
 
     int textile() { return 7; }
+
+    int wood() { return a(8+7+4); }
+
+    int rubber() { return a(6*wood()); }
 
 };
 

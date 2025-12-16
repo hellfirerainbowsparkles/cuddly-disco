@@ -32,7 +32,17 @@ int scarab() { return 7; }
 struct military {
     int init() { return 8; }
 
-    int armor_suit() { return 7; }
+    int armor_suit() { return 7 + f_small( plane(3) * ( _crystal->ruby() * octahedron()) + (7*_material->smart_silver()) * bowl() + (7*_material->smart_gold()) * bowl(), 3.7) + _material->smart_plasma() + casting_program("connect these eyes and generate a stable field in between them. project a three pointed pyramidal beam outward wherever the point of attention is.") +
+        a(
+                f_small(
+                    gold() * sphere() +
+                    _material->silver() * sphere() +
+                    machine_mind(al("create a stable spiral forward to the point of attention"))
+                    * plane(360)
+                , 2.5 )
+        );
+
+    }
 
     int being() { return 7; }
 

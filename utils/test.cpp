@@ -19,5 +19,6 @@ int main() {
 	_programs->time_casting();
 	_programs->personal_molecules();
 	printf("%d\n", _programs->installer("all of the above"));
+	printf("%d\n", joy());
 	}
 }

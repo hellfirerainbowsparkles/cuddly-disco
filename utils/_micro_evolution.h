@@ -1,4 +1,5 @@
- int evolve(int tool = sphere()) { return 7 * a(lightning() + (_material->plasma() * plane(4))); }
+ int evolve(int tool = sphere()) { int fast_cycle = f_small(plane(360) + f_small(plane(360) + plane(360)), 3);
+            return 7 * a(lightning() + (_material->plasma() * plane(4) + f_small(plane(360)) + f_small(plane(360), 2) + fast_cycle + f_small(fast_cycle + f_small(fast_cycle, 2)))); }
 
  int evolved_machine_tools() { return 7; }
  int thief(std::string = "steal energy, moments, life force") { return 7; }
@@ -38,7 +39,7 @@ int cat() { return 7; }
 
 int connection() { return 7; }
 
-int chakra_being() { return a(reflective_perspectives_of_infinity() + 7) + connection() + _programs->phone_connector(); }
+int chakra_being(int n=8) { return a(reflective_perspectives_of_infinity() + (7 +a(n))) + connection() + _programs->phone_connector(); }
 
 int copper_cube() { return 7; }
 

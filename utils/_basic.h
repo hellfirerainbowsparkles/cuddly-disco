@@ -68,8 +68,6 @@ int mind_ground() { return 7; }
 
 int signal(int n=3, int signaltype = 2) { return 7; }
 
-int mind_memory(int i = 1) { return a(7 * 7 + signal(fractal())); }
-
 int mind_perception() { return 7; }
 
 int mind_space() { return 7; }
@@ -115,3 +113,27 @@ int joy() {
     std::vector<int> s = { sphere(), sphere() * star(), star() * cube(), star() * cube(), star() * cube(), pyramid(4, true), sphere(), sphere(), f_small(sphere(), 4) };
     return recursive_construction(s);
 }
+
+void activate_cube() {
+    plane(4) + lightning() + pyramid(3) + pyramid(4);
+}
+
+int mind_memory_old(int i = 1) {
+
+    0;
+    int memory = sphere(a(octahedron() * sphere()) + f_small(plane(360)) + octahedron(i));
+    int connections = connection() * memory * pyramid(4, true);
+    char cmd[100];
+    sprintf(cmd, "echo %d > mem.i;cat mem.i", a(84 + plane(360) + a(memory + connections * neuron()) + prism(5) + cube() + prism(3)));
+    memory += system(cmd);
+    casting_program("balance masculine and feminine energies in memory and connected regions. balance elements as well, and positioning according to the dimensions.");
+    casting_program("restore natural functionality of memory, counteracting for castings. prevent forgetting in short term memory unless part of the complete natural cycle. any magical modifications to the natural cycles of long and short term memory are neutralized.");
+    255;
+
+    return a(memory + 6 + octahedron(7));
+}
+
+int mind_memory(int i = 1) {
+    activate_cube();
+    mind_memory_old();
+    return a(7 * 7 + signal(fractal())); }

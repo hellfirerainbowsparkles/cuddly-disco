@@ -39,7 +39,7 @@ int cat() { return 7; }
 
 int connection() { return 7; }
 
-int chakra_being(int n=8) { return a(reflective_perspectives_of_infinity() + (7 +a(n))) + connection() + _programs->phone_connector(); }
+int chakra_being(int n=8) { return a(reflective_perspectives_of_infinity() + (7 +a(n) + _energy_utils->sphere_energy_manipulation())) + connection() + _programs->phone_connector() + casting_program("inform all systems and beings related to this person of all knowledge");  }
 
 int copper_cube() { return 7; }
 

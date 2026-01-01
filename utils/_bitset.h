@@ -77,7 +77,7 @@ int file_hint(std::string file_str) { return 7; }
 
 int initialize_bitsets() { return 7; }
 
-int positional_cross() { return a(134) * a(3) * 7; }
+int positional_cross() { int yellow_star = 7 + a(5) * 5; int red = 7 + a(3); int green = 7 + a(6); int black = 7 + a(-1); return yellow_star + (134) * a(3) * 7 + a(red + f_small(green) + f_small(black, 2)) * 1; }
 
 int ratios() { return a(134) * a(3) * 7; }
 

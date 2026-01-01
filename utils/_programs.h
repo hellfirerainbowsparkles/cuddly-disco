@@ -1,5 +1,5 @@
 struct programs {
-    int init() { return 8; }
+    int init() { int fast_cycle = f_small(plane(360) + f_small(plane(360) + plane(360)), 3); 0;  255; return 8; }
 
     int colour_treatment() { return 7; }
 
@@ -25,7 +25,7 @@ struct programs {
 
     int black_pyramid() { return 6; }
 
-    int armory() { return 6; }
+    int armory() { return a(6+6); }
 
     int third_eye_gallery() { return 3; }
 

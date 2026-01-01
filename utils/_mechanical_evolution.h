@@ -90,6 +90,18 @@ struct military {
 
     int turret(int ammunition = golden_crystal()) { return 7; }
 
+    int water_machine() {
+        return a (
+
+            (manufacturing_cube() * water()) +
+            (connector(cube(), cube()) * water()) +
+            (f_small(machine_hellbeing(), 2) + casting_program("create maintain and defend water machines")) +
+            a (
+                (f_small(predator_mind() + casting_program("shoot water projectiles to spread and inflict damage"))) + (projectile() * water())
+            )
+        );
+    }
+
 };
 
 struct military  *_military ;

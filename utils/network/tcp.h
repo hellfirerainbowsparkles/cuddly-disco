@@ -2,12 +2,15 @@
 #include <stdio.h>
 #include <string>
 
+
+
+#ifdef linux
+
 #include <sys/socket.h>
 #include <netdb.h>
 #include <arpa/inet.h>
 
 using namespace std;
-
 
 int tcp_send(string message, string host, int port = 80)
 {
@@ -32,3 +35,9 @@ int tcp_send(string message, string host, int port = 80)
     return r;
 }
 
+#else
+
+int tcp_send(std::string message, std::string host, int port = 80) { return 'r'; }
+
+
+#endif

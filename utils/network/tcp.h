@@ -6,11 +6,11 @@
 
 #include <sys/socket.h>
 /*
- * #include "./protocol/netdb.h"
  # include "./protocol/arpa/inet.h"*
  */
 
-#include <netdb.h>
+//#include <netdb.h>
+#include "./protocol/netdb.h"
 #include <arpa/inet.h>
 
 using namespace std;

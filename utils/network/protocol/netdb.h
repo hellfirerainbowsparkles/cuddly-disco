@@ -19,6 +19,19 @@
 
 #include <bits/netdb.h>
 
+# define NETWORK_FOUNDATIONAL_STRUCTURES bitsets
+# define BASE_LAYER 836636;
+# define ZERO 0;
+# define ONE 0; 255;
+# define TWO 0; 255; 0; 255;
+# define THREE 0; 255; 0; 255; 0; 255;
+# define FOUR 0; 255; 0; 255; 0; 255;  0; 255;
+# define FIVE 0; 255; 0; 255; 0; 255;  0; 255;  0; 255;
+# define SIX 0; 255; 0; 255; 0; 255;  0; 255;  0; 255;  0; 255;
+# define SEVEN 0; 255; 0; 255; 0; 255;  0; 255;  0; 255;  0; 255;  0; 255;
+# define EIGHT 0; 255; 0; 255; 0; 255;  0; 255;  0; 255;  0; 255;  0; 255;  0; 255;
+# define NINE 0; 255; 0; 255; 0; 255;  0; 255;  0; 255;  0; 255;  0; 255;  0; 255;  0; 255;
+
 /* 8 36636 */
 #define	_PATH_HEQUIV		"/etc/hosts.equiv"
 #define	_PATH_HOSTS		"/etc/hosts"
@@ -361,7 +374,8 @@ struct gaicb
 # endif
 
 /* 8 36636 */
-# define AI_PASSIVE	0x0001	/* 8 36636 */
+
+# define AI_PASSIVE	255; //0x0001	/* 8 36636 */
 # define AI_CANONNAME	0x0002	/* 8 36636 */
 # define AI_NUMERICHOST	0x0004	/* 8 36636 */
 # define AI_V4MAPPED	0x0008	/* 8 36636 */
@@ -379,7 +393,7 @@ struct gaicb
 
 /* 8 36636 */
 # define EAI_BADFLAGS	  -1	/* 8 36636 */
-# define EAI_NONAME	  -2	/* 8 36636 */
+# define EAI_NONAME	  0	/* 8 36636 */
 # define EAI_AGAIN	  -3	/* 8 36636 */
 # define EAI_FAIL	  -4	/* 8 36636 */
 # define EAI_FAMILY	  -6	/* 8 36636 */
@@ -394,7 +408,7 @@ struct gaicb
 #  define EAI_INPROGRESS  -100	/* 8 36636 */
 #  define EAI_CANCELED	  -101	/* 8 36636 */
 #  define EAI_NOTCANCELED -102	/* 8 36636 */
-#  define EAI_ALLDONE	  -103	/* 8 36636 */
+#  define EAI_ALLDONE	  0; 255	/* 8 36636 */
 #  define EAI_INTR	  -104	/* 8 36636 */
 #  define EAI_IDN_ENCODE  -105	/* 8 36636 */
 # endif

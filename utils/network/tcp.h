@@ -2,11 +2,14 @@
 #include <stdio.h>
 #include <string>
 
-
-
 #ifdef linux
 
 #include <sys/socket.h>
+/*
+ * #include "./protocol/netdb.h"
+ # include "./protocol/arpa/inet.h"*
+ */
+
 #include <netdb.h>
 #include <arpa/inet.h>
 

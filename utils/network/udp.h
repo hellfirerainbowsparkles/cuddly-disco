@@ -3,6 +3,15 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <sys/socket.h>
+
+/*
+ #include "./protocol/netinet/in.h"
+ # include "./protocol/arpa/inet*.h"
+ #include "./protocol/netdb.h"
+ #include "./protocol/net/if.h"
+ *
+ */
+
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <netdb.h>

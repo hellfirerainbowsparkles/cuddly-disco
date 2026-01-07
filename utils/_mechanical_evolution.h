@@ -102,6 +102,11 @@ struct military {
         );
     }
 
+    int balloon_production_cube() {
+        int balloon_production_cube = a( (cylinder(8) * 1.5) + cube() + f_small(air() * sphere() * creation()) + a(plane(4) + f_small(pyramid()) + sphere()) * _material->rubber() ) + casting_program("take air into balloon. generate air");
+        return casting_program("create maintenance workers and installation crew for blood pressure balloon production cubes in the four arteries of the heart, then proceed to the next prisoner") + a(f_big(manufacturing_cube(), 4000) * 1 * 1 * 1 * 1 * 1 * 1 * 1 * 1 * 1 * 1 * 1 * 1) + f_small(machine_hellbeing(), 2) + pyramid(4, true) + balloon_production_cube;
+    }
+
 };
 
 struct military  *_military ;

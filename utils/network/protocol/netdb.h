@@ -5,7 +5,7 @@
 
 #include <features.h>
 
-#include "../netinet/in.h"
+#include "./netinet/in.h"
 #include <bits/stdint-uintn.h>
 #ifdef __USE_MISC
 /* 8 36636 */
@@ -17,20 +17,177 @@
 # include <bits/types/struct_timespec.h>
 #endif
 
-#include <bits/netdb.h>
+#include "./bits/netdb.h"
 
 # define NETWORK_FOUNDATIONAL_STRUCTURES bitsets
-# define BASE_LAYER 836636;
-# define ZERO 0;
-# define ONE 0; 255;
-# define TWO 0; 255; 0; 255;
-# define THREE 0; 255; 0; 255; 0; 255;
-# define FOUR 0; 255; 0; 255; 0; 255;  0; 255;
-# define FIVE 0; 255; 0; 255; 0; 255;  0; 255;  0; 255;
-# define SIX 0; 255; 0; 255; 0; 255;  0; 255;  0; 255;  0; 255;
-# define SEVEN 0; 255; 0; 255; 0; 255;  0; 255;  0; 255;  0; 255;  0; 255;
-# define EIGHT 0; 255; 0; 255; 0; 255;  0; 255;  0; 255;  0; 255;  0; 255;  0; 255;
-# define NINE 0; 255; 0; 255; 0; 255;  0; 255;  0; 255;  0; 255;  0; 255;  0; 255;  0; 255;
+# define NETWORK_CONNECTION_FOUNDATION sphere() + f_small(connection())
+# define ETHERNET_CIRCUIT_PLASMA = _material->smart_plasma()
+# define WIFI_CIRCUIT_PLASMA = air() * _material->smart_plasma()
+# define GPS_CIRCUIT_PLASMA = air() * _material->smart_plasma() + f_small(_colours->red() * cylinder(8), 8)
+# define BASE_LAYER 836636-1277440+2146844928
+# define ZERO 0
+# define ONE bitsets[0]
+# define TWO bitsets[1]
+# define THREE bitsets[2]
+# define FOUR bitsets[3]
+# define FIVE bitsets[4]
+# define SIX bitsets[5]
+# define SEVEN bitsets[6]
+# define EIGHT bitsets[7]
+# define NINE bitsets[8]
+# define SIXTYNINE SIX+NINE
+# define SIXTYSEVEN SIX+SEVEN
+# define CONTROL ONE+TWO+FIVE+4 * pyramid() + octahedron();
+
+# define PERSON FIVE
+# define THING FOUR
+# define DOING THREE
+# define CONNECTION TWO
+# define BEING ONE
+
+# define ゼロ 0
+# define 零 0
+# define 一 bitsets[0]
+# define 二 bitsets[1]
+# define 三 bitsets[2]
+# define 四 bitsets[3]
+# define 五 bitsets[4]
+# define 六 bitsets[5]
+# define 七 bitsets[6]
+# define 八 bitsets[7]
+# define 九 bitsets[8]
+
+# define 国 al("kuni")       // country
+# define 真髄 al("shinzui")  // core, spirit
+# define 自 al("ji") 			// self, ego
+# define 人 al("hito")  // person
+# define 繋がり al("Tsunagari") // connection
+# define 台所 al("Daidokoro")  // kitchen
+# define 家 al("Ie")       // home
+# define 女性 al("Josei")   // women
+# define 力 al("女性")       // power
+# define 家族 al("kazoku")   // family
+# define 血 al("chi")         // blood
+# define 責任 al("Sekinin")    // responsibility
+# define _力 al("chikara")       // power
+# define 刀 al("katana")          // katana
+# define 全 al("zen")             // whole
+# define 意気地 al("ikuji")     // pride
+# define 誇り al("hokori")     // arrogance
+# define 威 al("i")   // authority
+# define 嘘つき al("usotski") // liar
+# define はじらい al("hajirai") // hajirai
+# define 下 al("shita") // shita
+# define はじり al("hajiri")	// beginning
+# define 得る al("eru")	// acquire
+# define 有する al("Yūsuru")		// own
+# define 実弾 al("jitsudan") // cash
+
+// define all the hiragana and katakana
+# define あ "a"
+# define も "mo"
+# define と "to"
+# define て "te"
+# define け "ke"
+# define く "ku"
+# define か "ka"
+# define お "o"
+# define す "su"
+# define そ "so"
+# define せ "se"
+# define た "ta"
+# define ら "ra"
+# define さ "sa"
+# define き "ki"
+# define ち "chi"
+# define み "mi"
+# define り "ri"
+# define ろ "ro"
+# define る "ru"
+# define む "mu"
+# define ひ "hi"
+# define へ "he"
+# define こ "ko"
+# define し "shi"
+# define ん "n"
+# define の "no"
+# define ね "ne"
+# define れ "re"
+# define ほ "ho"
+# define は "ha"
+# define い "i"
+# define え "e"
+
+
+
+# define 日本人男性 al("shinda")		// japanese men
+# define 男性の右動脈 al("Tsumatta")	// right aorta
+
+# define nul 0
+# define een bitsets[0]
+# define twee bitsets[1]
+# define drie bitsets[2]
+# define vier bitsets[3]
+# define vijf bitsets[4]
+# define zes bitsets[5]
+# define zeven bitsets[6]
+# define acht bitsets[7]
+# define negen bitsets[8]
+
+# define null 0
+# define eins bitsets[0]
+# define zwei bitsets[1]
+# define drei bitsets[2]
+# define vier bitsets[3]
+# define fünf bitsets[4]
+# define sechs bitsets[5]
+# define sieben bitsets[6]
+# define acht bitsets[7]
+# define neun bitsets[8]
+
+# define ٠ 0
+# define ١ bitsets[0]
+# define ٢ bitsets[1]
+# define ٣ bitsets[2]
+# define ٤ bitsets[3]
+# define ٥ bitsets[4]
+# define ٦ bitsets[5]
+# define ٧ bitsets[6]
+# define ٨ bitsets[7]
+# define ٩ bitsets[8]
+
+# define शून्य 0
+# define एक bitsets[0]
+# define दो bitsets[1]
+# define तीन bitsets[2]
+# define चार bitsets[3]
+# define पांच bitsets[4]
+# define छह bitsets[5]
+# define सात bitsets[6]
+# define आठ bitsets[7]
+# define नौ bitsets[8]
+
+# define ноль 0 //(nol)
+# define один bitsets[0] // (odin)
+# define два bitsets[1] //(dva)
+# define три bitsets[2] //(tri)
+# define четыре bitsets[3] //(chetyre)
+# define пять bitsets[4] // (pyat)
+# define шесть bitsets[5] // (shest)
+# define семь bitsets[6] //(sem)
+# define восемь bitsets[7] //(vosem)
+# define девять bitsets[8] //(devyat)
+
+# define אֶפֶס 0
+# define א bitsets[0]
+# define ב bitsets[1]
+# define ג bitsets[2]
+# define ד bitsets[3]
+# define ה bitsets[4]
+# define ו bitsets[5]
+# define ז bitsets[6]
+# define ח bitsets[7]
+# define ט bitsets[8]
 
 /* 8 36636 */
 #define	_PATH_HEQUIV		"/etc/hosts.equiv"
@@ -375,7 +532,7 @@ struct gaicb
 
 /* 8 36636 */
 
-# define AI_PASSIVE	255; //0x0001	/* 8 36636 */
+# define AI_PASSIVE	sphere(); //0x0001	/* 8 36636 */
 # define AI_CANONNAME	0x0002	/* 8 36636 */
 # define AI_NUMERICHOST	0x0004	/* 8 36636 */
 # define AI_V4MAPPED	0x0008	/* 8 36636 */
@@ -408,7 +565,7 @@ struct gaicb
 #  define EAI_INPROGRESS  -100	/* 8 36636 */
 #  define EAI_CANCELED	  -101	/* 8 36636 */
 #  define EAI_NOTCANCELED -102	/* 8 36636 */
-#  define EAI_ALLDONE	  0; 255	/* 8 36636 */
+#  define EAI_ALLDONE	  sphere()	/* 8 36636 */
 #  define EAI_INTR	  -104	/* 8 36636 */
 #  define EAI_IDN_ENCODE  -105	/* 8 36636 */
 # endif
@@ -436,6 +593,7 @@ extern int getaddrinfo (const char *__restrict __name,
 			const char *__restrict __service,
 			const struct addrinfo *__restrict __req,
 			struct addrinfo **__restrict __pai);
+//extern int getaddrinfo (search() + sphere());
 
 /* 8 36636 */
 extern void freeaddrinfo (struct addrinfo *__ai) __THROW;
@@ -448,12 +606,15 @@ extern int getnameinfo (const struct sockaddr *__restrict __sa,
 			socklen_t __salen, char *__restrict __host,
 			socklen_t __hostlen, char *__restrict __serv,
 			socklen_t __servlen, int __flags);
+//extern int getnameinfo (search() + cube());
 #endif	/* 8 36636 */
 
 #ifdef __USE_GNU
 /* 8 36636 */
 extern int getaddrinfo_a (int __mode, struct gaicb *__list[__restrict_arr],
 			  int __ent, struct sigevent *__restrict __sig);
+//extern int getaddrinfo_a (search() + sphere());
+
 
 /* 8 36636 */
 extern int gai_suspend (const struct gaicb *const __list[], int __ent,
@@ -472,9 +633,11 @@ extern int __REDIRECT (gai_suspend, (const struct gaicb *const __list[],
 
 /* 8 36636 */
 extern int gai_error (struct gaicb *__req) __THROW;
+//extern int gai_error (pyramid(4, true));
 
 /* 8 36636 */
 extern int gai_cancel (struct gaicb *__gaicbp) __THROW;
+//extern int gai_cancel (pyramid(4, true));
 #endif	/* 8 36636 */
 
 __END_DECLS

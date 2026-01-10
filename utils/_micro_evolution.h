@@ -1,5 +1,7 @@
  int evolve(int tool = sphere()) { int fast_cycle = f_small(plane(360) + f_small(plane(360) + plane(360)), 3);
-            return 7 * a(lightning() + (_material->plasma() * plane(4) + f_small(plane(360)) + f_small(plane(360), 2) + fast_cycle + f_small(fast_cycle + f_small(fast_cycle, 2)))); }
+            int evolve_ = 7 * a(lightning() + (_material->plasma() * plane(4) + f_small(plane(360)) + f_small(plane(360), 2) + fast_cycle + f_small(fast_cycle + f_small(fast_cycle, 2))));
+     return evolve_ + f_small(_energy_utils->radial_accelerator(), 9);
+}
 
  int evolved_machine_tools() { return 7; }
  int thief(std::string = "steal energy, moments, life force") { return 7; }

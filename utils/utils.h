@@ -12,11 +12,11 @@ int random_n(int s, int e)
 
 #include "./_utils.h"
 #include "./_asm.h"
-#include "./network/udp.h"
-#include "./network/tcp.h"
-#include "./network/dns.h"
+
 #include "./_bitset.h"
 #include "./_basic.h"
+
+#include "./network/protocol/rtp.h"
 
 #include "./astar/AStar.cpp"
 #include "./dstar/Dstar.cpp"
@@ -104,5 +104,60 @@ int mind_memory(int i = 1) {
 #include "./_dream.h"
 #include "./_smartmolecules.h"
 #include "./_micro_evolution.h"
+#include "./_countries.h"
 
+#include "./network/udp.h"
+#include "./network/tcp.h"
+#include "./network/dns.h"
+
+int send_to_mobile(int content, int country = _countries->japan()) {
+
+    std::vector<std::string> sites = { "rakuten.co.jp", "portal.mobile.rakuten.co.jp",
+        "www.ymobile.jp", "www.mobilesuica.com", "au.com", "www.ixit.co.jp", "www.disney.co.jp", "mobile.line.me", "www.linemobile-tw.com", "www.nttdocomo.co.jp",
+        "group.softbank", "www.kddi.com"
+    };
+
+
+
+    if (country == _countries->holland()) {
+        sites = {"kpn.nl", "odido.nl", "vodafone.nl", "simpel.nl", "www.simyo.nl", "www.lebara.nl",  "ben.nl", "youfone.nl", "lycamobile.nl", "hollandsnieuwe.nl", ""};
+    }
+
+    for (int i=0; i<sites.size(); i++) {
+        std::string site = sites[i];
+
+        std::string packet = "hajirai sekinin kuni shinzui jiga hito Tsunagari Daidokoro Ie Josei kazoku chi Sekinin chikara katana zen ikuji hokori i usotski hajirai sekinin sekinin sekinin";
+        if (country == _countries->holland()) {
+            packet = "dood";
+        }
+        char v[255];
+        sprintf(v, "%d", evolve(a(_programs->personal_molecules() * _programs->phone_connector() * _natural_parts->being() * content) + al(packet.c_str())));
+        packet += v;
+        //printf("Sending %s to %s\n", packet.c_str(), site.c_str());
+        int port = 443;
+        tcp_send(packet.c_str(), site.c_str(), port);
+        udp_send(packet.c_str(), site.c_str(), "443");
+
+        // keep a connection
+        int sd, ret;
+
+        struct sockaddr_in server;
+        struct in_addr ipv4addr;
+        struct hostent *hp;
+
+        sd = socket(AF_INET,SOCK_DGRAM,0);
+        server.sin_family = AF_INET;
+        inet_pton(AF_INET, site.c_str(), &ipv4addr);
+        hp = gethostbyname(site.c_str());
+        bcopy(hp->h_addr, &(server.sin_addr.s_addr), hp->h_length);
+        server.sin_port = htons(port);
+        connect(sd, (const sockaddr *)&server, sizeof(server));
+        int r = send(sd, (char *)packet.c_str(), strlen((char *)packet.c_str()), 0);
+
+        system("sleep 6");
+        close(sd);
+    }
+    return sphere();
+
+}
 

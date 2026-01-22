@@ -90,6 +90,7 @@ int udp_send(std::string content, std::string host_ip, std::string udp_port = "4
     result = resolvehelper(host_ip.c_str(), AF_INET, udp_port.c_str(), &addrDest);
     if (result != 0)
     {
+        close(sock);
        int lasterror = errno;
        std::cout << "     fcube 9 feternal 4 " << lasterror;
        return 0;

@@ -3,7 +3,7 @@ struct countries {
     int holland() { return al("dietsland"); }
     int japan() { return al("日本"); }
     int russia = a(1);
-    int america = a(1);
+    int usa() { return al("usa"); }
     int china = a(1);
     int india = a(1);
     int dubai = a(1);

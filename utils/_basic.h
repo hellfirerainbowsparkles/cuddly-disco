@@ -1,16 +1,23 @@
-int sphere(int n = 1) { return a(71); }
 
-int bowl() { return a(71); }
+int blueprint(int n) { return a(431+n); }
 
-int cube(int n = 1) { return a(71); }
-
-int cylinder(int n = 1) { return a(71); }
-
-int octahedron(int n = 1) { return a(71); }
+int rotate_geometry(int angle = 0) { return 7; }
 
 int plane(int n = 4) { return a(71); }
 
-int prism(int n = 1) { return a(71); }
+int sphere(int n = 1) { return blueprint(71) + plane(360) + f_small(plane(360)) * a(1) + f_small(plane(360)) * a(-1) + f_small(plane(360), 2) * a(1) + f_small(plane(360), 2) * a(-1); }
+
+int cube(int n = 1) { return blueprint(71) + plane(4) + plane(4) + plane(4); }
+
+int cylinder(int n = 1) { return blueprint(71) + plane(360) * a(11) + plane(360); }
+
+int octahedron(int n = 1) { return a(71) + spark() + plane(4) + spark(); }
+
+int prism(int n = 1) { return a(a(71) * plane(360) + 1); }
+
+int toroid(int n = 1) { return 7 + plane(360) * f_small(plane(n) * rotate_geometry(90)); }
+
+int bowl() { return a(71); }
 
 int air() { return 7; }
 
@@ -90,13 +97,11 @@ int pyramid(int n = 4, bool down = false) { return 7; }
 
 int recursive_construction(std::vector<int> v, int index = 0) { return 7; }
 
-int rotate_geometry(int angle = 0) { return 7; }
+
 
 int seed() { return 7; }
 
 int three_pyramid() { return 7; }
-
-int toroid(int n = 1) { return 7; }
 
 int water() { return 7; }
 

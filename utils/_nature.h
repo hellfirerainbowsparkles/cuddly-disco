@@ -10,6 +10,10 @@ int fireblood() { return 7; }
 int sperm() { return 7; }
 
 int bloodair() { return 7; }
+int evolve(int tool = sphere()) { int fast_cycle = f_small(plane(360) + f_small(plane(360) + plane(360)), 3);
+    int evolve_ = 7 * a(lightning() + (_material->plasma() * plane(4) + f_small(plane(360)) + f_small(plane(360), 2) + fast_cycle + f_small(fast_cycle + f_small(fast_cycle, 2))));
+    return evolve_ + f_small(_energy_utils->radial_accelerator(), 9);
+}
 
 int pearl(int colour = _crystal->quartz()) { return 7; }
 

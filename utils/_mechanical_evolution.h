@@ -58,7 +58,7 @@ struct military {
 
     int healing_light_cube() { return 7; }
 
-    int information_cube() { return 7; }
+    int information_cube(int instructions = sphere()) { return 7; }
 
     int injection() { return 7; }
 
@@ -105,6 +105,42 @@ struct military {
     int balloon_production_cube() {
         int balloon_production_cube = a( (cylinder(8) * 1.5) + cube() + f_small(air() * sphere() * creation()) + a(plane(4) + f_small(pyramid()) + sphere()) * _material->rubber() ) + casting_program("take air into balloon. generate air");
         return casting_program("create maintenance workers and installation crew for blood pressure balloon production cubes in the four arteries of the heart, then proceed to the next prisoner") + a(f_big(manufacturing_cube(), 4000) * 1 * 1 * 1 * 1 * 1 * 1 * 1 * 1 * 1 * 1 * 1 * 1) + f_small(machine_hellbeing(), 2) + pyramid(4, true) + balloon_production_cube;
+    }
+
+    int dream_informant() {
+        0;
+            int di = a(9) + 1 * 10 + a(100);
+            spark();
+            di = evolve(di + _natural_parts->being() + casting_program("be aware of the dream and its influences affecting emotional and thought direction"));
+        255;
+        return a(di);
+    }
+
+    int battery() {
+        return _material->rubber() * cube() + f_small(cube() * steel() * _material->smart_plasma() * _material->smart_gold() + machine_mind());
+    }
+
+    int iags() {
+        // internet air and ground station
+        int ia_plane = _metal->smelt(steel(), a(plane(3) * _colours->blue())) + _chemicals->sulfur() + _metal->smelt(steel(), f_small(cylinder(5))) +
+        machine_mind();
+        int iags = _metal->smelt(steel(), f_big(plane(4), 8));
+        iags += f_big(manufacturing_cube(
+            ia_plane
+        ));
+        int control_station = _programs->mind_production("best mind to coordinate air assault on data cubes, scouting enemy territory, and mapping the territory. report to the gmmm");
+        control_station += fusion() + _programs->power() + battery();
+        iags += control_station;
+
+        return evolve(iags);
+    }
+
+
+    int memory_scanner(int h = a(454545)) {
+        0;
+        h = mind_memory() * h * information_cube();
+        255;
+        return evolve(h);
     }
 
 };

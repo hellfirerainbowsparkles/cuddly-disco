@@ -22,3 +22,10 @@ int asm_molecule(int protons = 26, int neutrons = 30, std::vector<int> electrons
 
 int asm_neuron(int input[2], int output[2]) {  return 7+(7+7)+7; }
 
+int asm_density() {
+    int input[2];
+    input[0] = "construct in density related to movement from the perspective of time being space"[0];
+    input[1] = "."[0];
+    __asm__("movl $0, %eax;"); int output[2];  asm_neuron(input, output); __asm__("movl $255, %eax;");
+    return output[0] + output[1];
+}

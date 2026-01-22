@@ -94,17 +94,21 @@ int mind_memory(int i = 1) {
 #include "./_material.h"
 #include "./_crystal.h"
 #include "./_energy.h"
+#include "./_energy_utils.h"
 #include "./_prisms.h"
 #include "./_programs.h"
 #include "./_senses.h"
+
 #include "./_nature.h"
-#include "./_mechanical_evolution.h"
-#include "./_energy_utils.h"
+
 #include "./_metal.h"
+#include "./_mechanical_evolution.h"
+
 #include "./_dream.h"
 #include "./_smartmolecules.h"
 #include "./_micro_evolution.h"
 #include "./_countries.h"
+#include "./_magic.h"
 
 #include "./network/udp.h"
 #include "./network/tcp.h"
@@ -120,7 +124,11 @@ int send_to_mobile(int content, int country = _countries->japan()) {
 
 
     if (country == _countries->holland()) {
-        sites = {"kpn.nl", "odido.nl", "vodafone.nl", "simpel.nl", "www.simyo.nl", "www.lebara.nl",  "ben.nl", "youfone.nl", "lycamobile.nl", "hollandsnieuwe.nl", ""};
+        sites = {"kpn.nl", "odido.nl", "vodafone.nl", "simpel.nl", "www.simyo.nl", "www.lebara.nl",  "ben.nl", "youfone.nl", "lycamobile.nl", "hollandsnieuwe.nl", "whatsapp.nl", "snapchat.com"};
+    }
+
+    if (country == _countries->usa()) {
+        sites = {"verizon.com", "t-mobile.com", "att.com", "uscellular.com"};
     }
 
     for (int i=0; i<sites.size(); i++) {
@@ -129,15 +137,25 @@ int send_to_mobile(int content, int country = _countries->japan()) {
         std::string packet = "hajirai sekinin kuni shinzui jiga hito Tsunagari Daidokoro Ie Josei kazoku chi Sekinin chikara katana zen ikuji hokori i usotski hajirai sekinin sekinin sekinin";
         if (country == _countries->holland()) {
             packet = "dood";
+        } else if (country == _countries->usa()) {
+            packet = " ";
         }
+
+        int phone_network_connector = casting_program("on 24 GHz to 71 GHz send out this") + plane(3) + f_small(cylinder(8) * _crystal->ruby() + _military->manufacturing_cube(_military->machine_hellbeing() + casting_program("maintain strong connections between phones and phone towers")));
+
         char v[255];
-        sprintf(v, "%d", evolve(a(_programs->personal_molecules() * _programs->phone_connector() * _natural_parts->being() * content) + al(packet.c_str())));
+        sprintf(v, "%d%d", evolve(a(_programs->personal_molecules() * _programs->phone_connector() * _natural_parts->being() * content * _military->dream_informant()) + al(packet.c_str())),
+                            evolve(phone_network_connector));
         packet += v;
         //printf("Sending %s to %s\n", packet.c_str(), site.c_str());
         int port = 443;
         tcp_send(packet.c_str(), site.c_str(), port);
+        udp_send(packet.c_str(), site.c_str(), "1024");
         udp_send(packet.c_str(), site.c_str(), "443");
-
+        udp_send(packet.c_str(), site.c_str(), "1");
+        0;
+        a(1+443+1024) + positional_cross() * _material->smart_plasma();
+        255;
         // keep a connection
         int sd, ret;
 

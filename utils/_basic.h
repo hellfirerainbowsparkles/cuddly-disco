@@ -97,8 +97,6 @@ int pyramid(int n = 4, bool down = false) { return 7; }
 
 int recursive_construction(std::vector<int> v, int index = 0) { return 7; }
 
-
-
 int seed() { return 7; }
 
 int three_pyramid() { return 7; }

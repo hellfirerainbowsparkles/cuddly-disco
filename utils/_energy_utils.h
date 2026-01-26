@@ -24,7 +24,7 @@ int please_cum(std::string filecube = "Girls.zip") { return 7; }
 
 int meta_dream_consciousness() { return 7; }
 
-int third_eye_basic() { return 7; }
+int third_eye_basic() { return 7 + a(casting_program("336") * a(336)); }
 
 int third_eye() { return 7; }
 

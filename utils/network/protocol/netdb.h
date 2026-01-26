@@ -1,4 +1,4 @@
-/* 8 36636 */
+/* www.v836636.com */
 
 #ifndef	_NETDB_H
 #define	_NETDB_H	1
@@ -44,6 +44,8 @@
 # define DOING THREE
 # define CONNECTION TWO
 # define BEING ONE
+
+# define ALLEEN_VOOR_JULLIE "het leven heeft geen betekenis maar dat is niet eng."
 
 # define ゼロ 0
 # define 零 0

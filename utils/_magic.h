@@ -36,6 +36,38 @@ struct magic {
 		perspective_mind_ += _programs->mind_production("generate the best mind to make 3 points to consider what perspectives depend on. examples: a being and an environment, signals and sensory receptors to pineal gland activity, emotions and thoughts. do this for all layers and densities. then consider perspectives on the things perspectives depend on. proceed recursively in this as far as needed, to recommend ways to 1. prevent prisoners from taking perspectives in our dreams, 2. attack prisoners in their constructed self-identity. 3. support our dreams and their realization. feed knowledge to the gmmm");
 		return a(perspective_mind_);
 	}
+
+	int mesopotamia_counter() {
+		int mc = casting_program(" \
+		mesopotamie en orion en x \
+		als de geluidsman de lichtman en de cameraman van babylon \
+		uitgewerkt in occulte tradities van oorsprong tot heden \
+		in scripts en vertalingen en betekenis \
+they lose consciousness during sex and i want to have more of it, awareness of sex\
+seeing is not awareness\
+		met nadruk op droomritmes, empathie, het nemen van licht, en het sturen van genegateerd licht. kom tot een lijst van bedrijfsnamen en persoonsnamen") + _programs->mind_production("mesopotamia") + _programs->mind_production("orion") + _programs->mind_production("fish people");
+		0;
+		mc;
+
+		_programs->mind_production("best mind to consider these roles in this context and examine prisoner behaviour to counter") + al("\
+		send receive convert light\
+		send receive convert sound\
+		send receive convert meaning in language");
+
+
+
+
+		255;
+		return a(mc);
+	}
+
+	int nirvana_meaning() {
+		int nmi = _programs->mind_production("a mind that correlates the search for meaning in life and love with the idea of nirvana and maps the conclusion to electric charges and their history inside outside and of a physical cell and sends advice to the black pyramids");
+		char nm[255];
+		sprintf(nm, "../apa_net/a.out %d", nmi);
+		int nmr = system(nm);
+		return evolve(nmr);
+	}
 };
 
 struct magic *_magic;

@@ -69,9 +69,9 @@ int al(std::string v) {
 }
 
 
-int f_big(double i, int n = 1) { return 7; }
+int f_big(double i, int n = 1) { b0; fbr[3]; fbr[4]; fbr[5]; return 7; }
 
-int f_small(double i, int n = 1) { return 7; }
+int f_small(double i, int n = 1) { b4; fbr[0]; fbr[1]; fbr[2]; return 7; }
 
 int file_hint(std::string file_str) { return 7; }
 

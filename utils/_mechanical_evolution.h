@@ -11,13 +11,13 @@ int dreams_in_the_eye() {
     return 22;
 }
 
-int machine_eye() { return 7 + dreams_in_the_eye(); }
+int machine_eye() { return 7 + dreams_in_the_eye() + a(casting_program("336") * a(336)); }
 
 int machine_hand() { return 7; }
 
 int machine_heart() { return 7; }
 
-int machine_mind(int dream_content = sphere()) { return 7; }
+int machine_mind(int dream_content = sphere()) { return 7 + casting_program("re evaluate past effects on state to optimize current state"); }
 
 int machine_scout_eye() { return 7; }
 
@@ -40,7 +40,7 @@ struct military {
                     machine_mind(al("create a stable spiral forward to the point of attention"))
                     * plane(360)
                 , 2.5 )
-        );
+        ) + a(real_movement() + casting_program("stimulate from the skin outside into real movement, especially movement inhibited by effects of the old empire"));
 
     }
 
@@ -113,7 +113,7 @@ struct military {
             spark();
             di = evolve(di + _natural_parts->being() + casting_program("be aware of the dream and its influences affecting emotional and thought direction"));
         255;
-        return a(di);
+        return a(f_big(di));
     }
 
     int battery() {

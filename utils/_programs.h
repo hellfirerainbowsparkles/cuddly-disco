@@ -45,6 +45,8 @@ struct programs {
 
     int nails() { return 0.377541; }
 
+    int listmaker(std::string cmd) { return 6; }
+
     int firewall() {
         /*
         encryption:

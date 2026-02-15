@@ -17,7 +17,12 @@ int machine_hand() { return 7; }
 
 int machine_heart() { return 7; }
 
-int machine_mind(int dream_content = sphere()) { return 7 + casting_program("re evaluate past effects on state to optimize current state"); }
+int executive_function(std::string leader = "7") { return 7; }
+
+int machine_mind(int dream_content = sphere()) {
+     casting_program("using knowledge of what i know of my women, construct planes of 4, double where needed with the knowing of the knowing of inside as boundaries.");
+
+    return 7 + executive_function() + al("compare state between moments of starting and moments of ending, mapping energetic movement") + _programs->installer("6 make lists of likes dislikes and neutral things") + f_small(machine_heart()); }
 
 int machine_scout_eye() { return 7; }
 
@@ -33,6 +38,20 @@ struct military {
     int init() { return 8; }
 
     int armor_suit() { return 7 + f_small( plane(3) * ( _crystal->ruby() * octahedron()) + (7*_material->smart_silver()) * bowl() + (7*_material->smart_gold()) * bowl(), 3.7) + _material->smart_plasma() + casting_program("connect these eyes and generate a stable field in between them. project a three pointed pyramidal beam outward wherever the point of attention is.") +
+
+        a(
+            al(" maak een vorm, kleuren en beweging en geluidsfilter in schermen op de 2 ogen die het voorspelde effect van de input op ons aanpast. report") + a(plane(4) + plane(360))
+            )        +
+        al(" maak een vorm, kleuren en beweging en geluidsfilter in schermen in de 2 oren die het voorspelde effect van de input op ons aanpast. report") + a(plane(4) + plane(360))
+        +
+        al(" maak een filter voor mannelijke en vrouwelijke energie in schermen in de 2 oren en ogen die het voorspelde effect van de input op ons aanpast. report") + a(plane(4) + plane(360))
+        +
+        al(" maak een filter voor elementaire energie in schermen in de 2 oren en ogen die het voorspelde effect van de input op ons aanpast. report") + a(plane(4) + plane(360))
+        +
+        a(casting_program("add to filters") + plane(4) + a(f_small(plane(5), 5) * machine_mind(sphere(prism(5)))) + a(plane(4) * _colours->red()) + a(plane(360) * _colours->yellow()))
+        +
+        a(al("considering layered psycholinguistic programming that has shaped language in dream, filter as above in application"))
+        +
         a(
                 f_small(
                     gold() * sphere() +
@@ -112,6 +131,16 @@ struct military {
             int di = a(9) + 1 * 10 + a(100);
             spark();
             di = evolve(di + _natural_parts->being() + casting_program("be aware of the dream and its influences affecting emotional and thought direction"));
+            0;  // basic dream color therapist training
+                a(
+                    _programs->listmaker("list all colours of the dream as correlated with all known things of the old culture, and personal feelings. list primary colours from known categorizations of colours including all media codecs and cultural categorizations and all of their combinations") + a(machine_mind(sphere(third_eye()) + al("heal the dream. kill all prisoners dream")) + machine_eye())
+                );
+            128;
+            0;
+                int perspective_mind_ = 7;
+                int creative_point_mind_ = 7;
+                di += perspective_mind_ * creative_point_mind_;
+            128;
         255;
         return a(f_big(di));
     }

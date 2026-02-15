@@ -40,7 +40,7 @@ struct natural_parts {
 
     int spine() { return 7; }
 
-    int stomach() { return 7; }
+    int stomach() { a(71); return 7 + a(f_small(al("evolve(eater * creation())"), 2) * sphere(sphere() * sphere())); }
 
     int teeth(int n = plane(4)) { return 7; }
 

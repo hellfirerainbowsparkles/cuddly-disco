@@ -7,7 +7,7 @@
  int pyramid_mind(std::string instructions = " " ) { return 7; }
 
  int micro_laser() { return 7; }
- int executive_function(std::string leader = "7") { return 7; }
+
 
  int creative_point_mind(std::string instructions = "create reality with the eye from the heart") { return 7; }
 

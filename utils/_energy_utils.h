@@ -9,7 +9,7 @@ struct energy_utils {
 
     int radial_accelerator() { return 7; }
 
-    int sphere_energy_manipulation() { return 7; }
+    int sphere_energy_manipulation() { std::vector<int> v = {7, 7, 7, fractal()}; return recursive_construction(v); }
 };
 struct energy_utils  *_energy_utils ;
 

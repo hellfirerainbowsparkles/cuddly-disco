@@ -84,6 +84,7 @@
 # define 得る al("eru")	// acquire
 # define 有する al("Yūsuru")		// own
 # define 実弾 al("jitsudan") // cash
+# define あかるい "akarui";
 
 // define all the hiragana and katakana
 # define あ "a"

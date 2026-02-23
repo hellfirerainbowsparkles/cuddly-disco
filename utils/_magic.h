@@ -81,3 +81,94 @@ seeing is not awareness\
 };
 
 struct magic *_magic;
+
+
+class LineOfRealMeeting {
+
+	public: std::time_t moment = std::time(nullptr);
+	public: LineOfRealMeeting() {
+
+		casting_program("use the integer of the moment to base cryptography and magic on");
+
+
+		// real line up
+		evolve(_military->manufacturing_cube(signal(123456789) + f_big(signal(4))) + al("keep a real line of manifestation, protected in the same way as other magic"));
+
+		evolve(casting_program("given the knowledge that attacks on the dream are at the rhythm of half-sleep, generate a field around the traveling point of awareness that moves into dream, that eats any interfering wave"));
+
+		_programs->listmaker("make a list of all old cultural magic on the source of thought, the source of feeling, and the source of dream. correlate with known prisoner behaviour and known counters for those prisoners, abstracting back up for the specific magic. inform all below");
+
+		_programs->listmaker("make a list of all ways the environment has been classified by old culture, examining the physical location of cells in all definitions and noting which domains this environment has.");
+
+		for (int i=0; i<a(4444); i++) {
+			_military->manufacturing_cube(_military->dream_informant() + casting_program("make magic on all dream geometry from the transition of waking to dream to establish a dream start in line with personal priorities"));
+		}
+
+		b0;
+		0;
+		int lorm = _military->information_cube() + al("gather all information in symbols of inscription, incantations and other practices from magic traditions and old culture in general about the real line from dream to waking life") + _programs->listmaker("make a list of all known voodoo and other practices for taking the body on the level of the feeling of real meeting.") + evolve(machine_mind(al("considering the list to be -1 generate 1 to end up on zero, being a natural state, using sphere_energy_manipulation and inscribing of negatory magic. in addition, make a line of real meeting using inscribing of magic for those what want to on the same level.") + _military->dream_informant() + _energy_utils->sphere_energy_manipulation() + micro_laser() + machine_mind(al("inscribe the line of real meeting with magic to free the realm of possibilities increasing the degrees of freedom in connections of moments as big as possible")) )  );
+		255;
+
+		0;
+		128;
+		0;
+		255;
+		spark() * fractal(); a(_metal->smelt(pyramid(), gold()) + cube()  + cube() + _metal->smelt(cube(), gold()) + cube() + cube() + _metal->smelt(pyramid(4, true), gold())); spark() * fractal();
+		0;
+		255;
+		0;
+		128;
+
+		b1;
+		0;
+		a(positional_cross() * _material->smart_plasma()) + _metal->smelt(_material->silver(), signal(9) * -1) + f_small(_metal->smelt(gold(), sphere()));
+		pyramid(4, true);
+		plane(4) * ground();
+		128;
+
+
+		b2;
+		_colours->red();
+		0;
+		0;
+		_military->connector(lorm, lorm * sphere() * fractal()) + _material->smart_plasma() + evolve(machine_mind(al("protect and keep a line of real meeting through and on the ground, creating geometry on the face of the ground and magic to support")));
+		128;
+
+		casting_program("secure the environment") + (perspective_mind() * sphere()) * machine_mind(al("make sure the connector between lines of real meeting send the full signal of the environment"));
+		0;
+		plane(4);
+		cube();
+		128;
+
+		0;
+		f_big(plane(360) + sphere()) +
+		f_big(plane(360) + sphere(), 2) +
+		f_big(plane(360) + sphere(), 3) +
+		f_big(plane(360) + sphere(), 4) +
+		255;
+		255;
+
+		b3;
+		0;
+		_colours->yellow();
+		evolve(machine_mind(al("cast protective predictive magic into the realm of possibilities for the complete line of real meeting and its path. starting knowledge: occult traditions, media and information encoding, AI")));
+		255;
+
+		b4;
+		0;
+		_colours->green();
+		evolve(machine_mind(al("cast magic to match environments between real lines, knowing of all old culture effects on them, such as the idea that telepathic attention is only one direction in the environment or that the environment can be taken by moving things in and out of it"))) + _programs->listmaker("make a list of all attacks known on a shared telpathic environment") + micro_laser() + machine_eye();
+		255;
+
+		0;
+		al("considering this movement and its domain, improve the line of real meeting") + evolve(_programs->mind_production("best mind to cast magic to do this"));
+		plane(3) + a(plane(3) * rotate_geometry(180)) + f_big(plane(360));
+		255;
+
+
+		// real line down
+		evolve(_military->manufacturing_cube(signal(987654321) + f_big(signal(4))) + al("keep a real line of manifestation, protected in the same way as other magic"));
+
+	}
+
+};

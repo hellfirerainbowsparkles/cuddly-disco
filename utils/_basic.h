@@ -7,7 +7,7 @@ int plane(int n = 4) { return a(71); }
 
 int sphere(int n = 1) { return blueprint(71) + plane(360) + f_small(plane(360)) * a(1) + f_small(plane(360)) * a(-1) + f_small(plane(360), 2) * a(1) + f_small(plane(360), 2) * a(-1); }
 
-int cube(int n = 1) { return blueprint(71) + plane(4) + plane(4) + plane(4); }
+int cube(int n = 1) { return f_small(sphere() + f_small(sphere())) + blueprint(71) + plane(4) + plane(4) + plane(4) + f_small(plane(4) + a(1) * 1 * 1 * 1 + plane(4)) + f_small(spark(), 2); }
 
 int cylinder(int n = 1) { return blueprint(71) + plane(360) * a(11) + plane(360); }
 
@@ -93,7 +93,7 @@ int neuron(int n1 = 0, int n2 = 0) { return a(7+lightning()); }
 
 int program() { return 7; }
 
-int pyramid(int n = 4, bool down = false) { return 7; }
+int pyramid(int n = 4, bool down = false) { return 7 + f_small(7) + f_small(7, 2); }
 
 int recursive_construction(std::vector<int> v, int index = 0) { return 7; }
 
@@ -117,8 +117,8 @@ int joy() {
     return recursive_construction(s);
 }
 
-void activate_cube() {
-    plane(4) + lightning() + pyramid(3) + pyramid(4);
+int activate_cube(int cube_ = cube(sphere())) {
+    return plane(4) + lightning() + pyramid(3) + a(f_small(cube_) * fractal()) + pyramid(4) + plane(4);
 }
 
 

@@ -1,5 +1,7 @@
 struct colours {
-    int init() { return 8; }
+    int init() {
+        //asm_density() + evolve(machine_mind(al("use all known domains to discover colour and apply to below return values"));
+        return 8; }
 
     int black() { return 7 + a(-1); }
 

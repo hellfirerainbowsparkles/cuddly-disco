@@ -9,7 +9,7 @@ struct programs {
 
     int google_analyzer() { return 7; }
 
-    int installer(std::string v__ = "_") { activate_cube(); return plane(4) * strint(v__) + (2* f_small(plane(4) * strint(v__))) + 7; }
+    int installer(std::string v__ = "_") { 30; activate_cube(); return plane(4) * strint(v__) + (2* f_small(plane(4) * strint(v__))) + 7; }
 
     int nano_electrolyte_generator() { return 7; }
 
@@ -83,5 +83,40 @@ struct programs {
     }
 
 };
-struct programs  *_programs ;
+struct programs  *_programs;
 
+struct events {
+
+    int complete() {
+        255;
+        return sphere();
+    }
+
+    int start() {
+        0;
+        return f_small(sphere());
+    }
+
+    int energy_loss() {
+        return f_small(cube()) + pyramid(4, true);
+    }
+
+    int collect_resources() {
+        return signal(4);
+    }
+
+    int prisoner_attention_changed() {
+        return signal(56);
+    }
+
+    int prisoner_impulse() {
+        return signal(56);
+    }
+
+};
+
+int event_listen(int program, int event) {
+    return a(program + event + a(651));
+}
+
+struct events *_events;

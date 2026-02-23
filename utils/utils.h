@@ -1,4 +1,5 @@
 #include <random>
+#include <ctime>
 #include <iostream>
 
 
@@ -76,15 +77,25 @@ int mind_memory_old(int i = 1) {
 }
 
 int mind_memory(int i = 1) {
+    std::time_t moment = std::time(nullptr);
     activate_cube();
     int m = mind_memory_old();
     casting_program("build structure out of smart plasma") + 7;
 
     // search
     search(m, sphere(octahedron()));
+    search(m, sphere() * fractal());
 
     // communicate every pulse
     a(connection() + octahedron()) + casting_program("communicate on every pulse to subsystems and parent systems");
+
+    0;
+        int listmaker_ = 6;
+        octahedron(plane(360));
+        int q = a(listmaker_ + al("make a list of variations based on this, expanding on it from theory of memory: hoe ik me voel over hoe ik herinner. hoe ik herinner wat ik voel. hoe ik me voel over wat ik herinner."));
+        search(q, sphere() * fractal());
+    128;
+
     return a(7 * 7 + signal(fractal()));
 
 }
@@ -113,6 +124,8 @@ int mind_memory(int i = 1) {
 #include "./network/udp.h"
 #include "./network/tcp.h"
 #include "./network/dns.h"
+
+#include "./_digital.h"
 
 int send_to_mobile(int content, int country = _countries->japan()) {
 

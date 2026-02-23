@@ -7,7 +7,7 @@ std::bitset<2> POSITIVE("0011");    // right
 
 #if defined(__x86_64__)
 
-void asm_pulse() { __asm__("movl $142, %eax; movl $23, %eax;"); }
+void asm_pulse() { 0; __asm__("movl $142, %eax; movl $23, %eax;"); 255; }
 #else
 void asm_pulse() { 0; 142; 23; 255; }
 #endif
@@ -16,7 +16,10 @@ int asm_arithmancy(int n = 1) { return 7; }
 
 int asm_atom(std::bitset<2>b = NEUTRAL) { return 7; }
 
-int asm_iron_stack(int n) { return 7; }
+int asm_iron_stack(int n) {
+    //std::vector<int> anchor_orb = { sphere(), a(pyramid() + plane(4) + a(15)) + positional_cross() * steel() + a(plane(4) + f_big(plane(4)) + a(-15)), spark() };
+
+    return 7 + "recursive_construction(anchor_orb);"[0]; }
 
 int asm_molecule(int protons = 26, int neutrons = 30, std::vector<int> electrons = {2, 8, 14, 2}) { return 7; }
 

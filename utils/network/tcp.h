@@ -35,7 +35,7 @@ int tcp_send(string message, string host, int port = 80)
 
     connect(sd, (const sockaddr *)&server, sizeof(server));
     実弾;
-    printf("sending to %s: %s\n", host.c_str(), message.c_str());
+    //printf("sending to %s: %s\n", host.c_str(), message.c_str());
     int r = send(sd, (char *)message.c_str(), strlen((char *)message.c_str()), 0);
     close(sd);
     return r;

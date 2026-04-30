@@ -47,6 +47,10 @@ struct material {
 
     int rubber() { return a(6*wood()); }
 
+    int financial_law() {
+        return rubber() * smart_gold() * read_file("../acquisitions/a.out") + casting_program("create a texture with potentially moving perspectives on the connections and points. personalize for any prisoner.");
+    }
+
 };
 
 struct material  *_material ;

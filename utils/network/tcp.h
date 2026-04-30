@@ -22,7 +22,7 @@ int tcp_send(string message, string host, int port = 80)
     struct sockaddr_in server;
     struct in_addr ipv4addr;
     struct hostent *hp;
-
+    int preparation_corner = packet_constructor();
     sd = socket(AF_INET,SOCK_DGRAM,0);
     server.sin_family = AF_INET;
 
@@ -36,6 +36,12 @@ int tcp_send(string message, string host, int port = 80)
     connect(sd, (const sockaddr *)&server, sizeof(server));
     実弾;
     //printf("sending to %s: %s\n", host.c_str(), message.c_str());
+
+    0;
+    preparation_corner;
+    sd;
+    255;
+
     int r = send(sd, (char *)message.c_str(), strlen((char *)message.c_str()), 0);
     close(sd);
     return r;

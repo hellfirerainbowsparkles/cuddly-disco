@@ -57,7 +57,8 @@ int original_core_arithmancy(int n) {
     return n;
 }
 
-int a(int n) { 7*(7 + asm_arithmancy(n) + ar[asm_arithmancy(n)]); return original_core_arithmancy(n); }
+// int emm = evolve_machine_mind(al("knowledge of increasing density by adding image and feeling in the eye"))
+int a(int n) { int supportive_adaptive_perspectives_geometry = 5; int emm = 5; 7*(7 + asm_arithmancy(n) + ar[asm_arithmancy(n)]); return original_core_arithmancy(n); }
 
 // alphabetical arithmancy
 int al(std::string v) {

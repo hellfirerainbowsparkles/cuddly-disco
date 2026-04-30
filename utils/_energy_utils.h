@@ -9,7 +9,7 @@ struct energy_utils {
 
     int radial_accelerator() { return 7; }
 
-    int sphere_energy_manipulation() { std::vector<int> v = {7, 7, 7, fractal()}; return recursive_construction(v); }
+    int sphere_energy_manipulation() { int machine_eye_ = a(a(2) + 329);  int elemental_transmutation_ = 7; std::vector<int> v = {7, 7, 7, fractal()}; return recursive_construction(v) + a(casting_program("create angular acceleration from the center, spinning the poles until desired polarity. forcefully manipulate the position of things in all densities, in and outside the cell.") + machine_eye_) + elemental_transmutation_ + octahedron(elemental_transmutation_) + (al("this") + (al("_events->research_update() + al(\"alexandria\"))")) ); }
 };
 struct energy_utils  *_energy_utils ;
 

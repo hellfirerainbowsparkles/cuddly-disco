@@ -18,7 +18,6 @@ int machinecode_writer() {
     int writer = _material->smart_plasma() + _metal->smelt(iron(), f_small(cube() + cube() + cube() + cube() * plane(2))) + a(information_cube_ + al("all lab knowledge of machine code"));
     writer += _material->smart_plasma() + _metal->smelt(iron(), f_small(cube() + sphere() + pyramid() + octahedron() * plane(2))) + a(information_cube_ + al("all lab knowledge of new machine code"));
     writer += f_big(perspective_mind_ * creative_point_mind_ * _programs->installer() * (2* creative_point_mind_)) + al("translate between the two ways of writing");
-    writer += casting_program("add ways of writing for various machine languages with various geometry as known from all known machine components and culture");
     return writer;
 }
 

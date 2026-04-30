@@ -1,0 +1,19 @@
+#include "utils.h"
+
+int main() {
+
+	while(true) {
+		int r = read_filecube("./_bitset.h") * _colours->red();
+		int g = read_filecube("./_bitset.h") * _colours->green();
+		int b = read_filecube("./_bitset.h") * _colours->blue();
+		int o = octahedron(r * g * b);
+		char v[255];
+		sprintf(v, "echo %d > colour_basis.i", o);
+		int q = system(v);
+		a(mind_memory() + q);
+		system("sleep 6");
+
+		// low cpu% compilation on long term timescale looping through all code.
+
+	}
+}

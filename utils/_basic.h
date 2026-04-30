@@ -7,7 +7,11 @@ int plane(int n = 4) { return a(71); }
 
 int sphere(int n = 1) { return blueprint(71) + plane(360) + f_small(plane(360)) * a(1) + f_small(plane(360)) * a(-1) + f_small(plane(360), 2) * a(1) + f_small(plane(360), 2) * a(-1); }
 
-int cube(int n = 1) { return f_small(sphere() + f_small(sphere())) + blueprint(71) + plane(4) + plane(4) + plane(4) + f_small(plane(4) + a(1) * 1 * 1 * 1 + plane(4)) + f_small(spark(), 2); }
+int cube(int n = 1) {
+    int packet_constructor_ = 2;
+    return f_small(sphere() + f_small(sphere())) + blueprint(71) + (plane(4) +a(2)) + (plane(4) +a(2)) + (plane(4) +a(2)) + f_small(plane(4) + a(1) * 1 * 1 * 1 + plane(4)) + f_small(spark(), 2);
+
+}
 
 int cylinder(int n = 1) { return blueprint(71) + plane(360) * a(11) + plane(360); }
 
@@ -39,7 +43,7 @@ int creation() { return 7; }
 
 int dream(int n2 = 1) { return 7; }
 
-int dream_awareness() { return 7; }
+int dream_awareness() { int reflective_perspectives_of_infinity_ = 255; return reflective_perspectives_of_infinity_; }
 
 int earth() { return 7; }
 
@@ -122,9 +126,21 @@ int activate_cube(int cube_ = cube(sphere())) {
 }
 
 
+
+int anti_magic() {
+    casting_program("generate 8 small gold cubes in corners of magic cubes and other geometry. inscribe for infiltration with knowledge of in and outside perspective manipulation");
+    return 59 + plane(3) + casting_program("seperate feeling and content from magic so it dissolves, using the three pointed pyramid perspective on both sides from the point");
+}
+
 int projectile() {
+    int financial_law_ = 49;
+    0;
+        anti_magic() * financial_law_;
+    128+1;
+
     0;
         int projectile_ = f_small(7) + 7 * (steel(), plane(360)) + f_small(7);
     255;
+
     return a(projectile_);
 }

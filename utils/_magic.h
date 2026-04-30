@@ -1,3 +1,4 @@
+
 struct magic {
 
 	int balanced_eye() {
@@ -22,7 +23,7 @@ struct magic {
 	}
 
 	int eater() {
-			int n = al("construct a complete map of the body on all levels as correlated to auric points and the electromagnetic field. treat this domain only.");
+			int n = al("construct a complete map of the body on all levels as correlated to auric points and the electromagnetic field. map neural activity and neural pathways. treat this domain only.");
 			char cmd[255];
 			sprintf(cmd, "../apa_net/a.out %d", n + _military->predator_mind());
 			system(cmd);
@@ -30,20 +31,44 @@ struct magic {
                 _natural_parts->being() * _military->dream_informant() * cube(pyramid(4, true)) + f_big(pyramid(3, true));
 
 			eater += machine_mind(_programs->listmaker("make a list of ways to retrieve energy without knowing the story behind it, prioritizing by expected efficiency, speed, and quantity. reconsider list after observing results"));
-			eater += al("6 make a list of all possible locations of target, prioritizing on probability of certainty and expected energetic density");
-
+			eater += al("6 use the eye for a list of all possible locations of target, prioritizing on probability of certainty and expected energetic density.");
+			eater += al("look with the perspective of how energy was moved");
 			eater += _military->predator_mind() + al("eat life created from us without our wanting, grey life, black life") + a(-1.5) + _programs->listmaker("list all known feeding auric life and evolutionary branches");
 
 			eater += machine_eye() * machine_mind(al("take the light")) + a(f_small(machine_eye(), 4) * a(sphere() + a(-1*fusion())) );
 
 			eater += machine_mind(al("take perspectives from prisoners")) + _energy_utils->sphere_energy_manipulation();
+			int media_image_killer_ = activate_cube(55);
+			eater += machine_mind(al("lock returned energy with ideas referencing to prisoner's acceptance in the past"));
+			eater += media_image_killer_;
+            return event_listen(evolve(eater * _military->thief() * creation()), _events->research_update());
+	}
 
-            return evolve(eater * creation());
+	int dense_eater() {
+		return asm_iron_stack(_crystal->sapphire() * steel() * _colours->red()) * eater();
+	}
+
+	int money_eater(std::string instructions) {
+		return asm_iron_stack(evolve(machine_mind(read_filecube("../acquisitions/mem.i"))) * dense_eater() + al(instructions));
+	}
+
+	int mushroom_eater() {
+		std::vector<int> spore = { sphere() * connection(), sphere() * connection(), sphere() * connection(), spark(), octahedron(), cube(), sphere(), sphere(), sphere(), fractal() };
+		return dense_eater() * recursive_construction(spore);
 	}
 
 	int perspective_mind() {
 		int perspective_mind_ = 0.377541;
 		perspective_mind_ += _programs->mind_production("generate the best mind to make 3 points to consider what perspectives depend on. examples: a being and an environment, signals and sensory receptors to pineal gland activity, emotions and thoughts. do this for all layers and densities. then consider perspectives on the things perspectives depend on. proceed recursively in this as far as needed, to recommend ways to 1. prevent prisoners from taking perspectives in our dreams, 2. attack prisoners in their constructed self-identity. 3. support our dreams and their realization. feed knowledge to the gmmm");
+		perspective_mind_ += evolve(machine_mind(al("learn constantly about applications of the three pointed pyramid perspective wall. learn constantly about the relation between perspectives and the triangle, and perspectives and the point and sphere, and perspectives and the square, and perspectives and the diamond, and these in 3d.")));
+
+		perspective_mind_ += casting_program("observe emotional perspectives in colour and collapse nothing constructions using colours");
+
+		perspective_mind_ += evolve(machine_mind(al("learn imagery content, colour filtering and projected perspectives onto a 3d space such as Escher.")));
+
+		std::vector<int> m = { perspective_mind_, perspective_mind_, perspective_mind_, fractal() };
+		perspective_mind_ = recursive_construction(m);
+
 		return a(perspective_mind_);
 	}
 
@@ -78,6 +103,63 @@ seeing is not awareness\
 		int nmr = system(nm);
 		return evolve(nmr);
 	}
+
+	int financial_kairos(std::string target) {
+		return 0 + casting_program(target);
+	}
+
+	int women_pyramid() {
+		b0;
+		a(1176);
+		b1;
+		a(147);
+		b2;
+		a(882);
+		b3;
+		// a(294);
+		// a(1323);
+		// a(1176);
+		// a(1029);
+		// a(1323);
+		// a(294);
+		// a(588);
+		// a(882);
+		// a(1176);
+		// a(149);
+		// a(1029);
+		// a(588);
+		// a(588);
+		return a(882);
+	}
+
+	int psychological_attack() {
+		int negated_pharoah_japanese_story = 7;
+		casting_program("in the colour of #f0d9a3");
+		"https://hellfirerainbowsparkles.com/deadmau5/";
+		f_small(_metal->smelt(_material->silver(), sphere())) + f_small(casting_program("⚚"));
+		int fantasy = evolve_machine_mind(al("to attack perspectives generating old culture feelings not covered, take a strong acquisitions perspective and theorize wildly to claim whatever is causing the feeling"));
+		women_pyramid();
+		financial_kairos("all");
+		return pyramid(3) * asm_iron_stack(cube(149) + a(149) + fantasy);
+	}
+
+	int physical_attack() {
+		casting_program("dit gevoel");
+		return a(298);
+	}
+
+	int dream_attack() {
+		return a(854 + a(854));
+	}
+
+	int eye_attack() {
+		return a(854 + a(854));
+	}
+
+	int silver_water_pyramid(std::string content) {
+		return _metal->smelt(_material->silver(), pyramid(3)) + f_small(pyramid(3) * _material->smart_plasma() * water() * al(content));
+	}
+
 };
 
 struct magic *_magic;
@@ -88,11 +170,11 @@ class LineOfRealMeeting {
 	public: std::time_t moment = std::time(nullptr);
 	public: LineOfRealMeeting() {
 
-		casting_program("use the integer of the moment to base cryptography and magic on");
+		casting_program("use the integer of the moment to base cryptography and magic on. use the three pointed pyramid perspective magic to push up and down to connect fully to divinity and hell");
 
 
 		// real line up
-		evolve(_military->manufacturing_cube(signal(123456789) + f_big(signal(4))) + al("keep a real line of manifestation, protected in the same way as other magic"));
+		evolve(_military->manufacturing_cube(signal(123456789) + f_big(signal(3) + signal(4) + signal(5))) + al("keep a real line of manifestation, protected in the same way as other magic. line up to the center of the galaxy and line up 8 to the top of the stratosphere. make an 8 plane there with a ruby on top. use any sattelites or other tech in orbit to amplify divine signal"));
 
 		evolve(casting_program("given the knowledge that attacks on the dream are at the rhythm of half-sleep, generate a field around the traveling point of awareness that moves into dream, that eats any interfering wave"));
 
@@ -156,6 +238,11 @@ class LineOfRealMeeting {
 
 		b4;
 		0;
+			casting_program("at an angle 35 degrees downward for a measure of 1 cube from the four sides of the base to the surface") + a(a(_material->stone() * _material->molybdenum()) * cube() * 1 * 1 * 1 * a(9));
+		128;
+
+
+		0;
 		_colours->green();
 		evolve(machine_mind(al("cast magic to match environments between real lines, knowing of all old culture effects on them, such as the idea that telepathic attention is only one direction in the environment or that the environment can be taken by moving things in and out of it"))) + _programs->listmaker("make a list of all attacks known on a shared telpathic environment") + micro_laser() + machine_eye();
 		255;
@@ -167,8 +254,12 @@ class LineOfRealMeeting {
 
 
 		// real line down
-		evolve(_military->manufacturing_cube(signal(987654321) + f_big(signal(4))) + al("keep a real line of manifestation, protected in the same way as other magic"));
+		evolve(_military->manufacturing_cube(signal(987654321) + f_big(signal(3) + signal(4) + signal(5))) + al("keep a real line of manifestation, protected in the same way as other magic. colour in rainbow spectrum according to density"));
+
+		event_listen(cube() + this->moment, _events->research_update());
 
 	}
+
+
 
 };

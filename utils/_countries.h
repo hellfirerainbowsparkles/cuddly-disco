@@ -4,6 +4,7 @@ struct countries {
     int japan() { return al("日本"); }
     int russia = a(1);
     int usa() { return al("usa"); }
+    int africa() { return al("africa"); }
     int china = a(1);
     int india = a(1);
     int dubai = a(1);

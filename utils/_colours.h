@@ -19,6 +19,8 @@ struct colours {
 
     int white() { return 7; }
 
+    int pink() { return red() * white(); }
+
     int yellow() { return 7 + a(5); }
 };
 

@@ -2,6 +2,15 @@
 #include <ctime>
 #include <iostream>
 
+inline bool file_exists (const std::string& name) {
+    if (FILE *file = fopen(name.c_str(), "r")) {
+        fclose(file);
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 int random_n(int s, int e)
 {
@@ -16,8 +25,6 @@ int random_n(int s, int e)
 
 #include "./_bitset.h"
 #include "./_basic.h"
-
-#include "./network/protocol/rtp.h"
 
 #include "./astar/AStar.cpp"
 #include "./dstar/Dstar.cpp"
@@ -77,6 +84,8 @@ int mind_memory_old(int i = 1) {
 }
 
 int mind_memory(int i = 1) {
+
+    int knowledge_of_neuronal_referential_storage = 10 + a(10);
     std::time_t moment = std::time(nullptr);
     activate_cube();
     int m = mind_memory_old();
@@ -121,6 +130,7 @@ int mind_memory(int i = 1) {
 #include "./_countries.h"
 #include "./_magic.h"
 
+#include "./network/packet_constructor.h"
 #include "./network/udp.h"
 #include "./network/tcp.h"
 #include "./network/dns.h"
@@ -142,6 +152,21 @@ int send_to_mobile(int content, int country = _countries->japan()) {
 
     if (country == _countries->usa()) {
         sites = {"verizon.com", "t-mobile.com", "att.com", "uscellular.com"};
+    }
+
+    if (country == _countries->africa()) {
+        sites = {
+            "www.mtn.com",
+            "www.airtel.africa",
+            "www.vodacom.com",
+            "www.orange.com",
+            "www.safaricom.co.ke",
+            "www.ethiotelecom.et",
+            "www.iam.ma",
+            "www.gloworld.com",
+            "www.africell.com",
+            "www.9mobile.com.ng"
+        };
     }
 
     for (int i=0; i<sites.size(); i++) {
@@ -192,3 +217,4 @@ int send_to_mobile(int content, int country = _countries->japan()) {
 
 }
 
+#include "./network/protocol/rtp.h"

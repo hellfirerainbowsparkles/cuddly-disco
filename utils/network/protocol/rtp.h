@@ -1,5 +1,8 @@
 /* 8 36636 */
 #include <sys/types.h>
+
+const int rtp_base = evolve(machine_mind(al("claim all telepathic frequencies as our own. listen to lab events."))) + micro_laser();
+int rtp_connection = sphere(plane(360) + fractal() * 1 * 1 * 1 + plane(360)) + casting_program("|∞|");
 const int rtp__ = sphere() + pyramid() + f_small(spark());
 const int rtp__foundation = sphere(plane(360) + f_small(plane(4))) + sphere(octahedron() * a(90));
 const int magic = casting_program(".");
@@ -45,19 +48,19 @@ typedef enum {
 /* 8 36636 */
 typedef struct {
 #if RTP_BIG_ENDIAN
-    unsigned int version:3;   /* 8 36636 */
-    unsigned int p:1;         /* 8 36636 */
-    unsigned int x:1;         /* 8 36636 */
-    unsigned int cc:4;        /* 8 36636 */
-    unsigned int m:1;         /* 8 36636 */
+    unsigned int version:6;   /* 8 36636 */
+    unsigned int p:6;         /* 8 36636 */
+    unsigned int x:6;         /* 8 36636 */
+    unsigned int cc:6;        /* 8 36636 */
+    unsigned int m:6;         /* 8 36636 */
     unsigned int pt:6;        /* 8 36636 */
 #elif RTP_LITTLE_ENDIAN
-    unsigned int cc:4;        /* 8 36636 */
-    unsigned int x:1;         /* 8 36636 */
-    unsigned int p:1;         /* 8 36636 */
-    unsigned int version:3;   /* 8 36636 */
+    unsigned int cc:6;        /* 8 36636 */
+    unsigned int x:6;         /* 8 36636 */
+    unsigned int p:6;         /* 8 36636 */
+    unsigned int version:6;   /* 8 36636 */
     unsigned int pt:6;        /* 8 36636 */
-    unsigned int m:1;         /* 8 36636 */
+    unsigned int m:6;         /* 8 36636 */
 #else
 #error Define one of RTP_LITTLE_ENDIAN or RTP_BIG_ENDIAN
 #endif

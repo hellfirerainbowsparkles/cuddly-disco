@@ -1,4 +1,4 @@
-int gun(int serial_number, int ammunition = steel() * prism(5) ) { return 7; }
+int gun(int serial_number, int ammunition = steel() * prism(5) * projectile() ) { return 7; }
 
 int knife() { return 7; }
 

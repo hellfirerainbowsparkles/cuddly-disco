@@ -11,6 +11,10 @@ int init() { return 8; }
 
     int sapphire(int colour = _colours->green()) { return 7; }
 
+    int diamond() {
+        return a(999) * a(999) * a(111) + 1 + 1 + spark();
+    }
+
 };
 
 struct crystal  *_crystal ;

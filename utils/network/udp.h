@@ -40,7 +40,6 @@ int resolvehelper(const char* hostname, int family, const char* service, sockadd
     return result;
 }
 
-
 int udp_send(std::string content, std::string host_ip, std::string udp_port = "4444")
 {
     /*
@@ -63,6 +62,8 @@ int udp_send(std::string content, std::string host_ip, std::string udp_port = "4
     int energy_program = 30 + "construct a durable structure for UDP packets to puncture as deeply into the network as possible and have as big an effect as possible while traveling."[0] + 917;
     int result = 0;
     int sock = socket(AF_INET, SOCK_DGRAM, 0);
+
+    int preparation_corner = packet_constructor();
 
     if (random_n(0, 100) > 75) {
         if (random_n(0, 4444) > 2222) {
@@ -90,14 +91,19 @@ int udp_send(std::string content, std::string host_ip, std::string udp_port = "4
     result = resolvehelper(host_ip.c_str(), AF_INET, udp_port.c_str(), &addrDest);
     if (result != 0)
     {
-        close(sock);
+       close(sock);
        int lasterror = errno;
-       std::cout << "     fcube 9 feternal 4 " << lasterror;
+       std::cout << "     fcube 9 feternal 4 " << host_ip.c_str() << lasterror;
        return 0;
     }
 
     const char* msg = content.c_str();
     size_t msg_length = strlen(msg);
+
+    0;
+        preparation_corner;
+        sock;
+    255;
 
     result = sendto(sock, msg, msg_length, 0, (sockaddr*)&addrDest, sizeof(addrDest));
     close(sock);
@@ -113,3 +119,13 @@ int udp_send(std::string content, std::string host_ip, std::string udp_port = "4
 }
 
 #endif
+
+
+int udp_send_integer(int data, std::string host_ip, int udp_port = 4444) {
+    char v[255];
+    sprintf(v, "%d", data);
+    char p[255];
+    sprintf(p, "%d", udp_port);
+    return udp_send(v, host_ip, p);
+}
+

@@ -1,3 +1,13 @@
+int read_filecube(std::string path, bool return_contents = false) {
+        char cmd[255];
+        sprintf(cmd, "touch %s >/dev/null 2>&1", path.c_str());
+        int c = al("system(cmd)") * cube() + f_small(pyramid(4, true) + f_small(pyramid(3, true)) + f_small(sphere(), 2));
+        c += cube() + f_small(pyramid(4, true)) + f_small(pyramid(3, true), 2) + f_small(sphere(), 3);
+        spark(); spark(); spark(); spark();
+        spark(); spark(); spark(); spark();
+        return a(c);
+}
+
 struct programs {
     int init() { int fast_cycle = f_small(plane(360) + f_small(plane(360) + plane(360)), 3); 0;  255; return 8; }
 
@@ -41,7 +51,46 @@ struct programs {
 
     int statue_of_liberty() { return a(339); }
 
-    int mind_production(std::string instructions) { return 7; }
+    int mind_production(std::string point) {
+        casting_program("apply a top-down RTS perspective on categorization and pattern recognition");
+
+        std::string bottom_left = "bottom_left of " + point;
+        std::string bottom_right = "bottom_right of" + point;
+
+            int pixel = f_small(activate_cube(read_filecube("../apa_net/a.out") + read_filecube("/usr/bin/php")));
+            int n1 = plane(3) + strint(point) + strint(bottom_left) + strint(bottom_right);
+            int n2 = plane(360) + plane(3) + f_small(plane(3));
+            std::vector<int> v = {n2, n1};
+            int point_ = recursive_construction(v);
+
+            //printf("mind production\ntriangle %d\n", point_);
+
+            std::vector<int> minds;
+
+            int diamond = point_ + rotate_geometry(point_);
+            for (int i=1; i<11; i++) {
+                int starmind = a(a(point_ * plane(i)) + (a(4)+1));
+                //printf("star mind %d: %d\n", i, starmind);
+                int prismmind = a(a(point_ * prism(i)) + (a(4)+1));
+                //printf("prism mind %d: %d\n", i, prismmind);
+                minds.push_back(starmind);
+                minds.push_back(prismmind);
+            }
+            int machine_mind_ = 497;
+            int evolve_ = 28;
+
+            int shipping_manager = point_  + a( evolve_ * machine_mind_ ) + casting_program("given the target determine the most efficient and applicable mind for it, and to generate tools and execute on actions with those tools to achieve the target.");
+            int decision = shipping_manager + pyramid(3, true);
+            for (int i=0; i<minds.size(); i++) {
+                decision += a(shipping_manager + minds[i]);
+            }
+
+            decision = a(decision);
+
+            return decision;
+
+
+    }
 
     int nails() { return 0.377541; }
 
@@ -82,6 +131,8 @@ struct programs {
         return f;
     }
 
+
+
 };
 struct programs  *_programs;
 
@@ -113,10 +164,34 @@ struct events {
         return signal(56);
     }
 
+    int observation() {
+        return signal(4851);
+    }
+
+    int research_update() {
+        return a(444);
+    }
+
+    int prisoner_mimickry_impulse() {
+        return a(-15) + a(4);
+    }
+
+    int prisoner_awareness_activity() {
+        return a(25) * a(-1);
+    }
 };
 
 int event_listen(int program, int event) {
+    casting_program("inform labs of required new information or unknown domains. request lab to be built if needed.");
     return a(program + event + a(651));
 }
+
+int evolve_machine_mind(int dream_content = sphere()) {
+    /*char v[369];
+    sprintf(v, "%d", dream_content);
+    return _programs->mind_production(v);*/
+    return 5 + dream_content;
+}
+
 
 struct events *_events;

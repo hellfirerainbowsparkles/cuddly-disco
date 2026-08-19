@@ -4506,5 +4506,37 @@
     {
         "claim": "in je derde oog",
         "with": "lightcrystal quartz"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
     }
 ]

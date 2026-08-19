@@ -64,6 +64,7 @@ SceneObject createSceneObjectsTetrahedron(int argc, char *argv[], std::vector<st
     em_field.scaleY = 2 * fbr[3];
     em_field.scaleZ = 2 * fbr[3];
     em_field.render_vertices = false;
+    em_field.pointcolours = crystalcolours[findColorForString("white")];
     //em_field = positionPointcloud(em_field, 0.0f, -5.0f, 0.0f);
     em_field.setUpdate(
         [](PointCloud& object)

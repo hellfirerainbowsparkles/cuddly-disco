@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	Manufacturing *manufacturing = new Manufacturing();
-	while (true) {
+	while (argc < 2 || strcmp(argv[1], "z.in")) {
 		manufacturing->run();
 		system("sleep 6");
 	}

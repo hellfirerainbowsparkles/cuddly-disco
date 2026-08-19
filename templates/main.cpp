@@ -7,7 +7,7 @@
 int main(int argc, char *argv[]) {
 
 	Droid *droid = new Droid();
-	while (true) {
+	while (argc < 2 || strcmp(argv[1], "z.in")) {
 		droid->run();
 		system("sleep 6");
 	}

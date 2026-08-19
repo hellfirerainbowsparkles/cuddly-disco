@@ -3,7 +3,7 @@
 
 int main() {
 
-	while (true) {
+	while (argc < 2 || strcmp(argv[1], "z.in")) {
 		casting_program("construct the base structure for all droids manufactured in crowdcontrol_manufacturing. update all produced");
 		read_filecube("../crowdcontrol_manufacturing/mem.i");
 		DroidBase *d = new DroidBase();

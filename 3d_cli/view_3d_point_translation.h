@@ -402,11 +402,12 @@ void drawPointCloud(const PointCloud& cloud)
 
     if (cloud.pointcolours.size() > 0) {
         colours = cloud.pointcolours;
-        std::exit(1);
     }
 
     for (const Point3D& point : cloud.points) {
-        drawPoint3D(point, 20.0f, colours);
+        Point3D point2 = point;
+        point2.z += 1;
+        drawPoint3D(point2, 20.0f, colours);
     }
     /*
     for (const Point3D& point2 : cloud.points2) {

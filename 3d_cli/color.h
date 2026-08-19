@@ -9,7 +9,7 @@ std::vector<int> crystalcolours[11] = {
     { 1, 1, 1, 1, 1, 1 },       // white
     { 3, 3, 3, 3, 3, 3 },       // black
     { 7, 7, 8, 9, 8, 8 },       // green
-    { 17, 17, 14, 11, -1, -1 },   // yellow
+    { 17, 17, 14, 11, -1, -1 },   // gold / yellow
     { 19, 19, 20, 21, -1, -1 },    // pink
     { 13, 13, 14, 15, -1, -1 },     // orange
     { 1, 4, 4, 22, -1, -1 },         // lightblue
@@ -24,7 +24,7 @@ int findColorForString(const std::string& color)
     if (color == "white")     return 3;
     if (color == "black")     return 4;
     if (color == "green")     return 5;
-    if (color == "yellow")    return 6;
+    if (color == "gold" || color == "yellow")    return 6;
     if (color == "pink")      return 7;
     if (color == "orange")    return 8;
     if (color == "lightblue") return 9;

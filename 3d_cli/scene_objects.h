@@ -41,7 +41,7 @@ SceneObject createSceneObjectsTetrahedron(int argc, char *argv[], std::vector<st
         if (!strcmp(argv[2], "black")) {
             _military->connector(scene_int, parse_droid_json("./dependencies/blacktetrahedron/mem.json"));
             _military->connector(scene_int, read_filecube("../blacktetrahedron/mem.i"));
-            tetrahedron.pointcolours = crystalcolours[findColorForString("gold")];
+            tetrahedron.pointcolours = crystalcolours[findColorForString("yellow")];
         }
     }
 
@@ -55,7 +55,7 @@ SceneObject createSceneObjectsTetrahedron(int argc, char *argv[], std::vector<st
 
     SceneObject scene;
     scene.pointclouds = { view_sphere_[0], view_sphere_[1], view_sphere_[2], view_sphere_[3], sphere_core, tetrahedron };
-    scene.use_scene_colours = false;
+    //scene.use_scene_colours = false;
     scene_int = scene.init(scene.pointclouds[0], colours_collection);
 
 

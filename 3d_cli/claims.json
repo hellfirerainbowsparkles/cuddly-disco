@@ -4390,5 +4390,121 @@
     {
         "claim": "black",
         "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "take from all in the surroundings",
+        "with": "tetrahedron black"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "in je derde oog",
+        "with": "lightcrystal quartz"
     }
 ]

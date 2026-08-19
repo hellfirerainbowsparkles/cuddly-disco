@@ -40,10 +40,10 @@ PointCloud createTriangularPyramid()
 {
     return {
         {
-            {-5.0f, -5.0f, -4.0f}, // 0 base
-            { 5.0f, -5.0f, -4.0f}, // 1 base
-            { 0.0f, -5.0f,  5.0f}, // 2 base
-            { 0.0f,  5.0f,  0.0f}  // 3 apex
+            {-5.0f, -4.0f, -4.0f}, // 0 base
+            { 5.0f, -4.0f, -4.0f}, // 1 base
+            { 0.0f, -4.0f,  5.0f}, // 2 base
+            { 0.0f,  7.0f,  0.0f}  // 3 apex
         },
         {
             // Triangular base.

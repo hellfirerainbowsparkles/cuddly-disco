@@ -1,4 +1,4 @@
 [
-{ "claim": "render_interval_ms", "with": 1},
+{ "claim": "render_interval_ms", "with": 3},
 { "claim": "core_magic", "with": 121 }
 ]

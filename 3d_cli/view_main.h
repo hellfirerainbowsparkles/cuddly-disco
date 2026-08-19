@@ -116,13 +116,13 @@ SceneObject createSceneObjects(int argc, char *argv[], std::vector<std::vector<i
     PointCloud dodecahedron_environment = scalePointCloud(dodecahedron, fbr[3], fbr[3], fbr[3]);
     dodecahedron_environment.render_vertices = false;
 
-    PointCloud hexaface = createTriangularSphere(5.0f, 2);
-    hexaface.scaleX = 2 * fbr[3];
-    hexaface.scaleY = 2 * fbr[3];
-    hexaface.scaleZ = 2 * fbr[3];
-    hexaface.render_vertices = false;
-    //hexaface = positionPointcloud(hexaface, 0.0f, -5.0f, 0.0f);
-    hexaface.setUpdate(
+    PointCloud em_field = createTriangularSphere(5.0f, 2);
+    em_field.scaleX = 2 * fbr[3];
+    em_field.scaleY = 2 * fbr[3];
+    em_field.scaleZ = 2 * fbr[3];
+    em_field.render_vertices = false;
+    //em_field = positionPointcloud(em_field, 0.0f, -5.0f, 0.0f);
+    em_field.setUpdate(
         [](PointCloud& object)
         {
             object.rotationY = -(fbr[3]/30);
@@ -132,7 +132,7 @@ SceneObject createSceneObjects(int argc, char *argv[], std::vector<std::vector<i
     );
 
     SceneObject scene;
-    scene.pointclouds = { octahedron_, facecube_, explosion, view_sphere_[0], view_sphere_[1], view_sphere_[2], view_sphere_[3], sphere, sphere_core, fcubes[0], fcubes[1], fcubes[2], dodecahedron, hexaface, dodecahedron_environment
+    scene.pointclouds = { octahedron_, facecube_, explosion, view_sphere_[0], view_sphere_[1], view_sphere_[2], view_sphere_[3], sphere, sphere_core, fcubes[0], fcubes[1], fcubes[2], dodecahedron, em_field, dodecahedron_environment
     };
 
     for (int i=0; i<cubes_.size(); i++) {
@@ -198,21 +198,21 @@ SceneObject createSceneObjectsVoice(int argc, char *argv[], std::vector<std::vec
     };
 
     for (int i=1; i<4; i++) {
-        PointCloud hexaface = createTriangularSphere(5.0f, 2);
-        hexaface.scaleX = i * (2 * fbr[3]);
-        hexaface.scaleY = i * (2 * fbr[3]);
-        hexaface.scaleZ = i * (2 * fbr[3]);
-        hexaface.colours = colours;
+        PointCloud em_field = createTriangularSphere(5.0f, 2);
+        em_field.scaleX = i * (2 * fbr[3]);
+        em_field.scaleY = i * (2 * fbr[3]);
+        em_field.scaleZ = i * (2 * fbr[3]);
+        em_field.colours = colours;
         if ( i == 1) {
-            hexaface.colours = crystalcolours[findColorForString("yellow")];
+            em_field.colours = crystalcolours[findColorForString("yellow")];
         } else if ( i == 2 ) {
-            hexaface.colours = crystalcolours[findColorForString("red")];
+            em_field.colours = crystalcolours[findColorForString("red")];
         } else {
-            hexaface.colours = crystalcolours[findColorForString("red")];
+            em_field.colours = crystalcolours[findColorForString("red")];
         }
-        hexaface.render_vertices = false;
-        //hexaface = positionPointcloud(hexaface, 0.0f, -5.0f, 0.0f);
-        hexaface.setUpdate(
+        em_field.render_vertices = false;
+        //em_field = positionPointcloud(em_field, 0.0f, -5.0f, 0.0f);
+        em_field.setUpdate(
             [&](PointCloud& object)
             {
                 object.rotationY = i == 2 ? (fbr[3]/30) : -(fbr[3]/30);
@@ -220,25 +220,25 @@ SceneObject createSceneObjectsVoice(int argc, char *argv[], std::vector<std::vec
                 prism(3883) * _material->smart_plasma() + f_small(_dg->_sphere() * _military->smart_lightparticle());
             }
         );
-        scene.pointclouds.push_back(hexaface);
+        scene.pointclouds.push_back(em_field);
     }
 
     for (int i=1; i<4; i++) {
-        PointCloud hexaface = createSphere(5.0f);
-        hexaface.scaleX = i + (1 * fbr[3]);
-        hexaface.scaleY = i + (1 * fbr[3]);
-        hexaface.scaleZ = i + (1 * fbr[3]);
-        hexaface.colours = colours;
+        PointCloud em_field = createSphere(5.0f);
+        em_field.scaleX = i + (1 * fbr[3]);
+        em_field.scaleY = i + (1 * fbr[3]);
+        em_field.scaleZ = i + (1 * fbr[3]);
+        em_field.colours = colours;
             if ( i == 1) {
-                hexaface.colours = crystalcolours[findColorForString("yellow")];
+                em_field.colours = crystalcolours[findColorForString("yellow")];
             } else if ( i == 2 ) {
-                hexaface.colours = crystalcolours[findColorForString("red")];
+                em_field.colours = crystalcolours[findColorForString("red")];
             } else {
-                hexaface.colours = crystalcolours[findColorForString("red")];
+                em_field.colours = crystalcolours[findColorForString("red")];
             }
-        hexaface.render_vertices = false;
-        //hexaface = positionPointcloud(hexaface, 0.0f, -5.0f, 0.0f);
-        hexaface.setUpdate(
+        em_field.render_vertices = false;
+        //em_field = positionPointcloud(em_field, 0.0f, -5.0f, 0.0f);
+        em_field.setUpdate(
             [&](PointCloud& object)
             {
                 object.rotationY = i == 2 ? (fbr[3]/30) : -(fbr[3]/30);
@@ -246,7 +246,7 @@ SceneObject createSceneObjectsVoice(int argc, char *argv[], std::vector<std::vec
                 prism(3883) * _material->smart_plasma() + f_small(_dg->_sphere() * _military->smart_lightparticle());
             }
         );
-        scene.pointclouds.push_back(hexaface);
+        scene.pointclouds.push_back(em_field);
     }
 
     AnimationObject animation(explosion);

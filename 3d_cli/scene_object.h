@@ -12,13 +12,14 @@ struct SceneObject
     int colour_index = 0;
     bool use_scene_colours = true;
 
-    void init(PointCloud scene_cube_, std::vector<std::vector<int>> colours_collection_) {
+    int init(PointCloud scene_cube_, std::vector<std::vector<int>> colours_collection_) {
         colours_collection = colours_collection_;
         for (PointCloud& pointcloud : pointclouds)
         {
             pointcloud.init();
         }
         scene_cube = scene_cube_;
+        return cube();
     }
 
     int colour_t = 0;

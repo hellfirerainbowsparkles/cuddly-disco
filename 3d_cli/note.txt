@@ -1,0 +1,147 @@
+What you want is a simple **Z-buffer**. For every terminal cell, store the depth of the object currently occupying it. Only draw a new character if it is closer to the camera.
+
+Assuming in your renderer **smaller `depth` means closer**:
+
+```cpp
+#include <vector>
+#include <limits>
+#include <ncurses.h>
+
+std::vector<std::vector<double>> zBuffer;
+
+void initZBuffer()
+{
+    zBuffer.assign(
+        LINES,
+        std::vector<double>(
+            COLS,
+            std::numeric_limits<double>::infinity()
+        )
+    );
+}
+```
+
+Clear it at the beginning of every frame:
+
+```cpp
+void clearZBuffer()
+{
+    for (int y = 0; y < LINES; ++y)
+    {
+        for (int x = 0; x < COLS; ++x)
+        {
+            zBuffer[y][x] =
+                std::numeric_limits<double>::infinity();
+        }
+    }
+}
+```
+
+Then instead of directly doing:
+
+```cpp
+mvaddch(y, x, pixel);
+```
+
+use:
+
+```cpp
+void drawPixelDepth(
+    int y,
+    int x,
+    double depth,
+    char pixel)
+{
+    if (x < 0 || x >= COLS ||
+        y < 0 || y >= LINES)
+        return;
+
+    // Something closer is already occupying this cell.
+    if (depth >= zBuffer[y][x])
+        return;
+
+    // This pixel is closer.
+    zBuffer[y][x] = depth;
+
+    mvaddch(y, x, pixel);
+}
+```
+
+Then your `drawLine3D()` changes from:
+
+```cpp
+mvaddch(y0, x0, pixel);
+```
+
+to:
+
+```cpp
+drawPixelDepth(
+    y0,
+    x0,
+    depth,
+    pixel
+);
+```
+
+Since your line function already interpolates Z:
+
+```cpp
+double t =
+    totalSteps > 0
+        ? static_cast<double>(currentStep) /
+          static_cast<double>(totalSteps)
+        : 0.0;
+
+double z =
+    a.z + (b.z - a.z) * t;
+
+double depth =
+    z + cameraDistance;
+```
+
+you can plug `depth` directly into the Z-buffer check:
+
+```cpp
+if (x0 >= 0 && x0 < COLS &&
+    y0 >= 0 && y0 < LINES)
+{
+    drawPixelDepth(
+        y0,
+        x0,
+        depth,
+        pixel
+    );
+}
+```
+
+Your frame loop then becomes:
+
+```cpp
+erase();
+clearZBuffer();
+
+drawPointCloud(cube);
+
+refresh();
+```
+
+Initialize the buffer once after ncurses starts:
+
+```cpp
+initscr();
+
+initZBuffer();
+```
+
+The important logic is simply:
+
+```cpp
+if (newDepth < zBuffer[y][x])
+{
+    zBuffer[y][x] = newDepth;
+    mvaddch(y, x, pixel);
+}
+```
+
+So if a line at depth `12.0` occupies `(40, 20)` and another line at depth `17.0` later tries to occupy the same terminal cell, the second line **will not be drawn**. If a line at depth `8.0` arrives instead, it replaces the existing character because it's in front.

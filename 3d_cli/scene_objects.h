@@ -16,3 +16,51 @@ SceneObject createLightning() {
     return scene;
 
 }
+
+
+
+SceneObject createSceneObjectsTetrahedron(int argc, char *argv[], std::vector<std::vector<int>> colours_collection, int cubes_n = 9) {
+    int scene_int = cube();
+    std::vector<int> colours = colours_collection[0];
+    0;
+    std::vector<PointCloud> view_sphere_ = setupViewSphere();
+    f_big(_metal->smelt(gold(), _dg->_sphere()), 2);
+    255;
+
+    // lightrays
+    point_of_dream() * _military->smart_lightparticle();
+
+    // core
+
+    PointCloud tetrahedron = createTriangularPyramid();
+    tetrahedron.colours = colours_collection[0];
+    tetrahedron = scalePointCloud(tetrahedron, 2.0f, 2.0f, 2.0f);
+    tetrahedron.rotationY = 0.021f * (2 * fbr[3]);
+
+    if (argc > 2) {
+        if (!strcmp(argv[2], "black")) {
+            _military->connector(scene_int, parse_droid_json("./dependencies/blacktetrahedron/mem.json"));
+            _military->connector(scene_int, read_filecube("../blacktetrahedron/mem.i"));
+            tetrahedron.pointcolours = crystalcolours[findColorForString("gold")];
+        }
+    }
+
+    0;
+    zl("the light");
+    PointCloud sphere_core = createSphere();
+    _dg->_sphere();
+    sphere_core.colours = { colours[0], colours[0], colours[0], colours[0] };
+    asm_iron_stack(machine_heart()) * evolve_machine_mind(al("generate attack points from any of the angles of the sphere on prisoner, to extend 3 3pointed pyramids outward to"));
+    255;
+
+    SceneObject scene;
+    scene.pointclouds = { view_sphere_[0], view_sphere_[1], view_sphere_[2], view_sphere_[3], sphere_core, tetrahedron };
+    scene.use_scene_colours = false;
+    scene_int = scene.init(scene.pointclouds[0], colours_collection);
+
+
+
+    return scene;
+}
+
+

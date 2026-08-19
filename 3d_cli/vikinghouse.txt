@@ -1,0 +1,126 @@
+boswachter: moeten we meer bomen planten?
+	+ gezond - geld + blijer
+
+schoolmeester: moeten we meer airco op school?
+	+ gezond + blijer - geld
+
+schoolmeester: moeten we meer digiborden?
+	- gezond - geld + blijer
+
+schoolmeester: moeten we meer school?
+	- geld - blijer
+
+mogen we ehm... wat was het nou?
+	en dan loopt ie weer weg
+
+schoolmeester: mogen we meer brandalarmen in scholen?
+	+ veiligheid - geld
+
+ondernemer: mogen we een autozaak openen?
+	+ geld - veiligheid - blijer - gezondheid
+
+bouwer: mogen we meer zwembaden?
+	+ blijer + geld - veiligheid + gezondheid
+
+bouwer: mogen we meer speelplaatsen voor kinderen?
+	- geld + blij + gezondheid
+
+bouwer: mogen we meer koffiecafes bouwen?
+	+ geld + blij	
+
+ondernemer: kunnen wij een schoenenwinkel openen? j/n
+	j: kans van zoveel % dat ze blijer worden
+		+ iets geld, kost niks
+
+bouwer: moeten we een groot standbeeld van je bouwen of niet? j/n
+	j: kans van zoveel % dat ze blijer, of minder blij
+		- veel geld
+
+bouwer: moeten we meer huizen gaan bouwen? j/n
+	blijer, kost wel geld
+
+verpleegkundige: kunnen we een ziekenhuis openen?
+	gezonder, kost niks en een beetje geld
+
+inkoper: moeten we meer dingen hebben? j/n
+	kost geld, worden ze blijer
+
+mens: moeten we... oh ik ben het vergeten
+	en dan loopt ie weg
+
+mens: oh ik weet het weer! nee laat maar.
+	en dan loopt ie weg
+
+iemand van de minderbelasting partij: mogen we minder belasting betalen?
+	- geld, blijer
+
+politie: moeten we meer politie aannemen?
+	+ veiligheid & - blij
+
+verpleegkundige: moeten we meer ambulances kopen?
+	- geld + gezondheid + blijer
+
+wetenschapper: moeten we minder zwaartekracht?
+	+ blijer - gezond
+
+winkelier: moeten we meer snoepjes verkopen?
+	+ blijer - gezond
+
+media magnaat: moeten we minder snoepreclame doen?
+	+ blij + gezond - geld
+
+dankbaar persoon: dankjewel! 
+
+ondankbaar persoon: dat besluit van net is niet zo handig. stom.
+
+boer: dit gebouw staat op mijn akker en DAT HEB JIJ BESLOTEN!
+	- geluk
+
+plantenbeschermer: mogen we boetes uitdelen als we zien dat iemand afval
+		gooit in de natuur?
+		+ geld
+
+fitnesscoach: mogen we dikke mensen aanspreken zodat ze bij ons komen 
+fitnessen?
+		+ geld + blij + gezondheid
+
+muis: mogen we minder katten?
+		- blij - gezondheid (muizen verspreiden ziektes)
+
+kat: mogen we meer muizen?
+	- blij - gezondheid (er zijn meer muizen!)
+
+mens: mogen we minder muizen?
+	+ blij - geld (katten kopen) -blij (specifiek voor katten)
+
+bouwer: moeten we de brug bouwen in 3 jaar of in 1 jaar?
+	1j: - veiligheid - blij
+	3j: + veiligheid + blij - geld 
+
+lamp: mogen we beter batterijen voor de lampen want dan leven we langer?
+	+ blij -geld
+
+- blij: vraag: mogen we een speeltuin bouwen want er is -blijheid?
+	+ blij - geld
+- geld: vraag: mogen we investeren in de zwarte markt?
+	+ blij + geld - veiligheid
+- veiligheid: vraag: mogen we meer politie want er is een onveilig gevoel
+	+ blij + veiligheid - geld
+- gezondheid: bouwer: mag ik een fitness centrum bouwen?
+	+ gezondheid - geld + blij
+
++ blij: vraag: we zijn zo blij dat we een feestje geven!
++ veiligheid: er is teveel veiligheid het is te streng mogen we minder
+	regels van de politie?
+	+ blij - veilig - geld
++ geld: er is teveel geld. het past niet meer in de kist!
++ gezondheid: mensen zijn heel gezond! maar de druiven zijn te zuur. kunnen 
+	we meer snoepjes verkopen?
+	- gezondheid + geld + blijheid
+
+ondernemer: mogen we een speelgoedwinkel bouwen?
+	+ geld + blij
+
+
+
+geld, veiligheid, gezondheid, geluk als metertjes

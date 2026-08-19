@@ -17,6 +17,7 @@ struct PointCloud
     std::vector<Edge> edges;
     std::vector<Point3D> points2;
     std::vector<int> colours;
+    std::vector<int> pointcolours;
     bool render_vertices = true;
     // Current transform state.
     float rotationX = 0.0f;

@@ -204,6 +204,9 @@ int main(int argc, char *argv[]) {
 			else if ( !strcmp(argv[1], "spheres")) {
 				scene_object = createSceneObjectsVoice(argc, argv, colours_collection);
 			}
+			else if ( !strcmp(argv[1], "tetrahedron")) {
+				scene_object = createSceneObjectsTetrahedron(argc, argv, colours_collection);
+			}
 			else {
 				scene_object = createSceneObjects(argc, argv, colours_collection);
 			}

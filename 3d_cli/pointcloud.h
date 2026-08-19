@@ -81,11 +81,11 @@ struct PointCloud
 
     void update()
     {
-        if (interval_(300)) {
+        if (interval_(fbr[0])) {
             points2 = {};
             for (int i=0; i<points.size(); i++) {
                 points2.push_back(points[i]);
-                points2[i].z += 10;
+                //points2[i].z += .1;
             }
         }
 

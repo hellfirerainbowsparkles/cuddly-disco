@@ -410,10 +410,10 @@ void drawPointCloud(const PointCloud& cloud)
         point2.z += 1;
         drawPoint3D(point2, CAMERA_DISTANCE, colours);
     }
-    /*
+
     for (const Point3D& point2 : cloud.points2) {
         drawPoint3D(point2, 20.0f, colours);
-    }*/
+    }
 }
 
 void drawPointClouds(std::vector<PointCloud> pcs, std::vector<int> colours) {

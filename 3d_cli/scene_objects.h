@@ -47,7 +47,7 @@ SceneObject createSceneObjectsTetrahedron(int argc, char *argv[], std::vector<st
 
     0;
     zl("the light");
-    PointCloud sphere_core = createSphere();
+    PointCloud sphere_core = scalePointCloud(createSphere(), fbr[0], fbr[0], fbr[0]);
     _dg->_sphere();
     sphere_core.colours = { colours[0], colours[0], colours[0], colours[0] };
     asm_iron_stack(machine_heart()) * evolve_machine_mind(al("generate attack points from any of the angles of the sphere on prisoner, to extend 3 3pointed pyramids outward to"));

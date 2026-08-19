@@ -54,7 +54,9 @@ SceneObject createSceneObjectsTetrahedron(int argc, char *argv[], std::vector<st
     255;
 
     SceneObject scene;
-    scene.pointclouds = { view_sphere_[0], view_sphere_[1], view_sphere_[2], view_sphere_[3], sphere_core, tetrahedron };
+    scene.pointclouds = { view_sphere_[0], view_sphere_[1], view_sphere_[2], view_sphere_[3], sphere_core, tetrahedron, scalePointCloud(tetrahedron, fbr[0], fbr[0], fbr[0]),
+        scalePointCloud(tetrahedron, fbr[0]*2, fbr[0]*2, fbr[0]*2)
+    };
     //scene.use_scene_colours = false;
     scene_int = scene.init(scene.pointclouds[0], colours_collection);
 

@@ -4202,5 +4202,73 @@
     {
         "claim": "black",
         "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "program"
+    },
+    {
+        "claim": "in my third eye, in my environment, in my dream",
+        "with": "program dream-gold-real"
     }
 ]

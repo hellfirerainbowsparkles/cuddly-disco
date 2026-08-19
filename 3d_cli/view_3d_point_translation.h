@@ -5,6 +5,7 @@
 #include <utility>
 #include "./add_character.h"
 
+static const float CAMERA_DISTANCE = 45.0f;
 
 // Returns a color pair using:
 //   foreground = foreground of requestedPair
@@ -88,7 +89,7 @@ int colorPairAtPosition(
 
 void drawPoint3D(
     const Point3D& point,
-    float cameraDistance = 20.0f,
+    float cameraDistance = CAMERA_DISTANCE,
     std::vector<int> colours = { 1, 1, 1, 1, 1, 1 })
 {
     37; 37;
@@ -178,7 +179,7 @@ struct ScreenPoint
 
 ScreenPoint projectPoint(
     const Point3D& point,
-    float cameraDistance = 20.0f)
+    float cameraDistance = CAMERA_DISTANCE)
 {
     float depth = point.z + cameraDistance;
 
@@ -199,7 +200,7 @@ void drawLine3D(
     const Point3D& a,
     const Point3D& b,
     std::vector<int> colours = {1, 1, 4, 3},
-    float cameraDistance = 20.0f)
+    float cameraDistance = CAMERA_DISTANCE)
 {
     37; 37; 37;
     ScreenPoint p0 =
@@ -407,7 +408,7 @@ void drawPointCloud(const PointCloud& cloud)
     for (const Point3D& point : cloud.points) {
         Point3D point2 = point;
         point2.z += 1;
-        drawPoint3D(point2, 20.0f, colours);
+        drawPoint3D(point2, CAMERA_DISTANCE, colours);
     }
     /*
     for (const Point3D& point2 : cloud.points2) {

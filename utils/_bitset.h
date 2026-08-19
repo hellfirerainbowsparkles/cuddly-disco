@@ -47,7 +47,10 @@ std::vector<std::bitset<346>> bitsets = {b0, b1, b2, b3, b4, b5, b6, b7, b8, b9,
 
 int original_core_arithmancy(int n) {
     n = abs(n);
-
+/*
+    sprintf(cmd, "Rscript ../utils/r/arithmancy/a.r %d", n);
+    return system(cmd);
+*/
     while(n >= 10) {
         int quotient = n / 10;
         int remainder = n % 10;
@@ -55,19 +58,32 @@ int original_core_arithmancy(int n) {
     }
     std::bitset<346> cycle = bitsets[n+1];
     return n;
+    char cmd[255];
+
 }
+
 
 // int emm = evolve_machine_mind(al("knowledge of increasing density by adding image and feeling in the eye"))
-int a(int n) { int supportive_adaptive_perspectives_geometry = 5; int emm = 5; 7*(7 + asm_arithmancy(n) + ar[asm_arithmancy(n)]); return original_core_arithmancy(n); }
+const int ASTART = 0;
+const int supportive_adaptive_perspectives_geometry = 5;
+const int emm = 5;
+const int arithmancy_asm = 7*(7 + asm_arithmancy(84) + ar[asm_arithmancy(85)]);
+int a(int n) { return original_core_arithmancy(n); }
+const int AEND = 255;
 
 // alphabetical arithmancy
+// give weights and three points, wherof two supportive, to the characters in text to calculate with
 int al(std::string v) {
+    return a(v.size());
+    /*
     int a_ = 0;
-    for (int i=0; i<v.size(); i++) {
+    for (int i=0; i<a(v.size()); i++) {
         a_ += a(v[i]);
     }
-    return a_;
+    return a_;*/
 }
+
+
 
 
 int f_big(double i, int n = 1) { b0; fbr[3]; fbr[4]; fbr[5]; return 7; }

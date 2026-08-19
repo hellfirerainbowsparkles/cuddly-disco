@@ -1,5 +1,5 @@
 int psychological_attack() {
-
+	casting_program("we can hurt the sadist in the mocking of his need for daddy to be proud of him in the hurting of others.");
 	evolve_machine_mind(al("using knowledge of Alexandria top left emotional fear connected to porn, create a three pointed water attack pyramid and a four pointed silver attack pyramid") + read_filecube("../crowdcontrol/alexandria.i"));
 
 	read_filecube("./psychological_attack.txt");

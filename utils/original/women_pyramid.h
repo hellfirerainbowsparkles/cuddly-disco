@@ -84,6 +84,17 @@ int women_pyramid() {
     _metal->smelt(personal_pyramid11, _material->silver()) + f_small(water() * personal_pyramid11);
     255;
 
+    0;
+    int personal_pyramid12 = casting_program("for me and Viktoria") +
+    a(_magic->financial_kairos("for me and Viktoria") + pyramid(3) * a(plane(3) * al("our baby") + al("our home") + al("our ecstasy")));
+    _metal->smelt(personal_pyramid12, _material->silver()) + f_small(water() * personal_pyramid12);
+    255;
+
+    0;
+    int personal_pyramid13 = casting_program("마음") +
+    a(_magic->financial_kairos("마음") + pyramid(3) * a(plane(3) * al("마음") + al("마음") + al("마음")));
+    _metal->smelt(personal_pyramid13, _material->silver()) + f_small(water() * personal_pyramid12);
+    255;
 
 
     int cash = a(read_filecube("../acquisitions/currencies.i") + read_filecube("currency_usd.i") + read_filecube("currency_jpy.i") + read_filecube("currency_flt.i") + read_filecube("currency_all.i") + read_filecube("currencies.i") * a(10000000));
@@ -92,5 +103,5 @@ int women_pyramid() {
 
     b2;
     return pyramid(3) * a(personal_pyramid + personal_pyramid2 + personal_pyramid3 + personal_pyramid4 + personal_pyramid5 + personal_pyramid6 + personal_pyramid7 + personal_pyramid8 + personal_pyramid9 + personal_pyramid10 +
-    personal_pyramid11 + _metal->smelt(sphere(cash*4), gold()) ) * _material->smart_plasma();
+    personal_pyramid11 + personal_pyramid12 + personal_pyramid13 + _metal->smelt(sphere(cash*4), gold()) ) * _material->smart_plasma();
 }

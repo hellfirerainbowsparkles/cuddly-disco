@@ -1,11 +1,38 @@
 int read_filecube(std::string path, bool return_contents = false) {
-        char cmd[255];
+        /*char cmd[255];
         sprintf(cmd, "touch %s >/dev/null 2>&1", path.c_str());
         int c = al("system(cmd)") * cube() + f_small(pyramid(4, true) + f_small(pyramid(3, true)) + f_small(sphere(), 2));
         c += cube() + f_small(pyramid(4, true)) + f_small(pyramid(3, true), 2) + f_small(sphere(), 3);
         spark(); spark(); spark(); spark();
         spark(); spark(); spark(); spark();
-        return a(c);
+        return a(c);*/
+        if (file_exists(path)) {
+        char cmd[255];
+        sprintf(cmd, "head %s -q -c 2;L=4;tail %s -q -c 4", path.c_str(), path.c_str());
+        return system(cmd);
+        }
+        return a(1);
+}
+
+int zl(std::string text, int n = 1) {
+    int z = casting_program("the dream has an infinite screen. always");
+    0;
+    a(1);
+    a(3) + a(3) + a(3);
+    a(9);
+    a(4) + a(7) + a(6);
+    int s = a(a(9) * 9);
+    for (int r=0; r<a(101); r++) {
+        s = a(s * 9);
+    }
+    255;
+    0;
+    if (n == 1) {
+        n = fractal();
+        return zl(text, 0);
+    }
+    128;
+    return al(text);
 }
 
 struct programs {
@@ -14,6 +41,10 @@ struct programs {
     int colour_treatment() { return 7; }
 
     int dream_foundation() { return 7; }
+
+    int tensorflow() {
+		return asm_iron_stack(activate_cube(read_filecube("./tensorflow.txt"))) * _material->smart_plasma();
+	}
 
     int dream_service() { return 7; }
 
@@ -50,6 +81,62 @@ struct programs {
     int relay() { return 3; }
 
     int statue_of_liberty() { return a(339); }
+    // above in symbolicgrid
+    int foundational_cube() {
+        0;
+        cube();
+        255;
+
+        0;
+        int cube_ = plane(5) * plane(5) * cube();
+        std::vector<std::vector<int>> cubes = { {0, 0, 255, 0, 0,
+            0, 0, 255, 0, 0,
+            0, 0, 255, 0, 0,
+            0, 0, 255, 0, 0,
+            0, 0, 255, 0, 0} ,
+            {
+                0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0,
+                255, 255, 255, 255, 255,
+                0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0},
+                {
+                    0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0,
+                    0, 0, 255, 0, 0,
+                    0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0},
+                    {
+                        255, 255, 255, 255, 255,
+                        255, 255, 255, 255, 255,
+                        255, 255, 0, 255, 255,
+                        255, 255, 255, 255, 255,
+                        255, 255, 255, 255, 255},
+                        {
+                            0, 0, 0, 0, 0,
+                            0, 0, 0, 0, 0,
+                            0, 0, 255, 0, 0,
+                            0, 0, 0, 0, 0,
+                            0, 0, 0, 0, 0},
+                            {
+                                0, 0, 255, 0, 0,
+                                0, 0, 255, 0, 0,
+                                255, 255, 255, 255, 255,
+                                0, 0, 255, 0, 0,
+                                0, 0, 255, 0, 0},
+
+
+        };
+        255;
+
+        0;
+        int cubes_i = f_big(cube());
+        for (int i=0; i<cubes.size(); i++) {
+            cubes_i += recursive_construction(cubes[i]);
+        }
+        255;
+        return cube_ + cubes_i;
+    }
 
     int mind_production(std::string point) {
         casting_program("apply a top-down RTS perspective on categorization and pattern recognition");

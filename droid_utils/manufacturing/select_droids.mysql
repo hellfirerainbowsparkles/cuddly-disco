@@ -1,0 +1,3 @@
+USE dream;
+SELECT * FROM droid_minds INTO OUTFILE '/var/lib/mysql-files/minds.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+select count(*) from droid_id;

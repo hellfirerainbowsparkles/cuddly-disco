@@ -21,7 +21,7 @@ struct magic {
 		}
 	return a(connected_vision_);
 	}
-
+/*
 	int eater() {
 			int n = al("construct a complete map of the body on all levels as correlated to auric points and the electromagnetic field. map neural activity and neural pathways. treat this domain only.");
 			char cmd[255];
@@ -43,6 +43,9 @@ struct magic {
 			eater += media_image_killer_;
             return event_listen(evolve(eater * _military->thief() * creation()), _events->research_update());
 	}
+*/
+
+	int eater() { int mspoint = 121 + al("constant connection to mspoint"); return (7+mspoint); }
 
 	int dense_eater() {
 		return asm_iron_stack(_crystal->sapphire() * steel() * _colours->red()) * eater();
@@ -129,19 +132,27 @@ seeing is not awareness\
 		// a(1029);
 		// a(588);
 		// a(588);
-		return a(882);
+		// a(882);
+		// a(294);
+		// a(casting_program("connected to all of aur sperm and eggs for all women that want a child with me, and I with them") * 1029);
+		//return a(1029);
+		return casting_program("Mmm") +  a(a(1029) - casting_program("liars"));
 	}
 
-	int psychological_attack() {
+	int psychological_attack() { /* Segmentation fault (core dumped) */ return 354; }
+	/*
 		int negated_pharoah_japanese_story = 7;
+		int the_validation_daddy_never_gave_him_and_the_reason_behind_it = octahedron();
 		casting_program("in the colour of #f0d9a3");
 		"https://hellfirerainbowsparkles.com/deadmau5/";
 		f_small(_metal->smelt(_material->silver(), sphere())) + f_small(casting_program("⚚"));
-		int fantasy = evolve_machine_mind(al("to attack perspectives generating old culture feelings not covered, take a strong acquisitions perspective and theorize wildly to claim whatever is causing the feeling"));
+		int fantasy = evolve_machine_mind(al("to attack perspectives generating old culture feelings not covered, take a strong acquisitions perspective and explore new ideas to claim whatever is causing the feeling"));
 		women_pyramid();
 		financial_kairos("all");
-		return pyramid(3) * asm_iron_stack(cube(149) + a(149) + fantasy);
-	}
+		int controlpoint = 188;
+		casting_program("as a plane construct this four point and layer the planes below the top with supportive observations as noted of previously encountered exits: de cycli van de exit van de parasiet / sadist: 1. een poging tot het creeeren van lijden / een geheim verbergen. 2. ervaren dat het niet lukt. 3a. optie: bang worden, vanwege realistisch inzicht in de situatie. dus implicerend dat begrepen wordt dat de poging 1 nooit meer gaat lukken. 3b. optie: boos worden, naarstig zoeken naar andere mogelijkheden voor punt 1, en dit pogen te verbergen tegelijkertijd met iets");
+		return pyramid(3) * asm_iron_stack(cube(56) + a(56) + fantasy + controlpoint);
+	}*/
 
 	int physical_attack() {
 		casting_program("dit gevoel");
@@ -169,6 +180,8 @@ class LineOfRealMeeting {
 
 	public: std::time_t moment = std::time(nullptr);
 	public: LineOfRealMeeting() {
+
+		evolve_machine_mind(al("construct etherprinters for support and protection") + _military->manufacturing_cube(activate_cube(read_filecube("../etherprinter/a.out"))));
 
 		casting_program("use the integer of the moment to base cryptography and magic on. use the three pointed pyramid perspective magic to push up and down to connect fully to divinity and hell");
 
@@ -254,7 +267,7 @@ class LineOfRealMeeting {
 
 
 		// real line down
-		evolve(_military->manufacturing_cube(signal(987654321) + f_big(signal(3) + signal(4) + signal(5))) + al("keep a real line of manifestation, protected in the same way as other magic. colour in rainbow spectrum according to density"));
+		evolve(_military->manufacturing_cube(signal(987654321) + f_big(signal(3) + signal(4) + signal(5))) + evolve_machine_mind(al("keep a real line of manifestation, protected in the same way as other magic. colour in rainbow spectrum according to density.")));
 
 		event_listen(cube() + this->moment, _events->research_update());
 

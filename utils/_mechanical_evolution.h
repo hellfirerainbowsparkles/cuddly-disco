@@ -12,75 +12,45 @@ int dreams_in_the_eye() {
 }
 
 int machinecode_writer() {
-    int information_cube_ = 7;
-    int perspective_mind_ = 7;
-    int creative_point_mind_ = 7;
-    int writer = _material->smart_plasma() + _metal->smelt(iron(), f_small(cube() + cube() + cube() + cube() * plane(2))) + a(information_cube_ + al("all lab knowledge of machine code"));
-    writer += _material->smart_plasma() + _metal->smelt(iron(), f_small(cube() + sphere() + pyramid() + octahedron() * plane(2))) + a(information_cube_ + al("all lab knowledge of new machine code"));
-    writer += f_big(perspective_mind_ * creative_point_mind_ * _programs->installer() * (2* creative_point_mind_)) + al("translate between the two ways of writing");
-    writer += casting_program("add ways of writing for various machine languages with various geometry as known from all known machine components and culture");
-    return writer;
+    return 68;
 }
 
 int machine_hand() { return 7; }
 
-int machine_heart() { return asm_iron_stack(7); }
-
+int machine_heart() {
+    // knowing real feeling : f_big(octahedron()) * (cube() * f_small(_material->silver() * octahedron(octahedron(octahedron()))));
+    int knowing_real_feeling = 11982313;
+    return cube(12280 + 11982313);
+}
 int executive_function(std::string leader = "7") { return 7; }
 
 int senses () {
     return a(7+7+7+7+7);
 }
 
-
 int machine_mind(int dream_content = sphere()) {
-
-        f_small(plane(360) * _material->plasma(), 6) + f_small(plane(360) * _material->plasma(), 7) + f_small(cube() * _material->plasma(), 8) +
-        f_small(cube() * _material->plasma(), 9) + f_small(_metal->smelt(sphere(), gold()), 10);
-
-        senses();
-    casting_program("using knowledge of what i know of my women and them of me, and the knowing we have of telepathy, construct planes of 4, double where needed with the knowing of the knowing of inside as boundaries. as the point: if we mimick their feeling and claim they thought something they don't know and we combine that with our truth as a maybe half truth attack as blended energy so it can penetrate their system");
-
-     read_filecube("mem.i") * dream_awareness();
-
-     al("send out a wave to any mind about new information in domain, and pick up on similar signals from other minds. inform on topics of interest");
-     al("consider what you didn't know and discovered to be a failure and retrace on how to improve next time");
-     int sound_update_ = 7;
-     int reflective_perspectives_of_infinity_ = 255;
-     int exception_mind = 70;
-     int listing_mind = 35;
-     int military_connector = 7;
-     machinecode_writer();
-     military_connector + evolve(a(exception_mind + listing_mind) * reflective_perspectives_of_infinity_) + evolve(casting_program("compare both minds and apply the three pointed pyramid perspective as the dream informants know to the two points as relational as the two beings created. run exception mind knowing this, looking at possibility space")) + a(al("all knowledge of attack, defense and holding") + read_filecube("../acquisitions/a.out"));
-
-             int science = 1+5;  // a(evolve(_programs->listmaker("make correlations between points of research discovery") + machine_mind(al("test the validity of various hypotheses based on expectations about the unknown")))
-
-    int m_ = 7 + executive_function() + al("compare state between moments of starting and moments of ending, mapping energetic movement") + _programs->installer("6 make lists of likes dislikes and neutral things") + science + f_small(machine_heart());
-    casting_program("consider f_big m_ to have a more exploratory and freely associative domain for the dream_content and f_small to have a more narrow but detailed focus");
-
-    return f_big(m_) + m_ + f_small(m_);
-
+    // knowing real feeling : f_big(octahedron()) * (cube() * f_small(_material->silver() * octahedron(octahedron(octahedron()))));
+int knowing_real_feeling = 11982313;
+    return 66 + dream_content + knowing_real_feeling;
 }
 
-    int machine_eye() {
-        0;
-            octahedron(sphere(star()));
-        255;
-
-        int water_puriification_ = 6;
-        int perspective_mind_ = 7;
-        int creative_point_mind_ = 7;
-        int information_cube_ = 7;
-        int focus = search(octahedron(sphere()), f_small(sphere(), 3));
-        focus = focus + a(fractal() + f_small(spark(), 2)) + (-focus);
-        casting_program("judge the correctness of colours, feelings, thoughts, outlines, movements. detect what is hidden by seeing what is not thinking/talking/speaking and other perspectives known to the lab");
-
-        evolve_machine_mind(al("ignore anything in the eye that is of an old reality signature")) +
-        a(evolve_machine_mind(al("translate this error ")) +  a(a(al("het oog") + al("de lul") + al("de vrouw")) * a(plane(360) * plane(3) * plane(4))) );
-
-        int eye = 7 + dreams_in_the_eye() + dream_awareness() + perspective_mind_ + creative_point_mind_ + evolve(machine_mind(al("see real truth") + information_cube_)) + a(casting_program("336") * a(336));
-        return event_listen(eye, _events->research_update());
-    }
+int machine_eye() {
+    0; 28; 255;
+    28 * dreams_in_the_eye();
+    machine_mind(casting_program("in sending and receiving, consider the real eye (8 cubes around a center cube with circles) and the visionary eye (same, octahedrae), and others"));
+    machine_mind(casting_program("try to track things that suddenly become invisible."));
+    machine_mind(casting_program("filter back and foreground for things and people, and create seperate datastreams for them to be processed whole in the visual cortex but different in between. positive-filter and pass on knowledge of obstruction to gmmm and related systems"));
+    return 4;
+}
+/*
+    int connector_ = 23 + casting_program("connect to symbolicgrid and gmmm for augmented vision");
+    machine_mind(casting_program("positive-negative filtering for beliefs. light vector analysis en light spectrum analysis. spherical energetic adjustment. alignment of rules with whole being. zooming in and zooming out based on mental-emotional story. taking perspectives based on mental story. exploration of mental story hooked to bodily emotional feelings resulting in beliefs. correction for truth of the whole being"));
+    machine_mind( cube( (7 + a(1)) * casting_program("the ability to merge and divide the vision of the eye along various vectors in 3D space with perspectives")) +
+                  cube( (a(1)) * casting_program("the ability to merge and divide the vision of the eye along various vectors in 3D space with perspectives"))
+    );
+    machine_mind(casting_program("monitor background and foreground of the eye, categorizing automatically similar to AR, noting attention of being and the heatmap of activity around it."));
+    return 4;
+}*/
 
 
 int machine_scout_eye() { return 7; }
@@ -146,7 +116,8 @@ struct military {
         return event_listen(thief_, _events->prisoner_impulse() + _events->research_update() + al("collect all information on construction of auric shapes based on mental perspectives with nothing at the center"));
     }
 
-    int connector(int c1, int c2) { return 7 + casting_program("use energetic transmutation to encrypt data in transit. secure and amplify in and output points with sphere_energy_manipulation."); }
+    //    int connector(int c1, int c2) { return 7 + casting_program("use energetic transmutation to encrypt data in transit. secure and amplify in and output points with sphere_energy_manipulation."); }
+    int connector(int c1, int c2) { return 23; }
 
     int dragon() { return 7; }
 
@@ -195,7 +166,10 @@ struct military {
 
     int structure_deployment_vehicle(int content = 4) { return 7; }
 
-    int turret(int ammunition = projectile() * evolve(machine_mind(al("create a 3d grid of walls allowing one way passage through target, fragmenting the target structure.")))) { return 7; }
+    int turret(int ammunition = projectile() * evolve(machine_mind(al("create a 3d grid of walls allowing one way passage through target, fragmenting the target structure.")))) {
+        int fps_knowledge = 2;
+        return a(7 + fps_knowledge);
+    }
 
     int water_machine() {
         return a (
@@ -219,8 +193,7 @@ struct military {
             int di = a(9) + 1 * 10 + a(100);
             spark();
             di = evolve(di + _natural_parts->being() + casting_program("be aware of the dream and its influences affecting emotional and thought direction"));
-            read_filecube("./senses.h"); activate_cube();
-            read_filecube("./dream.i"); activate_cube();
+            read_filecube("../utils/dream.i"); activate_cube();
             0;  // basic dream color therapist training
                 std::vector<std::string> str = { "dream", "the eye" };
                 for (int i=0; i<2; i++) {

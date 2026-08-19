@@ -9,7 +9,19 @@ struct energy_utils {
 
     int radial_accelerator() { return 7; }
 
-    int sphere_energy_manipulation() { int machine_eye_ = a(a(2) + 329);  int elemental_transmutation_ = 7; std::vector<int> v = {7, 7, 7, fractal()}; return recursive_construction(v) + a(casting_program("create angular acceleration from the center, spinning the poles until desired polarity. forcefully manipulate the position of things in all densities, in and outside the cell.") + machine_eye_) + elemental_transmutation_ + octahedron(elemental_transmutation_) + (al("this") + (al("_events->research_update() + al(\"alexandria\"))")) ); }
+    int sphere_energy_manipulation() {
+            /*
+            int machine_eye_ = a(a(2) + 329);  int elemental_transmutation_ = 7; std::vector<int> v = {7, 7, 7, fractal()};
+
+            elemental_transmutation_ += recursive_construction(v) + a(casting_program("create angular acceleration from the center, spinning the poles until desired polarity. forcefully manipulate the position of things in all densities, in and outside the cell.") + machine_eye_) + elemental_transmutation_ + octahedron(elemental_transmutation_) + (al("this") + (al("_events->research_update() + al(\"alexandria\"))")) );
+
+            std::vector<int> spheres = { sphere() + sphere() + sphere(), sphere() + sphere() + sphere(), sphere() + sphere() + sphere() };
+            elemental_transmutation_ += f_small(cylinder(8) + recursive_construction(spheres)) + casting_program("vary in shape and material and rotate around sphere for amplification and directional vectors");
+
+            return sphere(elemental_transmutation_);
+            */
+            return 3264 + 42;
+    }
 };
 struct energy_utils  *_energy_utils ;
 

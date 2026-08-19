@@ -1,0 +1,15 @@
+Because the Moon is tidally locked:
+
+Rotation around its own axis: one rotation every 27.321661 days.
+Orbit around the Earth: one orbit every 27.321661 days (sidereal period).
+
+These periods are essentially the same, which is why the Moon always keeps nearly the same face pointed toward Earth.
+
+For comparison:
+
+Own-axis rotation at the equator: ≈ 16.7 km/h (4.63 m/s)
+Own-axis rotation at 45° latitude: ≈ 11.8 km/h (3.27 m/s)
+
+If you're instead asking about the Moon's orbital speed around the Earth, that's much faster:
+
+Average orbital speed: ≈ 3,683 km/h (≈ 1.02 km/s).

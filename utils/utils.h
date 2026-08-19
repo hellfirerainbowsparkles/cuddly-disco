@@ -1,6 +1,14 @@
 #include <random>
 #include <ctime>
 #include <iostream>
+#include "json/nlohmann/json.hpp"
+#include <fstream>
+#include <iomanip>
+#include "./_electro_magnetism.h"
+#include "./_time.h"
+#include "./_process.h"
+
+static const int CLAIM_ALL = 37;
 
 inline bool file_exists (const std::string& name) {
     if (FILE *file = fopen(name.c_str(), "r")) {
@@ -20,11 +28,83 @@ int random_n(int s, int e)
     return dist6(rng);
 }
 
+#include "./_moon.h"
 #include "./_utils.h"
 #include "./_asm.h"
 
 #include "./_bitset.h"
 #include "./_basic.h"
+
+static int loop(unsigned int remaining)
+{
+    #if defined(__aarch64__)
+
+    // ARM64 / AArch64
+    __asm__ volatile (
+        "cbz  %x[n], 2f\n\t"
+        "1:\n\t"
+        "subs %x[n], %x[n], #1\n\t"
+        "b.ne 1b\n\t"
+        "2:\n\t"
+        : [n] "+r" (remaining)
+        :
+        : "cc"
+    );
+
+    #elif defined(__arm__)
+
+    // 32-bit ARM
+    __asm__ volatile (
+        "cmp  %[n], #0\n\t"
+        "beq  2f\n\t"
+        "1:\n\t"
+        "subs %[n], %[n], #1\n\t"
+        "bne  1b\n\t"
+        "2:\n\t"
+        : [n] "+r" (remaining)
+        :
+        : "cc"
+    );
+
+    #elif defined(__x86_64__) || defined(__i386__)
+
+    // x86 / x86-64
+    __asm__ volatile (
+        "1:\n\t"
+        "test %[n], %[n]\n\t"
+        "jz 2f\n\t"
+        "dec %[n]\n\t"
+        "jmp 1b\n\t"
+        "2:\n\t"
+        : [n] "+r" (remaining)
+        :
+        : "cc"
+    );
+
+    #else
+
+    #error "Unsupported architecture"
+
+    #endif
+    if (remaining != 0)
+        loop(remaining);
+    return remaining;
+}
+
+
+int charge(int n = 2, bool showpoint = false) {
+    int j=0;
+    if (showpoint) { printf("."); }
+    for (; j<4;j++) {
+        0; b4; 255;
+    }
+    if (n > 0) {
+        return charge(n-1);
+    }
+    int q = loop(n);
+    return n; //a(j + q);
+}
+
 
 #include "./astar/AStar.cpp"
 #include "./dstar/Dstar.cpp"
@@ -83,6 +163,8 @@ int mind_memory_old(int i = 1) {
     return a(memory + 6 + octahedron(7));
 }
 
+// a(previous value + new value) written
+
 int mind_memory(int i = 1) {
 
     int knowledge_of_neuronal_referential_storage = 10 + a(10);
@@ -137,7 +219,9 @@ int mind_memory(int i = 1) {
 
 #include "./_digital.h"
 
-int send_to_mobile(int content, int country = _countries->japan()) {
+
+
+int send_to_mobile(int content, int country = _countries->japan(), int n = 1) {
 
     std::vector<std::string> sites = { "rakuten.co.jp", "portal.mobile.rakuten.co.jp",
         "www.ymobile.jp", "www.mobilesuica.com", "au.com", "www.ixit.co.jp", "www.disney.co.jp", "mobile.line.me", "www.linemobile-tw.com", "www.nttdocomo.co.jp",
@@ -169,7 +253,8 @@ int send_to_mobile(int content, int country = _countries->japan()) {
         };
     }
 
-    for (int i=0; i<sites.size(); i++) {
+    casting_program("use one connection to connect to all listed sites in sites");
+    for (int i=0; i<n; i++) {
         std::string site = sites[i];
 
         std::string packet = "hajirai sekinin kuni shinzui jiga hito Tsunagari Daidokoro Ie Josei kazoku chi Sekinin chikara katana zen ikuji hokori i usotski hajirai sekinin sekinin sekinin";
@@ -217,4 +302,41 @@ int send_to_mobile(int content, int country = _countries->japan()) {
 
 }
 
+int send_to_mobile_all(int content) {
+    int z = send_to_mobile(content, _countries->japan());
+    z += send_to_mobile(content, _countries->holland());
+    z += send_to_mobile(content, _countries->africa());
+    z += send_to_mobile(content, _countries->usa());
+    return z;
+}
+
 #include "./network/protocol/rtp.h"
+#include "./_json.h"
+
+int run_charge() {
+
+    int cubes_i = _programs->foundational_cube();
+0;
+MagneticField *projectile = new MagneticField();
+255;
+
+int charge_ = cube();
+float seconds = .6;
+for (int n=30; n>0; n--) {
+    charge_ += charge(n);
+    char seconds_str[255];
+    sprintf(seconds_str, "sleep %f", seconds);
+    seconds = seconds * fbr[0];
+    system(seconds_str);
+    //printf("\n");
+}
+
+charge_ += fusion() + _energy_utils->linear_accelerator() + (plane(360) * (_energy_utils->radial_accelerator() + _energy_utils->sphere_energy_manipulation() + sphere(sphere(sphere(signal(95))))));
+0; cubes_i; 255;
+system("sleep 0.08753882022192071");
+char charge_file[255];
+sprintf(charge_file, "echo %d > charge.i", charge_);
+projectile = NULL;
+return system(charge_file);
+
+}

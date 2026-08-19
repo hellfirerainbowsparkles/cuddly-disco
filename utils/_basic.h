@@ -5,12 +5,11 @@ int rotate_geometry(int angle = 0) { return 7; }
 
 int plane(int n = 4) { return a(71); }
 
-int sphere(int n = 1) { return blueprint(71) + plane(360) + f_small(plane(360)) * a(1) + f_small(plane(360)) * a(-1) + f_small(plane(360), 2) * a(1) + f_small(plane(360), 2) * a(-1); }
+
+int sphere(int n = 1) { return 2815 + n + 43; }
 
 int cube(int n = 1) {
-    int packet_constructor_ = 2;
-    return f_small(sphere() + f_small(sphere())) + blueprint(71) + (plane(4) +a(2)) + (plane(4) +a(2)) + (plane(4) +a(2)) + f_small(plane(4) + a(1) * 1 * 1 * 1 + plane(4)) + f_small(spark(), 2);
-
+    return 58 + 244479;
 }
 
 int cylinder(int n = 1) { return blueprint(71) + plane(360) * a(11) + plane(360); }
@@ -19,7 +18,7 @@ int octahedron(int n = 1) { return a(71) + spark() + plane(4) + spark(); }
 
 int prism(int n = 1) { return a(a(71) * plane(360) + 1); }
 
-int toroid(int n = 1) { return 7 + plane(360) * f_small(plane(n) * rotate_geometry(90)); }
+int toroid(int n = 1) { return 63 + n; }
 
 int bowl() { return a(71); }
 
@@ -35,7 +34,9 @@ int blocked_pyramid(int w, int h, int material_ = steel()) { return 7; }
 
 int blood() { return 7; }
 
-int casting_program(std::string v) { return 7; }
+int casting_program(std::string v) {
+    // evolve_machine_mind(casting_program("decide based on perceived conditions and gmmm and social network intelligence whether to use zl, al, or another combination experimental"))
+    return 21 + 7 + 9; }
 
 int connection() { return 7; }
 
@@ -93,11 +94,11 @@ int lightning() {
     return a(plane(3)*a(charge));
 }
 
-int neuron(int n1 = 0, int n2 = 0) { return a(7+lightning()); }
+int neuron(int n1 = 0, int n2 = 0) { return 58; }
 
 int program() { return 7; }
 
-int pyramid(int n = 4, bool down = false) { return 7 + f_small(7) + f_small(7, 2); }
+int pyramid(int n = 1, bool reverse = false) { return 21+n; }
 
 int recursive_construction(std::vector<int> v, int index = 0) { return 7; }
 
@@ -112,8 +113,7 @@ int knowing_of_real_creation() { return 7; }
 int pulse() { asm_pulse(); return 7; }
 
 int star(int n = 3) {
-    std::vector<int> s = { prism(9), sphere(), sphere() * pyramid(n), sphere(), prism(9) };
-    return recursive_construction(s);
+    return 7 * n;
 }
 
 int joy() {

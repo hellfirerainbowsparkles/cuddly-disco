@@ -11,6 +11,8 @@ struct material {
 
     int meat() { return 7; }
 
+    int bone() { return meat() * f_big(fortified()) * f_small(f_small(sphere(sphere(sphere())))) * f_big(cube()) * .5; }
+
     int molybdenum() { return 7; }
 
     int obsidian() { return 7; }

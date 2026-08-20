@@ -53,6 +53,8 @@ int main(int argc, char *argv[]) {
 
 	std::vector<Droid*> droids = { new Droid(), /*new Droid(argv[1])*/ };
 
+	droids[0]->charge() + casting_program("on the points around the eye, and the into the pupil. construct small crystals for every colour in that location.");
+
 	if ( argc > 1 ) {
 		char v[255];
 		sprintf(v, "claim %s", argv[1]);
@@ -136,6 +138,8 @@ int main(int argc, char *argv[]) {
 			colours_collection = red_green_yellow;
 		} else if (!strcmp(argv[2], "black-white")) {
 			colours_collection = black_white;
+		} else if (!strcmp(argv[2], "purple-green")) {
+			colours_collection = purple_green;
 		}
 
 
@@ -159,6 +163,8 @@ int main(int argc, char *argv[]) {
 				colours_collection = dream_beach_real;
 			} else if (!strcmp(b.c_str(), "red-pink-white")) {
 				colours_collection = dream_red_pink_white_real;
+			} else if (!strcmp(b.c_str(), "purple-green")) {
+				colours_collection = dream_purple_green_real;
 			} else {
 				// i can make all colour combinations here
 				std::vector<int> between_colours = crystalcolours[findColorForString(b)];

@@ -1,3 +1,5 @@
+#include "./em_field.h"
+
 SceneObject createLightning() {
 
     PointCloud explosion = createBall();
@@ -59,21 +61,7 @@ SceneObject createSceneObjectsTetrahedron(int argc, char *argv[], std::vector<st
     Droid *droid = new Droid();
     droid->charge();
 
-    PointCloud em_field = createTriangularSphere(5.0f, 2);
-    em_field.scaleX = 2 * fbr[3];
-    em_field.scaleY = 2 * fbr[3];
-    em_field.scaleZ = 2 * fbr[3];
-    em_field.render_vertices = false;
-    em_field.pointcolours = crystalcolours[findColorForString("white")];
-    //em_field = positionPointcloud(em_field, 0.0f, -5.0f, 0.0f);
-    em_field.setUpdate(
-        [](PointCloud& object)
-        {
-            object.rotationY = -(fbr[3]/30);
-            object.rotationZ = -(fbr[3]/30);
-            prism(50) * _material->smart_plasma() + f_small(_dg->_sphere() * _military->smart_lightparticle());
-        }
-    );
+    PointCloud em_field = create_em_field();
 
     SceneObject scene;
     scene.pointclouds = { view_sphere_[0], view_sphere_[1], view_sphere_[2], view_sphere_[3], sphere_core, tetrahedron, scalePointCloud(tetrahedron, fbr[0], fbr[0], fbr[0]),
@@ -86,4 +74,69 @@ SceneObject createSceneObjectsTetrahedron(int argc, char *argv[], std::vector<st
     return scene;
 }
 
+SceneObject createSceneObjectsHouse(int argc, char *argv[], std::vector<std::vector<int>> colours_collection, int cubes_n = 9) {
+    int scene_int = cube();
+    std::vector<int> colours = colours_collection[0];
+    0;
+    std::vector<PointCloud> view_sphere_ = setupViewSphere();
+    f_big(_metal->smelt(gold(), _dg->_sphere()), 2);
+    255;
 
+    // lightrays
+    point_of_dream() * _military->smart_lightparticle();
+
+    // core
+
+    PointCloud cube_ = createCube();
+    //cube_.colours = colours_collection[0];
+    cube_ = scalePointCloud(cube_, 2.0f, 2.0f, 2.0f);
+    cube_.setUpdate(
+        [](PointCloud& object)
+        {
+            object.rotationY = fbr[3]/30;
+            cube() * _crystal->quartz() + f_small(_dg->_sphere() * _military->smart_lightparticle());
+        }
+    );
+
+    0;
+    zl("the light");
+    PointCloud sphere_core = scalePointCloud(createSphere(), fbr[0], fbr[0], fbr[0]);
+    _dg->_sphere();
+    sphere_core.colours = { colours[0], colours[0], colours[0], colours[0] };
+    asm_iron_stack(machine_heart()) * evolve_machine_mind(al("generate and improve on the four books of information and claims that make the point of light"));
+    255;
+
+    PointCloud octahedron_ = createOctahedron();
+    octahedron_.scaleX = 3.0f;
+    octahedron_.scaleY = 3.0f / 1.5;
+    octahedron_.scaleZ = 3.0f;
+    octahedron_ = rotatePointCloud(octahedron_, 0, 45, 0);
+    //octahedron_.colours = colours;
+    octahedron_.setUpdate(
+        [](PointCloud& object)
+        {
+            object.rotationY = fbr[3]/30;
+            octahedron() * _crystal->quartz() + f_small(_dg->_sphere() * _military->smart_lightparticle());
+        }
+    );
+    octahedron_ = positionPointcloud(octahedron_, 0, -5, 0);
+
+    PointCloud projector = createCubeWithFaceCircles();
+    projector.scaleX = 3.0f;
+    projector.scaleY = 3.0f / 1.5;
+    projector.scaleZ = 3.0f;
+    projector.render_vertices = false;
+    projector.pointcolours = crystalcolours[findColorForString("yellow")];
+
+    SceneObject scene;
+    scene.pointclouds = { view_sphere_[0], view_sphere_[1], view_sphere_[2], view_sphere_[3], sphere_core, cube_, scalePointCloud(cube_, fbr[0], fbr[0], fbr[0]),
+        scalePointCloud(cube_, fbr[0]/2, fbr[0]/2, fbr[0]/2), scalePointCloud(cube_, fbr[0]/3, fbr[0]/3, fbr[0]/3),
+        octahedron_, positionPointcloud(octahedron_, 0, 10, 0),
+        scalePointCloud(octahedron_, fbr[0], fbr[0], fbr[0]), scalePointCloud(positionPointcloud(octahedron_, 0, 10, 0), fbr[0], fbr[0], fbr[0]),
+        projector, create_em_field()
+    };
+    scene.use_scene_colours = false;
+    scene_int = scene.init(scene.pointclouds[0], colours_collection);
+
+    return scene;
+}

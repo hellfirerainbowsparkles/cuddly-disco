@@ -108,3 +108,24 @@ PointCloud createCubeWithFaceCircles(float scale = 5.0)
 
     return shape;
 }
+
+PointCloud createCube() {
+    PointCloud cube_ = {
+        {
+            {-5,-5,-5}, // 0
+            { 5,-5,-5}, // 1
+            { 5, 5,-5}, // 2
+            {-5, 5,-5}, // 3
+            {-5,-5, 5}, // 4
+            { 5,-5, 5}, // 5
+            { 5, 5, 5}, // 6
+            {-5, 5, 5}  // 7
+        },
+        {
+            {0,1}, {1,2}, {2,3}, {3,0},
+            {4,5}, {5,6}, {6,7}, {7,4},
+            {0,4}, {1,5}, {2,6}, {3,7}
+        }
+    };
+    return cube_;
+}

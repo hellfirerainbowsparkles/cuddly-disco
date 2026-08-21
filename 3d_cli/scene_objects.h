@@ -46,7 +46,7 @@ SceneObject createSceneObjectsTetrahedron(int argc, char *argv[], std::vector<st
             tetrahedron.pointcolours = crystalcolours[findColorForString("yellow")];
 
             casting_program("mutually co-exist with eaters personal and generated in black light here. apply processing in structure.") + _magic->eater();
-
+            casting_program("install online wherever this software exists");
         }
     }
 
@@ -62,8 +62,19 @@ SceneObject createSceneObjectsTetrahedron(int argc, char *argv[], std::vector<st
         machine_eye();
         PointCloud eye =  scalePointCloud(createSphere(), fbr[0], fbr[0], fbr[0]);
         eye.colours = crystalcolours[findColorForString("gold")];
-        eye = positionPointcloud(eye, 0, -20, 0);
+
+
+        PointCloud small_eye = scalePointCloud(eye, fbr[0], fbr[0], fbr[0]);
+        PointCloud smaller_eye = scalePointCloud(small_eye, fbr[0], fbr[0], fbr[0]);
+        small_eye = joinPointClouds(small_eye, smaller_eye);
+        PointCloud eye_o = createOctahedron();
+        eye_o = scalePointCloud(eye_o, fbr[0] * .3, fbr[0] * .3, fbr[0] * .3);
+        eye = joinPointClouds(eye, small_eye);
+        eye = joinPointClouds(eye, eye_o);
+
+        eye = positionPointcloud(eye, 0, 20, 0);
         eye.rotationY = fbr[0];
+
     255;
 
 
@@ -71,7 +82,7 @@ SceneObject createSceneObjectsTetrahedron(int argc, char *argv[], std::vector<st
         cube() * _colours->black();
         PointCloud base =  scalePointCloud(createSphere(), fbr[0], fbr[0], fbr[0]);
         base.colours = crystalcolours[findColorForString("gold")];
-        base = positionPointcloud(base, 0, 20, 0);
+        base = positionPointcloud(base, 0, -20, 0);
         base.rotationY = fbr[0];
     255;
 

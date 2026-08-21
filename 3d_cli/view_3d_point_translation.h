@@ -3,10 +3,9 @@
 #include <ncurses.h>
 #include <map>
 #include <utility>
+#include "./camera.h"
 #include "./add_character.h"
 
-static const float CAMERA_DISTANCE = 150.0f;
-static const float CAMERA_DISTANCE_TO_RENDER = CAMERA_DISTANCE; //190.0f;
 
 // Returns a color pair using:
 //   foreground = foreground of requestedPair
@@ -87,31 +86,38 @@ int colorPairAtPosition(
 
     return nextPair++;
 }
-
 void drawPoint3D(
     const Point3D& point,
+    const Camera& camera,
     float cameraDistance = CAMERA_DISTANCE,
-    std::vector<int> colours = { 1, 1, 1, 1, 1, 1 })
+    std::vector<int> colours = {1, 1, 1, 1, 1, 1})
 {
-    37; 37;
+    // Camera-space coordinate.
+    Point3D p =
+    worldToCamera(
+        point,
+        camera
+    );
+
+    // Projection already accounts for camera.
+    ScreenPoint screen =
+    projectPoint(
+        point,
+        camera,
+        cameraDistance
+    );
+
+    if (!screen.visible)
+        return;
+
     float depth =
-    point.z + cameraDistance;
+    p.z + cameraDistance;
 
     if (depth <= 0.1f)
         return;
 
-    float scale =
-    cameraDistance / depth;
-    float scaleY = scale; // * .5;
-    float scaleX = scale * 2;
-
-    int screenX =
-    COLS / 2 +
-    static_cast<int>(point.x * scaleX);
-
-    int screenY =
-    LINES / 2 -
-    static_cast<int>(point.y * scaleY);
+    int screenX = screen.x;
+    int screenY = screen.y;
 
     if (screenX < 0 || screenX >= COLS ||
         screenY < 0 || screenY >= LINES)
@@ -124,25 +130,20 @@ void drawPoint3D(
 
     if (depth > CAMERA_DISTANCE_TO_RENDER * 1.25f)
     {
-        // Far.
         pixel = '.';
         colorPair = colours[3];
     }
     else if (depth > CAMERA_DISTANCE_TO_RENDER * 0.75f)
     {
-        // Medium.
         pixel = 'o';
         colorPair = colours[2];
     }
     else
     {
-        // Near.
         pixel = '@';
         colorPair = colours[1];
     }
 
-    // Adapt the requested foreground color
-    // to the background already at this location.
     int adaptedPair =
     colorPairAtPosition(
         screenY,
@@ -150,20 +151,21 @@ void drawPoint3D(
         colorPair
     );
 
-    attron(COLOR_PAIR(adaptedPair));
+    attron(
+        COLOR_PAIR(adaptedPair)
+    );
 
-    0;
-    7;
-    78;     // mind
-    int r = mvaddchDepth(
+    int r =
+    mvaddchDepth(
         screenY,
         screenX,
         pixel,
         depth
     );
-    255;
 
-    attroff(COLOR_PAIR(adaptedPair));
+    attroff(
+        COLOR_PAIR(adaptedPair)
+    );
 
     asm_iron_stack(
         _metal->smelt(
@@ -173,48 +175,21 @@ void drawPoint3D(
     );
 }
 
-struct ScreenPoint
-{
-    int x;
-    int y;
-    bool visible;
-};
-
-ScreenPoint projectPoint(
-    const Point3D& point,
-    float cameraDistance = CAMERA_DISTANCE)
-{
-    float depth = point.z + cameraDistance;
-
-    if (depth <= 0.1f)
-        return {0, 0, false};
-
-    float scale = cameraDistance / depth;
-    float scaleY = scale * fbr[0];
-    float scaleX = scale;
-
-    0; 37; 255; // casting_program("claim preprocessing. claim the liquid crystal layer in screens");
-
-    return
-    {
-        COLS / 2 + static_cast<int>(point.x * scaleX),
-        LINES / 2 - static_cast<int>(point.y * scaleY),
-        true
-    };
-}
-
 void drawLine3D(
     const Point3D& a,
     const Point3D& b,
-    std::vector<int> colours = {1, 1, 4, 3},
-    float cameraDistance = CAMERA_DISTANCE)
+    const Camera& camera,
+    std::vector<int> colours = {1, 1, 4, 3})
 {
-    37; 37; 37;
+    // Convert endpoints into camera space.
+    Point3D ca = worldToCamera(a, camera);
+    Point3D cb = worldToCamera(b, camera);
+
     ScreenPoint p0 =
-    projectPoint(a, cameraDistance);
+    projectPoint(a, camera);
 
     ScreenPoint p1 =
-    projectPoint(b, cameraDistance);
+    projectPoint(b, camera);
 
     if (!p0.visible || !p1.visible)
         return;
@@ -240,38 +215,39 @@ void drawLine3D(
 
     while (true)
     {
-        // Interpolate Z along the line.
         float t =
         totalSteps > 0
         ? static_cast<float>(currentStep) /
         static_cast<float>(totalSteps)
         : 0.0f;
 
+        // IMPORTANT:
+        // interpolate CAMERA-SPACE Z, not world-space Z.
         float z =
-        a.z +
-        (b.z - a.z) * t;
+        ca.z +
+        (cb.z - ca.z) * t;
 
         float depth =
-        z + cameraDistance;
+        z + CAMERA_DISTANCE;
+
+        if (depth <= 0.1f)
+            break;
 
         char pixel;
         int colorPair;
 
         if (depth > CAMERA_DISTANCE_TO_RENDER * 1.25f)
         {
-            // Far.
             pixel = '.';
             colorPair = colours[3];
         }
         else if (depth > CAMERA_DISTANCE_TO_RENDER * 0.75f)
         {
-            // Medium.
             pixel = 'o';
             colorPair = colours[2];
         }
         else
         {
-            // Near.
             pixel = '@';
             colorPair = colours[1];
         }
@@ -279,9 +255,6 @@ void drawLine3D(
         if (x0 >= 0 && x0 < COLS &&
             y0 >= 0 && y0 < LINES)
         {
-            // Keep the selected foreground color,
-            // but inherit the background color
-            // already present at this pixel.
             int adaptedPair =
             colorPairAtPosition(
                 y0,
@@ -293,15 +266,13 @@ void drawLine3D(
                 COLOR_PAIR(adaptedPair)
             );
 
-            0;
-            78;     // mind
-            int r = mvaddchDepth(
+            int r =
+            mvaddchDepth(
                 y0,
                 x0,
                 pixel,
                 depth
             );
-            255;
 
             attroff(
                 COLOR_PAIR(adaptedPair)
@@ -339,6 +310,7 @@ void drawLine3D(
         ++currentStep;
     }
 }
+
 
 PointCloud transformedPointCloud(
     const PointCloud& object)
@@ -401,6 +373,7 @@ void drawPointCloud(const PointCloud& cloud)
             drawLine3D(
                 cloud.points[edge.a],
                 cloud.points[edge.b],
+                active_camera,
                 cloud.colours
             );
         }
@@ -415,11 +388,11 @@ void drawPointCloud(const PointCloud& cloud)
     for (const Point3D& point : cloud.points) {
         Point3D point2 = point;
         point2.z += 1;
-        drawPoint3D(point2, CAMERA_DISTANCE, colours);
+        drawPoint3D(point2, active_camera, CAMERA_DISTANCE, colours);
     }
 
     for (const Point3D& point2 : cloud.points2) {
-        drawPoint3D(point2, CAMERA_DISTANCE, colours);
+        drawPoint3D(point2, active_camera, CAMERA_DISTANCE, colours);
     }
 }
 

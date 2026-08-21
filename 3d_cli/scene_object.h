@@ -1,7 +1,9 @@
 #include "./cube_mirror_reflection.h"
 
+
 struct SceneObject
 {
+    Camera camera;
     PointCloud scene_cube;
     std::vector<PointCloud> pointclouds;
     std::vector<AnimationObject> animations;
@@ -13,6 +15,8 @@ struct SceneObject
     bool use_scene_colours = true;
 
     int init(PointCloud scene_cube_, std::vector<std::vector<int>> colours_collection_) {
+        this->camera.init();
+        active_camera = this->camera;
         colours_collection = colours_collection_;
         for (PointCloud& pointcloud : pointclouds)
         {
@@ -28,7 +32,7 @@ struct SceneObject
     int colour_t = 0;
     void update()
     {
-
+        this->camera.update();
         colour_t++;
         if (colour_t > 33.333 * fbr[3]) {
                 colour_index++;

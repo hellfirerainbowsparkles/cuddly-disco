@@ -5,6 +5,7 @@
 #include "droid.h"
 #include "./view_main.h"
 #include "./scene_objects.h"
+#include "./io/io.h"
 
 #include <string>
 
@@ -266,6 +267,24 @@ int main(int argc, char *argv[]) {
 				printf("[ no config found for %s ]", config_file);
 			}
 
+
+			if (argc > 1) {
+				// save everything to config
+				saveCamera(scene_object.camera, "camera.json");
+				std::vector<std::string> pointcloudFilenames = {};
+
+				for (int i=0; i<scene_object.pointclouds.size(); i++) {
+					char file[255];
+					sprintf(file, "pointcloud_%d.json", i);
+					pointcloudFilenames.push_back(file);
+					savePointCloud(scene_object.pointclouds[i], file);
+				}
+				saveSceneObject(scene_object, "scene.json", "camera.json", pointcloudFilenames);
+
+				char cmd[255];
+				sprintf(cmd, "mv scene.json camera.json pointcloud_*.json ./scenes/%s/", argv[1]);
+				system(cmd);
+			}
 
 			initscr();
 			initDepthBuffer();

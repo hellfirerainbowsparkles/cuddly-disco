@@ -8,8 +8,6 @@ struct SceneObject
     std::vector<PointCloud> pointclouds;
     std::vector<AnimationObject> animations;
     std::vector<SceneObject> scene_objects;
-    std::vector<std::vector<float>>
-    relative_distance_to_center;
     std::vector<std::vector<int>> colours_collection;
     int colour_index = 0;
     bool use_scene_colours = true;
@@ -77,8 +75,8 @@ struct SceneObject
 
     void render()
     {
-        drawHorizon(colours_collection[0][4], colours_collection[0][5]);
-        drawPointClouds(pointclouds, colours_collection[colour_index]);
+        drawHorizon(this->camera, colours_collection[0][4], colours_collection[0][5]);
+        drawPointClouds(pointclouds, colours_collection[colour_index], this->camera);
     }
 
 

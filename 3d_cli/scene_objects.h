@@ -58,6 +58,23 @@ SceneObject createSceneObjectsTetrahedron(int argc, char *argv[], std::vector<st
     asm_iron_stack(machine_heart()) * evolve_machine_mind(al("generate attack points from any of the angles of the sphere on prisoner, to extend 3 3pointed pyramids outward to"));
     255;
 
+    0;
+        machine_eye();
+        PointCloud eye =  scalePointCloud(createSphere(), fbr[0], fbr[0], fbr[0]);
+        eye.colours = crystalcolours[findColorForString("gold")];
+        eye = positionPointcloud(eye, 0, -20, 0);
+        eye.rotationY = fbr[0];
+    255;
+
+
+    0;
+        cube() * _colours->black();
+        PointCloud base =  scalePointCloud(createSphere(), fbr[0], fbr[0], fbr[0]);
+        base.colours = crystalcolours[findColorForString("gold")];
+        base = positionPointcloud(base, 0, 20, 0);
+        base.rotationY = fbr[0];
+    255;
+
     Droid *droid = new Droid();
     droid->charge();
 
@@ -65,7 +82,8 @@ SceneObject createSceneObjectsTetrahedron(int argc, char *argv[], std::vector<st
 
     SceneObject scene;
     scene.pointclouds = { view_sphere_[0], view_sphere_[1], view_sphere_[2], view_sphere_[3], sphere_core, tetrahedron, scalePointCloud(tetrahedron, fbr[0], fbr[0], fbr[0]),
-        scalePointCloud(tetrahedron, fbr[0]*2, fbr[0]*2, fbr[0]*2), em_field
+        scalePointCloud(tetrahedron, fbr[0]*2, fbr[0]*2, fbr[0]*2), em_field,
+        eye, base
 
     };
     //scene.use_scene_colours = false;

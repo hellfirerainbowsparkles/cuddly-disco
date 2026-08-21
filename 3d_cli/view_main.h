@@ -14,6 +14,7 @@
 #include "./circle.h"
 #include "./cube.h"
 #include "./view_basic.h"
+#include "./horizon.h"
 #include "./animation.h"
 #include "./scene_object.h"
 

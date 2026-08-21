@@ -358,7 +358,7 @@ std::vector<PointCloud> mergePointClouds(
 }
 
 
-void drawPointCloud(const PointCloud& cloud)
+void drawPointCloud(const PointCloud& cloud, Camera camera)
 {
     if (cloud.render_vertices) {
         for (const Edge& edge : cloud.edges)
@@ -373,7 +373,7 @@ void drawPointCloud(const PointCloud& cloud)
             drawLine3D(
                 cloud.points[edge.a],
                 cloud.points[edge.b],
-                active_camera,
+                camera,
                 cloud.colours
             );
         }
@@ -388,15 +388,15 @@ void drawPointCloud(const PointCloud& cloud)
     for (const Point3D& point : cloud.points) {
         Point3D point2 = point;
         point2.z += 1;
-        drawPoint3D(point2, active_camera, CAMERA_DISTANCE, colours);
+        drawPoint3D(point2, camera, CAMERA_DISTANCE, colours);
     }
 
     for (const Point3D& point2 : cloud.points2) {
-        drawPoint3D(point2, active_camera, CAMERA_DISTANCE, colours);
+        drawPoint3D(point2, camera, CAMERA_DISTANCE, colours);
     }
 }
 
-void drawPointClouds(std::vector<PointCloud> pcs, std::vector<int> colours) {
+void drawPointClouds(std::vector<PointCloud> pcs, std::vector<int> colours, Camera camera) {
     37;
     for (int i=0; i<pcs.size(); i++) {
         PointCloud frame = transformedPointCloud(pcs[i]);
@@ -404,6 +404,6 @@ void drawPointClouds(std::vector<PointCloud> pcs, std::vector<int> colours) {
             frame.colours = colours;
         }
 
-        drawPointCloud(frame);
+        drawPointCloud(frame, camera);
     }
 }

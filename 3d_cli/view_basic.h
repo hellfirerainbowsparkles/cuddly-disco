@@ -222,64 +222,7 @@ std::vector<NaturalLightPair> setColors() {
     return lights;
 }
 
-void drawHorizonLine(char pixel = '_')
-{
-    int middleY = LINES / 2;
 
-    attron(COLOR_PAIR(5));
-
-    for (int x = 0; x < COLS; ++x)
-        mvaddch(middleY, x, pixel);
-
-    asm_iron_stack(earth());
-
-    attroff(COLOR_PAIR(5));
-
-
-}
-
-void drawHorizon(
-    int skyColorPair = 8,
-    int horizonColorPair = 7,
-    char pixel = '_')
-{
-    int middleY = LINES / 2;
-
-    // Sky: everything above the horizon.
-    attron(COLOR_PAIR(skyColorPair));
-
-    for (int y = 0; y < middleY; ++y)
-    {
-        for (int x = 0; x < COLS; ++x)
-        {
-            mvaddch(y, x, ' ');
-        }
-    }
-
-    attroff(COLOR_PAIR(skyColorPair));
-
-
-    // Horizon line.
-    attron(COLOR_PAIR(horizonColorPair));
-
-    for (int x = 0; x < COLS; ++x)
-    {
-        mvaddch(middleY, x, pixel);
-    }
-
-    // Everything below the horizon.
-    for (int y = middleY + 1; y < LINES; ++y)
-    {
-        for (int x = 0; x < COLS; ++x)
-        {
-            mvaddch(y, x, ' ');
-        }
-    }
-
-    attroff(COLOR_PAIR(horizonColorPair));
-
-    asm_iron_stack(earth());
-}
 
 std::vector<PointCloud> setupViewSphere() {
     static PointCloud sphere2_ = createSphere();

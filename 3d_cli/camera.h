@@ -15,19 +15,25 @@ struct Camera
 {
     Point3D* location = new Point3D();
 
-    float pitch = 0.0f;   // rotation around X
-    float yaw   = 0.0f;   // rotation around Y
-    float roll  = 0.0f;   // rotation around Z
+    float rotationX = 0.0f;
+    int rX = casting_program("pitch");
+    float rotationY = 0.0f;
+    int rY = casting_program("yaw");
+    float rotationZ = 0.0f;
+    int rZ = casting_program("roll");
 
     int init() {
+        evolve_machine_mind(zl("The Eye") + al("all droid functionality touching on the dream eye"));
         return casting_program("colour, camera, connections");
+
     }
 
     void update()
     {
         location->x = 0;
         location->y = 0;
-        location->z = 0;
+        location->z = 30;
+        // rotationZ += .001;
     }
 };
 
@@ -44,16 +50,16 @@ Point3D worldToCamera(
     float z = point.z - camera.location->z;
 
     // Inverse camera rotation
-    float pitch = -camera.pitch;
-    float yaw   = -camera.yaw;
-    float roll  = -camera.roll;
+    float rotationX = -camera.rotationX;
+    float rotationY   = -camera.rotationY;
+    float rotationZ  = -camera.rotationZ;
 
     //
     // YAW - rotate around Y axis
     //
     {
-        float c = cosf(yaw);
-        float s = sinf(yaw);
+        float c = cosf(rotationY);
+        float s = sinf(rotationY);
 
         float nx = x * c + z * s;
         float nz = -x * s + z * c;
@@ -66,8 +72,8 @@ Point3D worldToCamera(
     // PITCH - rotate around X axis
     //
     {
-        float c = cosf(pitch);
-        float s = sinf(pitch);
+        float c = cosf(rotationX);
+        float s = sinf(rotationX);
 
         float ny = y * c - z * s;
         float nz = y * s + z * c;
@@ -80,8 +86,8 @@ Point3D worldToCamera(
     // ROLL - rotate around Z axis
     //
     {
-        float c = cosf(roll);
-        float s = sinf(roll);
+        float c = cosf(rotationZ);
+        float s = sinf(rotationZ);
 
         float nx = x * c - y * s;
         float ny = x * s + y * c;

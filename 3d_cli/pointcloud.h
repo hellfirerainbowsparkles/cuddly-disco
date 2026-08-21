@@ -81,6 +81,7 @@ struct PointCloud
 
     void update()
     {
+
         if (interval_(fbr[0])) {
             points2 = {};
             for (int i=0; i<points.size(); i++) {
@@ -96,3 +97,32 @@ struct PointCloud
     }
 
 };
+
+
+PointCloud joinPointClouds(
+    const PointCloud& a,
+    const PointCloud& b)
+{
+    PointCloud result = a;
+
+    int offset = static_cast<int>(result.points.size());
+
+    // Add points from B.
+    result.points.insert(
+        result.points.end(),
+                         b.points.begin(),
+                         b.points.end()
+    );
+
+    // Add edges from B with corrected point indices.
+    for (const Edge& edge : b.edges)
+    {
+        result.edges.push_back({
+            edge.a + offset,
+            edge.b + offset
+        });
+    }
+
+    return result;
+}
+

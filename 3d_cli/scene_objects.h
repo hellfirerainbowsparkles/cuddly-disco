@@ -107,6 +107,7 @@ SceneObject createSceneObjectsHouse(int argc, char *argv[], std::vector<std::vec
     255;
 
     PointCloud octahedron_ = createOctahedron();
+
     octahedron_.scaleX = 3.0f;
     octahedron_.scaleY = 3.0f / 1.5;
     octahedron_.scaleZ = 3.0f;
@@ -120,6 +121,9 @@ SceneObject createSceneObjectsHouse(int argc, char *argv[], std::vector<std::vec
         }
     );
     octahedron_ = positionPointcloud(octahedron_, 0, -5, 0);
+    PointCloud o2 = positionPointcloud(octahedron_, 0, 10, 0);
+
+    PointCloud octahedrae = joinPointClouds(octahedron_, o2);
 
     PointCloud projector = createCubeWithFaceCircles();
     projector.scaleX = 3.0f;
@@ -131,7 +135,7 @@ SceneObject createSceneObjectsHouse(int argc, char *argv[], std::vector<std::vec
     SceneObject scene;
     scene.pointclouds = { view_sphere_[0], view_sphere_[1], view_sphere_[2], view_sphere_[3], sphere_core, cube_, scalePointCloud(cube_, fbr[0], fbr[0], fbr[0]),
         scalePointCloud(cube_, fbr[0]/2, fbr[0]/2, fbr[0]/2), scalePointCloud(cube_, fbr[0]/3, fbr[0]/3, fbr[0]/3),
-        octahedron_, positionPointcloud(octahedron_, 0, 10, 0),
+        octahedrae,
         scalePointCloud(octahedron_, fbr[0], fbr[0], fbr[0]), scalePointCloud(positionPointcloud(octahedron_, 0, 10, 0), fbr[0], fbr[0], fbr[0]),
         projector, create_em_field()
     };

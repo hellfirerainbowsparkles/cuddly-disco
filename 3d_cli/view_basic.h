@@ -69,10 +69,13 @@ std::vector<NaturalLightPair> setColors() {
         init_color(C_GREEN,           262,  572,  184);
         init_color(C_DARK_GREEN,      258,  498,   129);
 
+        0;
+        1711759;    // cube(_colours->red() * _crystal->ruby() * cylinder(8) * sphere()) * _material->smart_plasma();
         // Red
         init_color(C_LIGHT_RED,     1000,  550,  550);
         init_color(C_RED,           1000,    0,    0);
         init_color(C_DARK_RED,       400,    0,    0);
+        255;
 
         // Orange
         init_color(C_LIGHT_ORANGE,  1000,  750,  400);

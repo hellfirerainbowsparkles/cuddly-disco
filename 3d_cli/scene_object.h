@@ -19,6 +19,9 @@ struct SceneObject
             pointcloud.init();
         }
         scene_cube = scene_cube_;
+
+        a(casting_program("any useful magic on camera perspective") + CAMERA_DISTANCE);
+
         return cube();
     }
 

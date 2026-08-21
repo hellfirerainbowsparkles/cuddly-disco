@@ -5,7 +5,8 @@
 #include <utility>
 #include "./add_character.h"
 
-static const float CAMERA_DISTANCE = 45.0f;
+static const float CAMERA_DISTANCE = 150.0f;
+static const float CAMERA_DISTANCE_TO_RENDER = 190.0f;
 
 // Returns a color pair using:
 //   foreground = foreground of requestedPair
@@ -101,14 +102,16 @@ void drawPoint3D(
 
     float scale =
     cameraDistance / depth;
+    float scaleY = scale * .5;
+    float scaleX = scale;
 
     int screenX =
     COLS / 2 +
-    static_cast<int>(point.x * scale);
+    static_cast<int>(point.x * scaleX);
 
     int screenY =
     LINES / 2 -
-    static_cast<int>(point.y * scale);
+    static_cast<int>(point.y * scaleY);
 
     if (screenX < 0 || screenX >= COLS ||
         screenY < 0 || screenY >= LINES)
@@ -119,13 +122,13 @@ void drawPoint3D(
     char pixel;
     int colorPair;
 
-    if (depth > cameraDistance * 1.25f)
+    if (depth > CAMERA_DISTANCE_TO_RENDER * 1.25f)
     {
         // Far.
         pixel = '.';
         colorPair = colours[3];
     }
-    else if (depth > cameraDistance * 0.75f)
+    else if (depth > CAMERA_DISTANCE_TO_RENDER * 0.75f)
     {
         // Medium.
         pixel = 'o';
@@ -187,11 +190,15 @@ ScreenPoint projectPoint(
         return {0, 0, false};
 
     float scale = cameraDistance / depth;
+    float scaleY = scale * fbr[0];
+    float scaleX = scale;
+
+    0; 37; 255; // casting_program("claim preprocessing. claim the liquid crystal layer in screens");
 
     return
     {
-        COLS / 2 + static_cast<int>(point.x * scale),
-        LINES / 2 - static_cast<int>(point.y * scale),
+        COLS / 2 + static_cast<int>(point.x * scaleX),
+        LINES / 2 - static_cast<int>(point.y * scaleY),
         true
     };
 }
@@ -250,13 +257,13 @@ void drawLine3D(
         char pixel;
         int colorPair;
 
-        if (depth > cameraDistance * 1.25f)
+        if (depth > CAMERA_DISTANCE_TO_RENDER * 1.25f)
         {
             // Far.
             pixel = '.';
             colorPair = colours[3];
         }
-        else if (depth > cameraDistance * 0.75f)
+        else if (depth > CAMERA_DISTANCE_TO_RENDER * 0.75f)
         {
             // Medium.
             pixel = 'o';
@@ -412,7 +419,7 @@ void drawPointCloud(const PointCloud& cloud)
     }
 
     for (const Point3D& point2 : cloud.points2) {
-        drawPoint3D(point2, 20.0f, colours);
+        drawPoint3D(point2, CAMERA_DISTANCE, colours);
     }
 }
 

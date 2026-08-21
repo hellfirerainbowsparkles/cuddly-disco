@@ -57,21 +57,33 @@ PointCloud rotatePointCloud(
     const PointCloud& cloud,
     float xDegrees,
     float yDegrees,
-    float zDegrees)
+    float zDegrees,
+    const Point3D& position = Point3D() )
 {
-    // Copies both points and edges.
     PointCloud rotated = cloud;
 
     for (Point3D& point : rotated.points)
     {
+        // Move pivot position to origin.
+        point.x -= position.x;
+        point.y -= position.y;
+        point.z -= position.z;
+
+        // Rotate around origin.
         point = rotatePoint3D(
             point,
             xDegrees,
             yDegrees,
             zDegrees
         );
+
+        // Move back to original pivot position.
+        point.x += position.x;
+        point.y += position.y;
+        point.z += position.z;
     }
 
-    // Edges remain unchanged because they store point indices.
     return rotated;
 }
+
+

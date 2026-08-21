@@ -270,6 +270,84 @@ SceneObject createSceneObjectsDragon(int argc, char *argv[], std::vector<std::ve
 
     255;
 
+    0;
+    _material->smart_plasma() + casting_program("construct the skeleton of a dragon using our trait_augmentations and other machine additions suggested");
+    255;
+
+    0;
+    PointCloud head_o = createOctahedron();
+    head_o.rotationY = 0.021f * (2 * fbr[3]);
+    head_o = positionPointcloud(head_o, 0, 30, 0);
+    255;
+
+    0;
+    PointCloud neck_o = createOctahedron();
+    //neck_o = scalePointCloud(neck_o, fbr[0], .5f, fbr[0]);
+    neck_o = positionPointcloud(neck_o, 0, 20, 0);
+    neck_o = joinPointClouds(neck_o, scalePointCloud(createOctahedron(), 4 * fbr[0], 4 * fbr[0], 4 * fbr[0]));
+    255;
+
+    0;
+    PointCloud tailpoint1_o = createOctahedron();
+    tailpoint1_o = positionPointcloud(tailpoint1_o, 0, -10 * fbr[3], 0);
+
+    PointCloud tailpoint2_o = createOctahedron();
+    tailpoint2_o = scalePointCloud(tailpoint2_o, fbr[0], 2.0f, fbr[0]);
+    tailpoint2_o = positionPointcloud(tailpoint2_o, 0, -18 * fbr[3], 0);
+
+    PointCloud tailpoint3_o = createOctahedron();
+    tailpoint3_o = scalePointCloud(tailpoint3_o, fbr[1], 2.0f, fbr[1]);
+    tailpoint3_o =  positionPointcloud(tailpoint3_o, 0, -24 * fbr[0], 0);
+    255;
+
+    0;
+    PointCloud feather1 = scalePointCloud(createOctahedron(), 3.2 * fbr[0], 5 * fbr[0], 3.2 * fbr[0]);
+    feather1 = positionPointcloud(feather1, 30.0f, 0.0f, 0.0f);
+
+    255;
+
+    0;
+    PointCloud feather2 = scalePointCloud(createOctahedron(), 3.2 * fbr[0], 5 * fbr[0], 3.2 * fbr[0]);
+    feather2 = positionPointcloud(feather2, -30.0f, 0.0f, 0.0f);
+    255;
+
+    0;
+    PointCloud feather3 = scalePointCloud(createOctahedron(), 3.2 * fbr[0], 5 * fbr[0], 3.2 * fbr[0]);
+    feather3 = rotatePointCloud(feather3, 0, 0, 45);
+    feather3 = positionPointcloud(feather3, 30.0f, 0.0f, 0.0f);
+    255;
+
+    0;
+    PointCloud feather4 = scalePointCloud(createOctahedron(), 3.2 * fbr[0], 5 * fbr[0], 3.2 * fbr[0]);
+    feather4 = rotatePointCloud(feather4, 0, 0, -45);
+    feather4 = positionPointcloud(feather4, -30.0f, 0.0f, 0.0f);
+    255;
+
+    0;
+    PointCloud feather5 = scalePointCloud(createOctahedron(), 3.2 * fbr[0], 5 * fbr[0], 3.2 * fbr[0]);
+    feather5 = rotatePointCloud(feather5, 0, 0, 90);
+    feather5 = positionPointcloud(feather5, 30.0f, 0.0f, 0.0f);
+    255;
+
+    0;
+    PointCloud feather6 = scalePointCloud(createOctahedron(), 3.2 * fbr[0], 5 * fbr[0], 3.2 * fbr[0]);
+    feather6 = rotatePointCloud(feather6, 0, 0, -90);
+    feather6 = positionPointcloud(feather6, -30.0f, 0.0f, 0.0f);
+    255;
+
+    PointCloud dodecahedron = createDodecahedron(5.0f);
+    //dodecahedron.colours = colours;
+    dodecahedron.scaleX = 2.0f;
+    dodecahedron.scaleY = 2.0f;
+    dodecahedron.scaleZ = 2.0f;
+    dodecahedron.setUpdate(
+        [](PointCloud& object)
+        {
+            object.rotationY = fbr[3]/30;
+            object.rotationZ = fbr[3]/30;
+            prism(5) * gold() + f_small(_dg->_sphere() * _military->smart_lightparticle());
+        }
+    );
 
     SceneObject scene;
     scene.pointclouds = { view_sphere_[0], view_sphere_[1], view_sphere_[2], view_sphere_[3], sphere_core, tetrahedron, scalePointCloud(tetrahedron, fbr[0], fbr[0], fbr[0]),
@@ -277,7 +355,19 @@ SceneObject createSceneObjectsDragon(int argc, char *argv[], std::vector<std::ve
         head, neck,
         tailpoint1, tailpoint2, tailpoint3,
         claw1, claw2,
-        eye
+        eye,
+        head_o,
+        neck_o,
+        tailpoint1_o,
+        tailpoint2_o,
+        tailpoint3_o,
+        feather1,
+        feather2,
+        feather3,
+        feather4,
+        feather5,
+        feather6,
+        dodecahedron
     };
     //scene.use_scene_colours = false;
     scene.camera.location->z = -33;

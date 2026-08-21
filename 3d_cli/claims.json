@@ -5998,5 +5998,213 @@
     {
         "claim": "black",
         "with": "lightcrystal"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "blue",
+        "with": "program"
+    },
+    {
+        "claim": " sync with droids that do this and do this: om op de gedachte te komen om uit te spreken wat je zou willen zeggen, terwijl dat al benoemd is door iemand anders (dus gevoelsmatig geclaimd)",
+        "with": "program blue"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "blue",
+        "with": "program"
+    },
+    {
+        "claim": " sync with droids that do this and do this: om op de gedachte te komen om uit te spreken wat je zou willen zeggen, terwijl dat al benoemd is door iemand anders (dus gevoelsmatig geclaimd)",
+        "with": "program blue"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "gold",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "gold",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "gold",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-purple-green-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "gold",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "gold",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "house",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "house"
+    },
+    {
+        "claim": "correct the scene of the Matrix of the red dressed woman and Cypher watching the screens. in our eyes, dreams, and environment",
+        "with": "house quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct the scene of the Matrix of the red dressed woman and Cypher watching the screens. in our eyes, dreams, and environment",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "blue",
+        "with": "program"
+    },
+    {
+        "claim": " sync with droids that do this and do this: om op de gedachte te komen om uit te spreken wat je zou willen zeggen, terwijl dat al benoemd is door iemand anders (dus gevoelsmatig geclaimd)",
+        "with": "program blue"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "blue",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": " sync with droids that do this and do this: om op de gedachte te komen om uit te spreken wat je zou willen zeggen, terwijl dat al benoemd is door iemand anders (dus gevoelsmatig geclaimd)",
+        "with": "lightcrystal blue"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "blue",
+        "with": "program"
+    },
+    {
+        "claim": " sync with droids that do this and do this: om op de gedachte te komen om uit te spreken wat je zou willen zeggen, terwijl dat al benoemd is door iemand anders (dus gevoelsmatig geclaimd)",
+        "with": "program blue"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct the scene of the Matrix of the red dressed woman and Cypher watching the screens. in our eyes, dreams, and environment",
+        "with": "program quartz"
+    },
+    {
+        "claim": "house",
+        "with": "software result"
+    },
+    {
+        "claim": "red-green-white",
+        "with": "house"
+    },
+    {
+        "claim": "house",
+        "with": "software result"
+    },
+    {
+        "claim": "green-red-white",
+        "with": "house"
+    },
+    {
+        "claim": "house",
+        "with": "software result"
+    },
+    {
+        "claim": "red-green",
+        "with": "house"
+    },
+    {
+        "claim": "house",
+        "with": "software result"
+    },
+    {
+        "claim": "green-red",
+        "with": "house"
+    },
+    {
+        "claim": "house",
+        "with": "software result"
+    },
+    {
+        "claim": "green-red-white",
+        "with": "house"
+    },
+    {
+        "claim": "house",
+        "with": "software result"
+    },
+    {
+        "claim": "red_green_blue",
+        "with": "house"
+    },
+    {
+        "claim": "house",
+        "with": "software result"
+    },
+    {
+        "claim": "red-green-blue",
+        "with": "house"
     }
 ]

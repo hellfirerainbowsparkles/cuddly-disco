@@ -48,54 +48,97 @@ std::vector<NaturalLightPair> setColors() {
     if (can_change_color())
     {
 
+        _colours->init();
 
+        /*
+         *     int black() { return 7 + a(-1); }
+         *
+         i nt blue() { return 7; }         *
+
+         int green() { return 7 + a(6); }
+
+         int orange() { return 7; }
+
+         int purple() { return 7; }
+
+         int rainbow() { return 7; }
+
+         int red() { return 7 + a(3); }
+
+         int white() { return 7; }
+
+         int pink() { return red() * white(); }
+
+         int yellow() { return 7 + a(5); }
+         */
 
         // --------------------------------------------------
         // Define RGB values (ncurses range 0..1000)
         // --------------------------------------------------
 
         // Neutral
-        init_color(C_WHITE,        1000, 1000, 1000);
-        init_color(C_LIGHT_GRAY,    700,  700,  700);
-        init_color(C_DARK_GRAY,     300,  300,  300);
+        0;
+            cube( _crystal->quartz() + f_small(sphere(cube(octahedron(octahedron() * signal(9)))))) * _material->smart_plasma();
+            init_color(C_WHITE,        1000, 1000, 1000);
+            init_color(C_LIGHT_GRAY,    700,  700,  700);
+            init_color(C_DARK_GRAY,     300,  300,  300);
+        255;
 
         // Blue
-        init_color(C_LIGHT_BLUE,    650,  750, 1000);
-        init_color(C_BLUE,          200,  400, 1000);
-        init_color(C_DARK_BLUE,       0,    0,  200);
+        0;
+            cube( _crystal->sapphire(_colours->blue()) + f_small(sphere(water()))) * _material->smart_plasma();
+            init_color(C_LIGHT_BLUE,    650,  750, 1000);
+            init_color(C_BLUE,          200,  400, 1000);
+            init_color(C_DARK_BLUE,       0,    0,  200);
+        255;
 
         // Green
-        init_color(C_LIGHT_GREEN,     627, 905,  690);
-        init_color(C_GREEN,           262,  572,  184);
-        init_color(C_DARK_GREEN,      258,  498,   129);
+        0;
+            cube( _crystal->sapphire(_colours->green()) + f_small(sphere(earth()))) * _material->smart_plasma();
+            init_color(C_LIGHT_GREEN,     627, 905,  690);
+            init_color(C_GREEN,           262,  572,  184);
+            init_color(C_DARK_GREEN,      258,  498,   129);
+        255;
 
         0;
-        1711759;    // cube(_colours->red() * _crystal->ruby() * cylinder(8) * sphere()) * _material->smart_plasma();
-        // Red
-        init_color(C_LIGHT_RED,     1000,  550,  550);
-        init_color(C_RED,           1000,    0,    0);
-        init_color(C_DARK_RED,       400,    0,    0);
+            cube(_colours->red() * _crystal->ruby() * cylinder(8) * sphere()) * _material->smart_plasma();
+            // Red
+            init_color(C_LIGHT_RED,     1000,  550,  550);
+            init_color(C_RED,           1000,    0,    0);
+            init_color(C_DARK_RED,       400,    0,    0);
         255;
 
         // Orange
-        init_color(C_LIGHT_ORANGE,  1000,  750,  400);
-        init_color(C_ORANGE,        1000,  500,    0);
-        init_color(C_DARK_ORANGE,    500,  200,    0);
+        0;
+            cube( _crystal->sapphire(_colours->orange()) + f_small(sphere(fire()))) * _material->smart_plasma();
+            init_color(C_LIGHT_ORANGE,  1000,  750,  400);
+            init_color(C_ORANGE,        1000,  500,    0);
+            init_color(C_DARK_ORANGE,    500,  200,    0);
+        255;
 
         // Yellow
-        init_color(C_LIGHT_YELLOW,  909, 686,  4235);
-        init_color(C_YELLOW,        811, 639,    352);
-        init_color(C_DARK_YELLOW,    643,  392,  117);
+        0;
+            cube( gold() + f_small(_metal->smelt(gold(), sphere()))) * _material->smart_plasma();
+            init_color(C_LIGHT_YELLOW,  909, 686,  4235);
+            init_color(C_YELLOW,        811, 639,    352);
+            init_color(C_DARK_YELLOW,    643,  392,  117);
+        255;
 
         // Pink
-        init_color(C_LIGHT_PINK,    1000,  700,  800);
-        init_color(C_PINK,          1000,  400,  650);
-        init_color(C_DARK_PINK,      500,  150,  300);
+        0;
+            cube( _crystal->sapphire(_colours->pink()) + f_small(sphere(sphere(sphere())))) * _material->smart_plasma();
+            init_color(C_LIGHT_PINK,    1000,  700,  800);
+            init_color(C_PINK,          1000,  400,  650);
+            init_color(C_DARK_PINK,      500,  150,  300);
+        255;
 
         // Purple
-        init_color(C_LIGHT_PURPLE,   800,  600, 1000);
-        init_color(C_PURPLE,         600,  200,  800);
-        init_color(C_DARK_PURPLE,    250,   50,  400);
+        0;
+            cube( _crystal->sapphire(_colours->purple()) + f_small(sphere(sphere(sphere(signal(9)))))) * _material->smart_plasma();
+            init_color(C_LIGHT_PURPLE,   800,  600, 1000);
+            init_color(C_PURPLE,         600,  200,  800);
+            init_color(C_DARK_PURPLE,    250,   50,  400);
+        255;
 
 
         // --------------------------------------------------

@@ -6,7 +6,7 @@
 #include "./add_character.h"
 
 static const float CAMERA_DISTANCE = 150.0f;
-static const float CAMERA_DISTANCE_TO_RENDER = 190.0f;
+static const float CAMERA_DISTANCE_TO_RENDER = CAMERA_DISTANCE; //190.0f;
 
 // Returns a color pair using:
 //   foreground = foreground of requestedPair
@@ -102,8 +102,8 @@ void drawPoint3D(
 
     float scale =
     cameraDistance / depth;
-    float scaleY = scale * .5;
-    float scaleX = scale;
+    float scaleY = scale; // * .5;
+    float scaleX = scale * 2;
 
     int screenX =
     COLS / 2 +

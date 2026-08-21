@@ -207,6 +207,8 @@ int main(int argc, char *argv[]) {
 
 			if ( !strcmp(argv[1], "lightning")) {
 				scene_object = createLightning();
+			} else if ( !strcmp(argv[1], "dragon")) {
+				scene_object = createSceneObjectsDragon(argc, argv, colours_collection);
 			}
 			else if ( !strcmp(argv[1], "spheres")) {
 				scene_object = createSceneObjectsVoice(argc, argv, colours_collection);

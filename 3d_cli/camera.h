@@ -30,9 +30,9 @@ struct Camera
 
     void update()
     {
-        location->x = 0;
-        location->y = 0;
-        location->z = 30;
+        //location->x = 0;
+        //location->y = 0;
+        //location->z = 30;
         // rotationZ += .001;
     }
 };

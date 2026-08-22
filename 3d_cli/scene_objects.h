@@ -1,5 +1,12 @@
 #include "./em_field.h"
 
+
+void camera_up()    { scene_object.camera.rotationX += .02; }
+void camera_down()  { scene_object.camera.rotationX -= .02; }
+void camera_left()  { scene_object.camera.rotationY += .02; }
+void camera_right() { scene_object.camera.rotationY -= .02; }
+
+
 SceneObject createLightning() {
 
     PointCloud explosion = createBall();
@@ -99,7 +106,13 @@ SceneObject createSceneObjectsTetrahedron(int argc, char *argv[], std::vector<st
         eye, base
 
     };
-    //scene.use_scene_colours = false;
+
+    scene.keybindings->setMovement(
+        camera_up,
+        camera_down,
+        camera_left,
+        camera_right
+    );
     scene_int = scene.init(scene.pointclouds[0], colours_collection);
 
     return scene;
@@ -171,17 +184,20 @@ SceneObject createSceneObjectsHouse(int argc, char *argv[], std::vector<std::vec
         projector, create_em_field()
     };
     scene.use_scene_colours = false;
+
+    scene.keybindings->setMovement(
+        camera_up,
+        camera_down,
+        camera_left,
+        camera_right
+    );
+
     scene_int = scene.init(scene.pointclouds[0], colours_collection);
 
     return scene;
 }
 
 
-
-void dragon_up()    { scene_object.camera.rotationX += .02; }
-void dragon_down()  { scene_object.camera.rotationX -= .02; }
-void dragon_left()  { scene_object.camera.rotationY += .02; }
-void dragon_right() { scene_object.camera.rotationY += .02; }
 
 
 SceneObject createSceneObjectsDragon(int argc, char *argv[], std::vector<std::vector<int>> colours_collection, int cubes_n = 9) {
@@ -395,10 +411,10 @@ SceneObject createSceneObjectsDragon(int argc, char *argv[], std::vector<std::ve
     scene.camera.location->z = -33;
 
     scene.keybindings->setMovement(
-        dragon_up,
-        dragon_down,
-        dragon_left,
-        dragon_right
+        camera_up,
+        camera_down,
+        camera_left,
+        camera_right
     );
 
     scene_int = scene.init(scene.pointclouds[0], colours_collection);

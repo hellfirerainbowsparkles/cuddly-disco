@@ -362,5 +362,45 @@
     {
         "claim": "eat awkward",
         "with": "dragon black"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "dragon"
+    },
+    {
+        "claim": "house",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-sapphire-real",
+        "with": "house"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "dragon"
+    },
+    {
+        "claim": "house",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-sapphire-real",
+        "with": "house"
     }
 ]

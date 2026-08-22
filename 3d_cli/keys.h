@@ -1,28 +1,6 @@
 #include <ncurses.h>
 #include <functional>
 
-
-/*
-struct key_bindings_ {
-    std::function<void()> moveUp;
-    std::function<void()> moveDown;
-    std::function<void()> moveLeft;
-    std::function<void()> moveRight;
-
-    void setMovement(
-        std::function<void()> up,
-                     std::function<void()> down,
-                     std::function<void()> left,
-                     std::function<void()> right)
-    {
-        moveUp    = up;
-        moveDown  = down;
-        moveLeft  = left;
-        moveRight = right;
-    }
-
-};*/
-
 class KeyBinding {
     public: std::function<void()> function;
     char key = ' ';

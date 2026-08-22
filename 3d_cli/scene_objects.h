@@ -178,6 +178,11 @@ SceneObject createSceneObjectsHouse(int argc, char *argv[], std::vector<std::vec
 
 
 
+void dragon_up()    { scene_object.camera.rotationX += .02; }
+void dragon_down()  { scene_object.camera.rotationX -= .02; }
+void dragon_left()  { scene_object.camera.rotationY += .02; }
+void dragon_right() { scene_object.camera.rotationY += .02; }
+
 
 SceneObject createSceneObjectsDragon(int argc, char *argv[], std::vector<std::vector<int>> colours_collection, int cubes_n = 9) {
     int scene_int = cube();
@@ -349,6 +354,21 @@ SceneObject createSceneObjectsDragon(int argc, char *argv[], std::vector<std::ve
         }
     );
 
+    PointCloud em_field2 = create_em_field();
+    em_field2 = scalePointCloud(em_field2, fbr[3], fbr[3], fbr[3]);
+
+
+    PointCloud em_field3 = create_em_field();
+    em_field3 = scalePointCloud(em_field2, fbr[4], fbr[4], fbr[4]);
+    em_field3.setUpdate(
+        [](PointCloud& object)
+        {
+            object.rotationY = (fbr[3]/30);
+            object.rotationZ = (fbr[3]/30);
+            prism(50) * _material->smart_plasma() + f_small(_dg->_sphere() * _military->smart_lightparticle());
+        }
+    );
+
     SceneObject scene;
     scene.pointclouds = { view_sphere_[0], view_sphere_[1], view_sphere_[2], view_sphere_[3], sphere_core, tetrahedron, scalePointCloud(tetrahedron, fbr[0], fbr[0], fbr[0]),
         scalePointCloud(tetrahedron, fbr[0]*2, fbr[0]*2, fbr[0]*2), em_field,
@@ -367,11 +387,22 @@ SceneObject createSceneObjectsDragon(int argc, char *argv[], std::vector<std::ve
         feather4,
         feather5,
         feather6,
-        dodecahedron
+        dodecahedron,
+        em_field2,
+        em_field3
     };
     //scene.use_scene_colours = false;
     scene.camera.location->z = -33;
+
+    scene.keybindings->setMovement(
+        dragon_up,
+        dragon_down,
+        dragon_left,
+        dragon_right
+    );
+
     scene_int = scene.init(scene.pointclouds[0], colours_collection);
 
     return scene;
 }
+

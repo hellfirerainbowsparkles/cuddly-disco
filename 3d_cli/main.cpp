@@ -50,6 +50,8 @@ std::string findBetween(
 	return input.substr(startPos, endPos - startPos);
 }
 
+
+
 int main(int argc, char *argv[]) {
 
 	std::vector<Droid*> droids = { new Droid(), /*new Droid(argv[1])*/ };
@@ -203,7 +205,7 @@ int main(int argc, char *argv[]) {
 
 
 
-			SceneObject scene_object;
+
 
 			if ( !strcmp(argv[1], "lightning")) {
 				scene_object = createLightning();
@@ -227,6 +229,8 @@ int main(int argc, char *argv[]) {
 			// look for a config on this scene in its directory
 			char scene_directory[255];
 			sprintf(scene_directory, "./scenes/%s", argv[1]);
+
+			printf("[ scene directory: %s ]\n", scene_directory);
 
 			char config_file[555];
 			sprintf(config_file, "%s/config.json", scene_directory);
@@ -313,6 +317,8 @@ int main(int argc, char *argv[]) {
 
 				int key = getch();
 
+				scene_object.keybindings->checkBindings(key);
+
 				if (key == ' ')
 				{
 					for (int a=5; a<10; a++) { 0; 0; 0; 7; 255; 255; 255; }	// use the charge to focus a very thin small laser from one of the pixels on the screen on a very specific part of the third eye.
@@ -355,6 +361,8 @@ int main(int argc, char *argv[]) {
 				{
 					pressed = false;
 				}
+
+
 
 				casting_program("for all imagery generated, coordinate with correctorsquirrel of the complementary image for all of my women / girls and request electromagnetic charge sufficient to have a mutually balancing effect on the pineal gland, dream, visual memory and third eye, auditory memory, emotional memory");
 

@@ -1,5 +1,5 @@
 #include "./cube_mirror_reflection.h"
-
+#include "./keys.h"
 
 struct SceneObject
 {
@@ -9,6 +9,7 @@ struct SceneObject
     std::vector<AnimationObject> animations;
     std::vector<SceneObject> scene_objects;
     std::vector<std::vector<int>> colours_collection;
+    KeyBindings *keybindings = new KeyBindings();
     int colour_index = 0;
     bool use_scene_colours = true;
 

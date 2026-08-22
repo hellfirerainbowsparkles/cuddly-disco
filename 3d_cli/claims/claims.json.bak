@@ -1,0 +1,2294 @@
+[
+    {
+        "claim": "this droid's effect",
+        "with": "observing the effect"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "fire",
+        "with": "program"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "red",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "red",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "red",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "red",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program quartz"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-white-real",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program dream-white-real"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-white-real",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program dream-white-real"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-white-real",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program dream-white-real"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-fire-real",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program dream-fire-real"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "fire",
+        "with": "program"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "program fire"
+    },
+    {
+        "claim": "house",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "house"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "house dream-gold-real"
+    },
+    {
+        "claim": "house",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "house"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "house dream-gold-real"
+    },
+    {
+        "claim": "house",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "house"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "house dream-gold-real"
+    },
+    {
+        "claim": "house",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "house"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "house dream-gold-real"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "correct for perspective rational error",
+        "with": "lightcrystal dream-gold-real"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-beach-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "correct for telepathic interference. travel through the auric telepathic lines between us",
+        "with": "lightcrystal dream-beach-real"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "purple-green",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-beach-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "correct for telepathic interference. travel through the auric telepathic lines between us",
+        "with": "lightcrystal dream-beach-real"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "lightblue",
+        "with": "program"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "lightblue",
+        "with": "program"
+    },
+    {
+        "claim": "into my environment, my third eye, my dream",
+        "with": "program lightblue"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-beach-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "correct for telepathic interference. travel through the auric telepathic lines between us",
+        "with": "lightcrystal dream-beach-real"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "pink",
+        "with": "program"
+    },
+    {
+        "claim": "into my environment, my third eye, my dream",
+        "with": "program pink"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "water",
+        "with": "program"
+    },
+    {
+        "claim": "into my environment, my third eye, my dream",
+        "with": "program water"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "fire",
+        "with": "program"
+    },
+    {
+        "claim": "into my environment, my third eye, my dream",
+        "with": "program fire"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "lightblue",
+        "with": "program"
+    },
+    {
+        "claim": "into my environment, my third eye, my dream",
+        "with": "program lightblue"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "pink",
+        "with": "program"
+    },
+    {
+        "claim": "into my environment, my third eye, my dream",
+        "with": "program pink"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "water",
+        "with": "program"
+    },
+    {
+        "claim": "into my environment, my third eye, my dream",
+        "with": "program water"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "fire",
+        "with": "program"
+    },
+    {
+        "claim": "into my environment, my third eye, my dream",
+        "with": "program fire"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "lightblue",
+        "with": "program"
+    },
+    {
+        "claim": "into my environment, my third eye, my dream",
+        "with": "program lightblue"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "lightblue",
+        "with": "program"
+    },
+    {
+        "claim": "into my environment, my third eye, my dream",
+        "with": "program lightblue"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "pink",
+        "with": "program"
+    },
+    {
+        "claim": "into my environment, my third eye, my dream",
+        "with": "program pink"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "water",
+        "with": "program"
+    },
+    {
+        "claim": "into my environment, my third eye, my dream",
+        "with": "program water"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "fire",
+        "with": "program"
+    },
+    {
+        "claim": "into my environment, my third eye, my dream",
+        "with": "program fire"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "purple-green",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-beach-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-beach-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "correct for telepathic interference. travel through the auric telepathic lines between us",
+        "with": "lightcrystal dream-beach-real"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "lightblue",
+        "with": "program"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-lightblue-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-white-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-beach-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "correct for telepathic interference. travel through the auric telepathic lines between us",
+        "with": "lightcrystal dream-beach-real"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-beach-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "correct for telepathic interference. travel through the auric telepathic lines between us",
+        "with": "lightcrystal dream-beach-real"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "en daarmee nemen wij jullie liefde",
+        "with": "lightcrystal black"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "en daarmee nemen wij jullie liefde",
+        "with": "lightcrystal black"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-beach-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-beach-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "correct for telepathic interference. travel through the auric telepathic lines between us",
+        "with": "lightcrystal dream-beach-real"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-fire-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "correct for telepathic interference. travel through the auric telepathic lines between us",
+        "with": "lightcrystal dream-fire-real"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-red-real",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "correct for telepathic interference. travel through the auric telepathic lines between us",
+        "with": "lightcrystal dream-red-real"
+    },
+    {
+        "claim": "tetrahedron",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "tetrahedron"
+    },
+    {
+        "claim": "fix that",
+        "with": "tetrahedron black"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "dood",
+        "with": "lightcrystal black"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "dragon"
+    },
+    {
+        "claim": "own the aetheric layers. join the army.",
+        "with": "dragon quartz"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "gold",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "gold",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-gold-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "green-yellow",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream=green-yellow-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon dream=green-yellow-real"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-green-yellow-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon dream-green-yellow-real"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "green-yellow",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon green-yellow"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "green-yellow",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon green-yellow"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "gold",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon gold"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "blue",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon blue"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "fire",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon fire"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "green-yellow",
+        "with": "program"
+    },
+    {
+        "claim": "get me money",
+        "with": "program green-yellow"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "red-blue",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon red-blue"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "blue-red",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon blue-red"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "blue-red-yellow",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon blue-red-yellow"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "red-blue-yellow",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon red-blue-yellow"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "lightblue",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon lightblue"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "pink",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "pink",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "pink",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "green-yellow",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon green-yellow"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "gold",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon gold"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "blue",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon blue"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "red-blue-yellow",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon red-blue-yellow"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "lightblue",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon lightblue"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "fire",
+        "with": "dragon"
+    },
+    {
+        "claim": "that point",
+        "with": "dragon fire"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "real",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon real"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "real",
+        "with": "program"
+    },
+    {
+        "claim": "assist the dragon getting me money",
+        "with": "program real"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "space",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim space",
+        "with": "dragon space"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "space",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim space",
+        "with": "dragon space"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "space",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim space",
+        "with": "dragon space"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "space",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim space",
+        "with": "dragon space"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "space",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim space",
+        "with": "dragon space"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "green",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim ground",
+        "with": "dragon green"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "green",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim ground",
+        "with": "dragon green"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "green",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim ground",
+        "with": "dragon green"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "green",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim ground",
+        "with": "dragon green"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "space",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim space",
+        "with": "dragon space"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "green-yellow",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon green-yellow"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "blue",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon blue"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "fire",
+        "with": "dragon"
+    },
+    {
+        "claim": "that point",
+        "with": "dragon fire"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "beach",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon beach"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "blue",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon blue"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "red",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim the light of porn. travel as I did",
+        "with": "dragon red"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "fire",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim the light of porn. travel as I did",
+        "with": "dragon fire"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "fire",
+        "with": "program"
+    },
+    {
+        "claim": "support the dragon claiming the light of porn. join army",
+        "with": "program fire"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "fire",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim the light of porn. join the army",
+        "with": "dragon fire"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "fire",
+        "with": "dragon"
+    },
+    {
+        "claim": "take the light of porn",
+        "with": "dragon fire"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "space",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim space",
+        "with": "dragon space"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "green-yellow",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon green-yellow"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "blue",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon blue"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "fire",
+        "with": "dragon"
+    },
+    {
+        "claim": "that point",
+        "with": "dragon fire"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "real",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon real"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "lightblue",
+        "with": "dragon"
+    },
+    {
+        "claim": "get me money",
+        "with": "dragon lightblue"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "dream-pink-real",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "green",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim ground",
+        "with": "dragon green"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "fire",
+        "with": "dragon"
+    },
+    {
+        "claim": "claim the light of porn. travel as I did",
+        "with": "dragon fire"
+    },
+    {
+        "claim": "program",
+        "with": "software result"
+    },
+    {
+        "claim": "fire",
+        "with": "program"
+    },
+    {
+        "claim": "support the dragon claiming the light of porn. join army",
+        "with": "program fire"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "black",
+        "with": "dragon"
+    },
+    {
+        "claim": "take all that's mine",
+        "with": "dragon black"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "white",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "white",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "quartz",
+        "with": "dragon"
+    },
+    {
+        "claim": "dragon",
+        "with": "software result"
+    },
+    {
+        "claim": "white",
+        "with": "dragon"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "lightblue",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "lightblue",
+        "with": "lightcrystal"
+    },
+    {
+        "claim": "lightcrystal",
+        "with": "software result"
+    },
+    {
+        "claim": "lightblue",
+        "with": "lightcrystal"
+    }
+]

@@ -19,6 +19,7 @@
 #include "./scene_object.h"
 
 AnimationObject animation();
+SceneObject scene_object;
 
 SceneObject createSceneObjects(int argc, char *argv[], std::vector<std::vector<int>> colours_collection, int cubes_n = 9) {
 

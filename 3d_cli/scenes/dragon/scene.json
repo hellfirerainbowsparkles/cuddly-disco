@@ -3,12 +3,12 @@
     "colour_index": 0,
     "colours_collection": [
         [
-            1,
-            4,
-            4,
-            22,
-            -1,
-            -1
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
         ]
     ],
     "pointclouds": [
@@ -40,7 +40,9 @@
         "pointcloud_25.json",
         "pointcloud_26.json",
         "pointcloud_27.json",
-        "pointcloud_28.json"
+        "pointcloud_28.json",
+        "pointcloud_29.json",
+        "pointcloud_30.json"
     ],
     "use_scene_colours": true
 }

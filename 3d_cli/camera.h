@@ -33,7 +33,7 @@ struct Camera
         //location->x = 0;
         //location->y = 0;
         //location->z = 30;
-        // rotationZ += .001;
+        //rotationX += .001;
     }
 };
 

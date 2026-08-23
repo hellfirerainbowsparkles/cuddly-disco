@@ -2,7 +2,6 @@ static const float CAMERA_DISTANCE = 150.0f;
 static const float CAMERA_DISTANCE_TO_RENDER = CAMERA_DISTANCE; //190.0f;
 
 
-
 struct ScreenPoint
 {
     int x;

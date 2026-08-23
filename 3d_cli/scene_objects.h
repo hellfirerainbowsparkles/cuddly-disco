@@ -1,10 +1,6 @@
 #include "./em_field.h"
 
 
-void camera_up()    { scene_object.camera.rotationX += .02; }
-void camera_down()  { scene_object.camera.rotationX -= .02; }
-void camera_left()  { scene_object.camera.rotationY += .02; }
-void camera_right() { scene_object.camera.rotationY -= .02; }
 
 
 SceneObject createLightning() {
@@ -107,6 +103,7 @@ SceneObject createSceneObjectsTetrahedron(int argc, char *argv[], std::vector<st
 
     };
 
+    scene.camera.location->z = 67;
     scene.keybindings->setMovement(
         camera_up,
         camera_down,

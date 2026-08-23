@@ -21,6 +21,12 @@
 AnimationObject animation();
 SceneObject scene_object;
 
+void camera_up()    { scene_object.camera.rotationX += .02; }
+void camera_down()  { scene_object.camera.rotationX -= .02; }
+void camera_left()  { scene_object.camera.rotationY += .02; }
+void camera_right() { scene_object.camera.rotationY -= .02; }
+//void camera_moveZ() { scene_object.camera->location.z += .02; }
+
 SceneObject createSceneObjects(int argc, char *argv[], std::vector<std::vector<int>> colours_collection, int cubes_n = 9) {
 
     std::vector<int> colours = colours_collection[0];
@@ -115,8 +121,16 @@ SceneObject createSceneObjects(int argc, char *argv[], std::vector<std::vector<i
     );
 
 
-    PointCloud dodecahedron_environment = scalePointCloud(dodecahedron, fbr[3], fbr[3], fbr[3]);
-    dodecahedron_environment.render_vertices = false;
+    PointCloud dodecahedron_environment = createDodecahedron(5.0f);
+    //dodecahedron_environment.render_vertices = false;
+    for (int i=0; i < 5; i++) {
+        PointCloud tmp = scalePointCloud(dodecahedron_environment, 2.0, 2.0, 2.0);
+        dodecahedron_environment = joinPointClouds(tmp, dodecahedron_environment);
+    }
+    dodecahedron_environment.rotationY = fbr[0];
+
+
+
 
     PointCloud em_field = createTriangularSphere(5.0f, 2);
     em_field.scaleX = 2 * fbr[3];
@@ -156,6 +170,13 @@ SceneObject createSceneObjects(int argc, char *argv[], std::vector<std::vector<i
     AnimationObject animation(explosion);
     animation.objectIndex = 2;
     scene.animations = { animation };
+
+    scene.keybindings->setMovement(
+        camera_up,
+        camera_down,
+        camera_left,
+        camera_right
+    );
 
     scene.init(fcubes[0], colours_collection);
 
@@ -255,6 +276,14 @@ SceneObject createSceneObjectsVoice(int argc, char *argv[], std::vector<std::vec
     animation.objectIndex = 0;
     scene.animations = { animation };
     scene.use_scene_colours = false;
+
+    scene.keybindings->setMovement(
+        camera_up,
+        camera_down,
+        camera_left,
+        camera_right
+    );
+
     scene.init(scene.pointclouds[0], colours_collection);
 
     return scene;

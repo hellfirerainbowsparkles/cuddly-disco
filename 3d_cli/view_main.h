@@ -25,7 +25,8 @@ void camera_up()    { scene_object.camera.rotationX += .02; }
 void camera_down()  { scene_object.camera.rotationX -= .02; }
 void camera_left()  { scene_object.camera.rotationY += .02; }
 void camera_right() { scene_object.camera.rotationY -= .02; }
-//void camera_moveZ() { scene_object.camera->location.z += .02; }
+void camera_incZ() { scene_object.camera.location->z += 2; }
+void camera_decZ() { scene_object.camera.location->z -= 2; }
 
 SceneObject createSceneObjects(int argc, char *argv[], std::vector<std::vector<int>> colours_collection, int cubes_n = 9) {
 
@@ -122,7 +123,7 @@ SceneObject createSceneObjects(int argc, char *argv[], std::vector<std::vector<i
 
 
     PointCloud dodecahedron_environment = createDodecahedron(5.0f);
-    //dodecahedron_environment.render_vertices = false;
+    dodecahedron_environment.render_vertices = false;
     for (int i=0; i < 5; i++) {
         PointCloud tmp = scalePointCloud(dodecahedron_environment, 2.0, 2.0, 2.0);
         dodecahedron_environment = joinPointClouds(tmp, dodecahedron_environment);
@@ -177,6 +178,9 @@ SceneObject createSceneObjects(int argc, char *argv[], std::vector<std::vector<i
         camera_left,
         camera_right
     );
+
+    scene.keybindings->addAction('+', camera_incZ);
+    scene.keybindings->addAction('-', camera_decZ);
 
     scene.init(fcubes[0], colours_collection);
 

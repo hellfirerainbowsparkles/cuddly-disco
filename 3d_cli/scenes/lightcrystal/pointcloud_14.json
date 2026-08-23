@@ -10252,7 +10252,7 @@
         "y": 0.0,
         "z": 0.0
     },
-    "render_vertices": true,
+    "render_vertices": false,
     "rotation": {
         "x": 0.0,
         "y": 0.6180340051651001,

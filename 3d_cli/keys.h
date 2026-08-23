@@ -31,6 +31,13 @@ class KeyBindings {
 
     }
 
+    public: void addAction(char key_, std::function<void()> function_) {
+        KeyBinding kb;
+        kb.key = key_;
+        kb.function = function_;
+        actions.push_back(kb);
+    }
+
     public: void checkBindings(int key) {
         keypad(stdscr, TRUE);
         if (key == KEY_UP)
@@ -43,26 +50,13 @@ class KeyBindings {
         } else if (key == KEY_RIGHT) {
             moveRight();
         }
-/*
-        switch (key)
-        {
-            case KEY_UP || ' ':
-                moveUp();
-                break;
 
-            case KEY_DOWN:
-                moveDown();
-                break;
-
-            case KEY_LEFT:
-                moveLeft();
-                break;
-
-            case KEY_RIGHT:
-                moveRight();
-                break;
+        for (int i=0; i<actions.size(); i++) {
+            if (key == actions[i].key) {
+                actions[i].function();
+            }
         }
-        */
+
     }
 
 };

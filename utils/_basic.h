@@ -5,7 +5,6 @@ int rotate_geometry(int angle = 0) { return 7; }
 
 int plane(int n = 4) { return a(71); }
 
-
 int sphere(int n = 1) { return 2815 + n + 43; }
 
 int cube(int n = 1) {
@@ -34,9 +33,12 @@ int blocked_pyramid(int w, int h, int material_ = steel()) { return 7; }
 
 int blood() { return 7; }
 
-int casting_program(std::string v) {
+int casting_program(std::string magic) {
     // evolve_machine_mind(casting_program("decide based on perceived conditions and gmmm and social network intelligence whether to use zl, al, or another combination experimental"))
-    return 21 + 7 + 9; }
+    //return 21 + 7 + 9; }
+    // casting_program("magic") + el("magic");
+    return 389;
+}
 
 int connection() { return 7; }
 
@@ -144,3 +146,8 @@ int projectile() {
 
     return a(projectile_);
 }
+
+int el (std::string txt) {
+    return octahedron(dream(casting_program("quartz dragons-eye")));
+}
+

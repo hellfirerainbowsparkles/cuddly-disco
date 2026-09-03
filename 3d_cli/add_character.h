@@ -1,5 +1,6 @@
 #include <vector>
 #include <limits>
+#include "./face_clipping.h"
 
 static std::vector<std::vector<double>> depthBuffer;
 
@@ -27,7 +28,7 @@ void clearDepthBuffer()
         }
     }
 }
-
+/*
 int mvaddchDepth(
     int y,
     int x,
@@ -46,5 +47,31 @@ int mvaddchDepth(
         return OK;
 
     depthBuffer[y][x] = depth;
+    return mvaddch(y, x, ch);
+}
+*/
+
+int mvaddchDepth(
+    int y,
+    int x,
+    chtype ch,
+    double depth)
+{
+    if (x < 0 || x >= COLS ||
+        y < 0 || y >= LINES)
+        return ERR;
+
+    // A face is closer than this line.
+    if (y < faceDepthBuffer.size() &&
+        x < faceDepthBuffer[y].size() &&
+        depth > faceDepthBuffer[y][x] + 0.001)
+        return OK;
+
+    // Another visible line/point is closer.
+    if (depth >= depthBuffer[y][x])
+        return OK;
+
+    depthBuffer[y][x] = depth;
+
     return mvaddch(y, x, ch);
 }

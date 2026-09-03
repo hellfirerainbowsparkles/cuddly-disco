@@ -7,11 +7,13 @@
 #include "./pyramid.h"
 #include "./octahedron.h"
 #include "./create_sphere.h"
+#include "./surface_polygon.h"
 
 #include "./lines.h"
 
 #include "./square.h"
 #include "./circle.h"
+#include "./sine_wave.h"
 #include "./cube.h"
 #include "./view_basic.h"
 #include "./horizon.h"
@@ -21,12 +23,12 @@
 AnimationObject animation();
 SceneObject scene_object;
 
-void camera_up()    { scene_object.camera.rotationX += .02; }
-void camera_down()  { scene_object.camera.rotationX -= .02; }
-void camera_left()  { scene_object.camera.rotationY += .02; }
-void camera_right() { scene_object.camera.rotationY -= .02; }
-void camera_incZ() { scene_object.camera.location->z += 2; }
-void camera_decZ() { scene_object.camera.location->z -= 2; }
+void camera_up()    { scene_object.camera.rotationX += .05; }
+void camera_down()  { scene_object.camera.rotationX -= .05; }
+void camera_left()  { scene_object.camera.rotationY += .05; }
+void camera_right() { scene_object.camera.rotationY -= .05; }
+void camera_forward() { moveCameraForward(scene_object.camera, 10.0f); }
+void camera_backward() { moveCameraForward(scene_object.camera, -10.0f); }
 
 SceneObject createSceneObjects(int argc, char *argv[], std::vector<std::vector<int>> colours_collection, int cubes_n = 9) {
 
@@ -179,8 +181,8 @@ SceneObject createSceneObjects(int argc, char *argv[], std::vector<std::vector<i
         camera_right
     );
 
-    scene.keybindings->addAction('+', camera_incZ);
-    scene.keybindings->addAction('-', camera_decZ);
+    scene.keybindings->addAction('+', camera_forward);
+    scene.keybindings->addAction('-', camera_backward);
 
     scene.init(fcubes[0], colours_collection);
 

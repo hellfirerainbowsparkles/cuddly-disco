@@ -85,6 +85,7 @@ int main(int argc, char *argv[]) {
 	std::vector<int> colours = crystalcolours[2];
 	std::vector<std::vector<int>> colours_collection = { colours };
 	if (argc > 2) {
+
 		if (!strcmp(argv[2], "fire")) {
 			colours = crystalcolours[1];
 		} else if (!strcmp(argv[2], "water") || !strcmp(argv[2], "blue")) {
@@ -215,12 +216,20 @@ int main(int argc, char *argv[]) {
 			else if ( !strcmp(argv[1], "spheres")) {
 				scene_object = createSceneObjectsVoice(argc, argv, colours_collection);
 			}
+			else if ( !strcmp(argv[1], "dragons-eye")) {
+				scene_object = createSceneObjectsDragonsEye(argc, argv, colours_collection);
+			}
+			else if ( !strcmp(argv[1], "dragons-eye-program")) {
+				scene_object = createSceneObjectsDragonsEyeProgram(argc, argv, colours_collection);
+			}
 			else if ( !strcmp(argv[1], "tetrahedron")) {
 				scene_object = createSceneObjectsTetrahedron(argc, argv, colours_collection);
 			}
 			else if ( !strcmp(argv[1], "house")) {
 				casting_program("to make four books in the cube. to write with light in the point");
 				scene_object = createSceneObjectsHouse(argc, argv, colours_collection);
+			} else if (!strcmp(argv[1], "fire-altar")) {
+				scene_object = createSceneObjectsFireAltar(argc, argv, colours_collection);
 			}
 			else {
 				scene_object = createSceneObjects(argc, argv, colours_collection);
@@ -294,6 +303,7 @@ int main(int argc, char *argv[]) {
 
 			initscr();
 			initDepthBuffer();
+			initFaceDepthBuffer();
 			cbreak();
 			noecho();
 			nodelay(stdscr, TRUE);
@@ -313,6 +323,7 @@ int main(int argc, char *argv[]) {
 				if ( interval(interval_i) ) {
 
 				clearDepthBuffer();
+				clearFaceDepthBuffer();
 				scene_object.update();
 
 				int key = getch();

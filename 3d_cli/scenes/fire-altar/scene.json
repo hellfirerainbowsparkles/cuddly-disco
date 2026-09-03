@@ -1,0 +1,44 @@
+{
+    "camera": "camera.json",
+    "colour_index": 0,
+    "colours_collection": [
+        [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+        ]
+    ],
+    "pointclouds": [
+        "pointcloud_0.json",
+        "pointcloud_1.json",
+        "pointcloud_2.json",
+        "pointcloud_3.json",
+        "pointcloud_4.json",
+        "pointcloud_5.json",
+        "pointcloud_6.json",
+        "pointcloud_7.json",
+        "pointcloud_8.json",
+        "pointcloud_9.json",
+        "pointcloud_10.json",
+        "pointcloud_11.json",
+        "pointcloud_12.json",
+        "pointcloud_13.json",
+        "pointcloud_14.json",
+        "pointcloud_15.json",
+        "pointcloud_16.json",
+        "pointcloud_17.json",
+        "pointcloud_18.json",
+        "pointcloud_19.json",
+        "pointcloud_20.json",
+        "pointcloud_21.json",
+        "pointcloud_22.json",
+        "pointcloud_23.json",
+        "pointcloud_24.json",
+        "pointcloud_25.json",
+        "pointcloud_26.json"
+    ],
+    "use_scene_colours": true
+}

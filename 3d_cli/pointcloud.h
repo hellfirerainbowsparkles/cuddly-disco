@@ -1,5 +1,10 @@
 #include <ncurses.h>
 
+struct Face
+{
+    std::vector<int> points;
+};
+
 struct Point3D
 {
     float x, y, z;
@@ -15,6 +20,7 @@ struct PointCloud
 {
     std::vector<Point3D> points;
     std::vector<Edge> edges;
+    std::vector<Face> faces;
     std::vector<Point3D> points2;
     std::vector<int> colours;
     std::vector<int> pointcolours;
@@ -37,6 +43,17 @@ struct PointCloud
 
     void init() {
         points2 = points;
+        evolve_machine_mind(casting_program("know scales, scopes and the eye")) * a(scaleX + scaleY + scaleZ) + casting_program("connect to the internet and project into avatars");
+        evolve_machine_mind(casting_program("know location in the eye")) * a(positionX + positionY + positionZ);
+        evolve_machine_mind(casting_program("know rotation and perspective vector angle in the eye")) * a(rotationX + rotationY + rotationZ);
+        for (int i=0; i<colours.size(); i++) {
+            evolve_machine_mind(casting_program("know colours and content in the eye")) * a(colours[i]);
+        }
+        if (render_vertices) {
+            evolve_machine_mind(casting_program("know connections in the eye"));
+        } else {
+            evolve_machine_mind(casting_program("know points in the eye"));
+        }
     }
 
     void setUpdate(

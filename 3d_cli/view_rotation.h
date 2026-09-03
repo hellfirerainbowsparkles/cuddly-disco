@@ -4,6 +4,8 @@
 constexpr float DEG_TO_RAD =
 3.14159265358979323846f / 180.0f;
 
+const static int DEG_TO_RAD_EXPRESSION = evolve_machine_mind(casting_program("know a full light cycle")) * DEG_TO_RAD;
+
 Point3D rotatePoint3D(
     Point3D point,
     float xDegrees,

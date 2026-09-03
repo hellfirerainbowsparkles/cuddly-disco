@@ -357,7 +357,211 @@ std::vector<PointCloud> mergePointClouds(
     return result;
 }
 
+void fillCameraFacingFaces(
+    const PointCloud& cloud,
+    const Camera& camera,
+    int colour)
+{
+    std::vector<Face> visible =
+    getCameraFacingFaces(cloud, camera);
 
+    auto edgeFunction = [](
+        float ax, float ay,
+        float bx, float by,
+        float px, float py)
+    {
+        return
+        (px - ax) * (by - ay) -
+        (py - ay) * (bx - ax);
+    };
+
+    for (const Face& face : visible)
+    {
+        if (face.points.size() < 3)
+            continue;
+
+        for (int i = 1;
+             i < static_cast<int>(face.points.size()) - 1;
+        ++i)
+             {
+                 const Point3D& a =
+                 cloud.points[face.points[0]];
+
+                 const Point3D& b =
+                 cloud.points[face.points[i]];
+
+                 const Point3D& c =
+                 cloud.points[face.points[i + 1]];
+
+                 ScreenPoint A =
+                 projectPoint(a, camera);
+
+                 ScreenPoint B =
+                 projectPoint(b, camera);
+
+                 ScreenPoint C =
+                 projectPoint(c, camera);
+
+                 if (!A.visible ||
+                     !B.visible ||
+                     !C.visible)
+                     continue;
+
+                 Point3D ca = worldToCamera(a, camera);
+                 Point3D cb = worldToCamera(b, camera);
+                 Point3D cc = worldToCamera(c, camera);
+
+                 float da = ca.z + CAMERA_DISTANCE;
+                 float db = cb.z + CAMERA_DISTANCE;
+                 float dc = cc.z + CAMERA_DISTANCE;
+
+                 int minX = std::max(
+                     0,
+                     std::min({A.x, B.x, C.x})
+                 );
+
+                 int maxX = std::min(
+                     COLS - 1,
+                     std::max({A.x, B.x, C.x})
+                 );
+
+                 int minY = std::max(
+                     0,
+                     std::min({A.y, B.y, C.y})
+                 );
+
+                 int maxY = std::min(
+                     LINES - 1,
+                     std::max({A.y, B.y, C.y})
+                 );
+
+                 float area =
+                 edgeFunction(
+                     A.x, A.y,
+                     B.x, B.y,
+                     C.x, C.y
+                 );
+
+                 if (std::abs(area) < 0.0001f)
+                     continue;
+
+                 for (int y = minY; y <= maxY; ++y)
+                 {
+                     for (int x = minX; x <= maxX; ++x)
+                     {
+                         float w0 =
+                         edgeFunction(
+                             B.x, B.y,
+                             C.x, C.y,
+                             x, y
+                         );
+
+                         float w1 =
+                         edgeFunction(
+                             C.x, C.y,
+                             A.x, A.y,
+                             x, y
+                         );
+
+                         float w2 =
+                         edgeFunction(
+                             A.x, A.y,
+                             B.x, B.y,
+                             x, y
+                         );
+
+                         if (!(
+                             (w0 >= 0 && w1 >= 0 && w2 >= 0) ||
+                             (w0 <= 0 && w1 <= 0 && w2 <= 0)
+                         ))
+                             continue;
+
+                             w0 /= area;
+                             w1 /= area;
+                             w2 /= area;
+
+                             float depth =
+                             da * w0 +
+                             db * w1 +
+                             dc * w2;
+
+                             attron(COLOR_PAIR(colour));
+
+                             mvaddchDepth(
+                                 y,
+                                 x,
+                                 ACS_CKBOARD,
+                                 depth
+                             );
+
+                             attroff(COLOR_PAIR(colour));
+                     }
+                 }
+             }
+    }
+}
+
+void drawPointCloud(
+    const PointCloud& cloud,
+    Camera camera)
+{
+
+    if (!cloud.colours.empty())
+        fillCameraFacingFaces(
+            cloud,
+            camera,
+            cloud.colours[1]
+        );
+
+    // Draw edges over the filled faces.
+    if (cloud.render_vertices)
+    {
+        for (const Edge& edge : cloud.edges)
+        {
+            if (edge.a < 0 || edge.b < 0 ||
+                edge.a >= static_cast<int>(cloud.points.size()) ||
+                edge.b >= static_cast<int>(cloud.points.size()))
+                continue;
+
+            drawLine3D(
+                cloud.points[edge.a],
+                cloud.points[edge.b],
+                camera,
+                cloud.colours
+            );
+        }
+    }
+
+    std::vector<int> colours = cloud.colours;
+
+    if (!cloud.pointcolours.empty())
+        colours = cloud.pointcolours;
+
+    for (const Point3D& point : cloud.points)
+    {
+        Point3D point2 = point;
+        point2.z += 1;
+
+        drawPoint3D(
+            point2,
+            camera,
+            CAMERA_DISTANCE,
+            colours
+        );
+    }
+
+    for (const Point3D& point : cloud.points2)
+    {
+        drawPoint3D(
+            point,
+            camera,
+            CAMERA_DISTANCE,
+            colours
+        );
+    }
+}
+
+/*
 void drawPointCloud(const PointCloud& cloud, Camera camera)
 {
     if (cloud.render_vertices) {
@@ -394,8 +598,8 @@ void drawPointCloud(const PointCloud& cloud, Camera camera)
     for (const Point3D& point2 : cloud.points2) {
         drawPoint3D(point2, camera, CAMERA_DISTANCE, colours);
     }
-}
-
+}*/
+/*
 void drawPointClouds(std::vector<PointCloud> pcs, std::vector<int> colours, Camera camera) {
     37;
     for (int i=0; i<pcs.size(); i++) {
@@ -404,6 +608,88 @@ void drawPointClouds(std::vector<PointCloud> pcs, std::vector<int> colours, Came
             frame.colours = colours;
         }
 
+        rasterizePointCloudFaces(
+            frame,
+            frame.faces,
+            camera
+        );
+
         drawPointCloud(frame, camera);
     }
+}*/
+
+
+
+void drawFaces(
+    const PointCloud& pointcloud,
+    const Camera& camera)
+{
+    for (const Face& face : pointcloud.faces)
+    {
+        if (face.points.size() < 2)
+            continue;
+
+        for (int i = 0;
+             i < static_cast<int>(face.points.size());
+        ++i)
+             {
+                 int a = face.points[i];
+                 int b = face.points[
+                     (i + 1) % face.points.size()
+                 ];
+
+                 drawLine3D(
+                     pointcloud.points[a],
+                     pointcloud.points[b],
+                     camera,
+                     pointcloud.colours
+
+                 );
+             }
+    }
 }
+
+
+void drawPointClouds(
+    std::vector<PointCloud> pcs,
+    std::vector<int> colours,
+    Camera camera)
+{
+    std::vector<PointCloud> frames;
+
+    // Transform everything first.
+    for (int i = 0; i < pcs.size(); ++i)
+    {
+        PointCloud frame = transformedPointCloud(pcs[i]);
+
+        if (pcs[i].colours.empty())
+            frame.colours = colours;
+
+        frames.push_back(frame);
+    }
+
+    // PASS 1: put ALL surfaces into depth buffer.
+    for (PointCloud& frame : frames)
+    {
+        rasterizePointCloudFaces(
+            frame,
+            frame.faces,
+            camera
+        );
+    }
+
+    // PASS 2: draw lines.
+    for (PointCloud& frame : frames)
+    {
+        drawPointCloud(
+            frame,
+            camera
+        );
+        drawFaces(
+            frame,
+            camera
+        );
+    }
+}
+
+

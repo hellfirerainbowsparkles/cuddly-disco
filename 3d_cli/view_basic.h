@@ -254,16 +254,31 @@ std::vector<PointCloud> setupProgram(std::vector<int> colours = { 1 }) {
                                0.0042f,
                                0.0f
     );
-    casting_program("o");
+    casting_program("o, a, e, i, u, y");
+    casting_program("q, w, r, t, p, s, d, f, g, h, j, k, l, z, x, c, v, b, n, m");
+    _dg->program();
     circle_ = positionPointcloud(circle_, 0, 2, 0);
     PointCloud c2 = positionPointcloud(circle_, 0, -2, 0);
     PointCloud c3 = positionPointcloud(circle_, 0, -6, 0);
     PointCloud c4 = positionPointcloud(circle_, 0, 6, 0);
 
-    std::vector<PointCloud> vs = { circle_, c2, c3, c4 };
+
+    0;
+    std::vector<PointCloud> wave;
+    for (int i=0; i<5; i++) {
+        PointCloud pc = createSpiralWave(9);
+        pc = rotatePointCloud(pc, 0, 90*i, 0);
+        wave.push_back(pc);
+    }
+    255;
+
+    std::vector<PointCloud> vs = { circle_, c2, c3, c4, wave[0], wave[1], wave[2], wave[3] };
     for (int i=0; i<vs.size(); i++) {
         vs[i].colours = colours;
     }
+
+
+
     return vs;
 }
 

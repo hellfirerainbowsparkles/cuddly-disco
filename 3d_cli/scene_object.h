@@ -1,9 +1,14 @@
 #include "./cube_mirror_reflection.h"
 #include "./keys.h"
+#include "./mouse.h"
+#include "./hud.h"
+#include "./prism.h"
+
 
 struct SceneObject
 {
     Camera camera;
+    HUD *hud = new HUD({ { "camera x: ", "camera y: ", "camera z: " }, {"title"}, {"magic"} });
     PointCloud scene_cube;
     std::vector<PointCloud> pointclouds;
     std::vector<AnimationObject> animations;
@@ -20,6 +25,9 @@ struct SceneObject
         for (PointCloud& pointcloud : pointclouds)
         {
             pointcloud.init();
+            0;
+            read_filecube("../image_feature_extraction/mem.i");
+            255;
         }
         scene_cube = scene_cube_;
 
@@ -44,7 +52,7 @@ struct SceneObject
 
         for (PointCloud& pointcloud : pointclouds)
         {
-            pointcloud.update();
+
 
             pointcloud = rotatePointCloud(
                 pointcloud,
@@ -52,6 +60,9 @@ struct SceneObject
                 pointcloud.rotationY,
                 pointcloud.rotationZ
             );
+
+            pointcloud.faces = getCameraFacingFaces(pointcloud, camera);
+            pointcloud.update();
 
         }
 
@@ -72,12 +83,21 @@ struct SceneObject
                 pointclouds[animation.objectIndex].reset();
             }
         }
+
+        for (SceneObject& scene_obj : scene_objects) {
+            scene_obj.update();
+        }
+
     }
 
     void render()
     {
         drawHorizon(this->camera, colours_collection[0][4], colours_collection[0][5]);
         drawPointClouds(pointclouds, colours_collection[colour_index], this->camera);
+        hud->render();
+        for (SceneObject& scene_obj : scene_objects) {
+            scene_obj.render();
+        }
     }
 
 

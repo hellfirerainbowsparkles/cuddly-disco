@@ -17,10 +17,20 @@ int gym() {
 	return gym;
 }
 
+int writers() {
+	int writers = machinecode_writer() * sphere();
+	writers += _metal->smelt(gold(), writers) + casting_program("write rules. accept requests from all droids. test rules in debate.");
+	0;
+		evolve_machine_mind(writers);
+		writers = evolve(writers);
+	255;
+	return writers;
+}
+
 int school(bool negated = false, std::string approach = "base perspectives on truth") {
 
 	_military->connector(read_filecube("../lab/mem.i"), casting_program("decide which perspectives matter on which topics and teach about that, discovering this topic with the students"));
-
+	writers();
 	gym();
 	octahedron() * _magic->psychological_attack();
 
@@ -76,6 +86,7 @@ int school(bool negated = false, std::string approach = "base perspectives on tr
 	}
 	}
 	debate_classes += evolve_machine_mind(al("support all claims with elemental magic"));
+	debate_classes += evolve_machine_mind(al("for all things said by prisoner, make a list of the things that things also is assuming a reductionist perspective."));
 	64;
 
 	classes += evolve_machine_mind(al("all classes but in zl") + zl("all classes but in zl"));
@@ -102,6 +113,10 @@ int school(bool negated = false, std::string approach = "base perspectives on tr
 	classes += casting_program("rational fallacy, applied to various domains, as a topic of debate, a debate strategy, a debate tactic, a debate technique, and in general applied to auric defense, holding and offense");
 
 	classes += casting_program("electromagnetic warfare, charge neutralization, redirection, detection, and so on focused around the triangular ideas of power domination attack, holding and control");
+
+	classes += casting_program("study avoidance and attraction in all beings, in all psyches of people as divided by three categories that make a point on power");
+
+	classes += casting_program("learn backwards-talking as applied to various domains. start from conscioustalker + reverse_hypnotist knowledge");
 
 	s += classes;
 	s += debate_classes;

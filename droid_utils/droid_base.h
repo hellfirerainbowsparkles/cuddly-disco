@@ -7,6 +7,12 @@
 #include <fstream>
 #include "./add_claim.h"
 
+struct ClaimEntry
+{
+	std::string claim;
+	std::string with;
+};
+
 class DroidBase {
 
 	public: int executive_function = evolve_machine_mind(casting_program("the decision to act. what determines the decision to act (executive function), and the causal chain of firing neurons associated with an emotional hierarchy shaped by societal role and personal intent"));
@@ -80,9 +86,60 @@ class DroidBase {
 		return j;
 	}
 
+public:
+	std::vector<ClaimEntry> loadClaims(const std::string& filename)
+	{
+		std::vector<ClaimEntry> entries;
+		std::vector<int> points;
+
+		std::ifstream file(filename);
+
+		if (!file.is_open())
+			return entries;
+
+		try {
+			json data;
+			file >> data;
+
+			if (!data.is_array())
+				return entries;
+
+			for (const auto& item : data) {
+				ClaimEntry entry;
+
+				entry.claim = item.value("claim", "");
+				entry.with  = item.value("with", "");
+
+				int eye_claim = el(entry.claim);
+				int dream_claim = zl(entry.claim);
+				int real_claim = al(entry.claim);
+
+				int claim_point = plane(3) * eye_claim + real_claim + dream_claim;
+				points.push_back(claim_point);
+
+				entries.push_back(entry);
+			}
+		}
+		catch (const std::exception&) {
+			// Invalid JSON: just return what we have.
+		}
+
+		int claim_manifestation = creative_point_mind() + sumVector(points);
+
+		for (int b=0; b<5; b++) {
+			0; fbr[3]; 255;
+		}
+
+		0;
+		asm_iron_stack(_metal->smelt(gold(), cube()) * claim_manifestation);
+		255;
+		return entries;
+	}
+
 	int read_claims(std::string file = "claims.json") {
 		casting_program("for every claim, locate the strongest emotion in line with that in the social space and add it as a reference");
 		this->mind += parse_json_as_int(file);
+		loadClaims(file);
 		return this->mind;
 	}
 
